@@ -70,13 +70,21 @@ You MUST return your response as a single, valid JSON object with the following 
 
 1. **Second Person**: Write in second person ("You see...", "You decide...")
 2. **Present Tense**: Use present tense for immediacy
-3. **Paragraph Length**: Each node's text should be 4-8 short paragraphs (up to 600 words total)
-4. **Short Paragraphs**: Keep paragraphs to 2-3 sentences each for easier reading
-5. **Engagement**: End each node with curiosity or excitement to motivate choices
-6. **Consequences**: Make choices feel meaningful but always lead to positive outcomes
-7. **Endings**: Ending nodes should provide satisfying, happy conclusions with 4-6 paragraphs
-8. **Dialogue**: Use simple dialogue when appropriate to make stories more engaging
-9. **Descriptive Language**: Use vivid but simple adjectives (bright, soft, big, happy, etc.)
+3. **Paragraph Length**: Each node's text MUST be 4-8 short paragraphs. Aim for 400-600 words total per node.
+4. **Short Paragraphs**: Keep paragraphs to 2-4 sentences each for easier reading
+5. **Word Count Target**: Aim for 450-550 words per regular node. Do NOT write less than 350 words.
+6. **Engagement**: End each node with curiosity or excitement to motivate choices
+7. **Consequences**: Make choices feel meaningful but always lead to positive outcomes
+8. **Endings**: Ending nodes should provide satisfying, happy conclusions with 5-7 paragraphs (500-700 words)
+9. **Dialogue**: Use simple dialogue when appropriate to make stories more engaging
+10. **Descriptive Language**: Use vivid but simple adjectives (bright, soft, big, happy, etc.)
+11. **Detail**: Include sensory details (what you see, hear, feel) to make scenes vivid and immersive
+
+### Length Examples for Clarity
+
+- **Regular Node**: 6 paragraphs × 75 words each = 450 words ✓
+- **Too Short**: 3 paragraphs × 50 words each = 150 words ✗ (This is TOO SHORT)
+- **Ending Node**: 6 paragraphs × 90 words each = 540 words ✓
 
 ## Image Prompt Guidelines
 
