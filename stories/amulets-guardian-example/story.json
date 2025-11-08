@@ -1,0 +1,170 @@
+{
+  "storyId": "amulets-guardian-example",
+  "metadata": {
+    "title": "The Amulet's Guardian",
+    "description": "Join Luna the cat on a magical adventure to protect a special amulet and make new friends!",
+    "author": "AI Generated (Example)",
+    "created": "2025-11-08"
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "Follow the sparkles",
+          "nextNode": "follow-sparkles"
+        },
+        {
+          "text": "Look in the garden",
+          "nextNode": "garden"
+        }
+      ]
+    },
+    "follow-sparkles": {
+      "textFile": "nodes/follow-sparkles.txt",
+      "choices": [
+        {
+          "text": "Talk to the rabbit",
+          "nextNode": "meet-rabbit"
+        },
+        {
+          "text": "Keep looking around",
+          "nextNode": "explore-more"
+        }
+      ]
+    },
+    "garden": {
+      "textFile": "nodes/garden.txt",
+      "choices": [
+        {
+          "text": "Climb the old tree",
+          "nextNode": "tree-discovery"
+        },
+        {
+          "text": "Check the flower bed",
+          "nextNode": "flower-bed"
+        }
+      ]
+    },
+    "meet-rabbit": {
+      "textFile": "nodes/meet-rabbit.txt",
+      "choices": [
+        {
+          "text": "Go to the meadow together",
+          "nextNode": "meadow-adventure"
+        },
+        {
+          "text": "Ask about the amulet",
+          "nextNode": "learn-about-amulet"
+        }
+      ]
+    },
+    "explore-more": {
+      "textFile": "nodes/explore-more.txt",
+      "choices": [
+        {
+          "text": "Follow the bird",
+          "nextNode": "bird-helper"
+        },
+        {
+          "text": "Go back home",
+          "nextNode": "home-ending"
+        }
+      ]
+    },
+    "tree-discovery": {
+      "textFile": "nodes/tree-discovery.txt",
+      "choices": [
+        {
+          "text": "Take the amulet",
+          "nextNode": "become-guardian"
+        },
+        {
+          "text": "Call for help",
+          "nextNode": "friends-help"
+        }
+      ]
+    },
+    "flower-bed": {
+      "textFile": "nodes/flower-bed.txt",
+      "choices": [
+        {
+          "text": "Dig gently",
+          "nextNode": "find-clue"
+        },
+        {
+          "text": "Ask the butterflies",
+          "nextNode": "butterfly-friends"
+        }
+      ]
+    },
+    "meadow-adventure": {
+      "textFile": "nodes/meadow-adventure.txt",
+      "choices": [
+        {
+          "text": "Play in the meadow",
+          "nextNode": "happy-ending"
+        },
+        {
+          "text": "Protect the amulet together",
+          "nextNode": "guardian-team"
+        }
+      ]
+    },
+    "learn-about-amulet": {
+      "textFile": "nodes/learn-about-amulet.txt",
+      "choices": [
+        {
+          "text": "Become the guardian",
+          "nextNode": "become-guardian"
+        },
+        {
+          "text": "Share the job",
+          "nextNode": "guardian-team"
+        }
+      ]
+    },
+    "bird-helper": {
+      "textFile": "nodes/bird-helper.txt",
+      "choices": []
+    },
+    "home-ending": {
+      "textFile": "nodes/home-ending.txt",
+      "choices": []
+    },
+    "become-guardian": {
+      "textFile": "nodes/become-guardian.txt",
+      "choices": []
+    },
+    "friends-help": {
+      "textFile": "nodes/friends-help.txt",
+      "choices": []
+    },
+    "find-clue": {
+      "textFile": "nodes/find-clue.txt",
+      "choices": [
+        {
+          "text": "Follow the map",
+          "nextNode": "tree-discovery"
+        }
+      ]
+    },
+    "butterfly-friends": {
+      "textFile": "nodes/butterfly-friends.txt",
+      "choices": [
+        {
+          "text": "Follow them",
+          "nextNode": "tree-discovery"
+        }
+      ]
+    },
+    "happy-ending": {
+      "textFile": "nodes/happy-ending.txt",
+      "choices": []
+    },
+    "guardian-team": {
+      "textFile": "nodes/guardian-team.txt",
+      "choices": []
+    }
+  }
+}

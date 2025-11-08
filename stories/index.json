@@ -1,17 +1,17 @@
 [
   {
-    "storyId": "example-adventure",
-    "title": "Example Adventure",
-    "description": "A sample story to demonstrate the structure. Replace this with generated stories.",
+    "storyId": "the-amulets-guardian",
+    "title": "The Amulet's Guardian",
+    "description": "Join the quest of a brave mermaid to find the lost ocean amulet!",
     "author": "AI Generated",
     "created": "2025-11-08",
     "startNode": "start"
   },
   {
-    "storyId": "the-amulets-guardian",
+    "storyId": "amulets-guardian-example",
     "title": "The Amulet's Guardian",
-    "description": "Join the quest of a brave mermaid to find the lost ocean amulet!",
-    "author": "AI Generated",
+    "description": "Join Luna the cat on a magical adventure to protect a special amulet and make new friends!",
+    "author": "AI Generated (Example)",
     "created": "2025-11-08",
     "startNode": "start"
   }
