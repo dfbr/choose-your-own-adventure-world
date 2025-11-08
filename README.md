@@ -5,7 +5,7 @@ An AI-generated interactive story site built for GitHub Pages.
 ## Project Structure
 
 ```
-daphne-cyoa/
+cyoa/
 ├── index.html              # Main landing page with story list
 ├── reader.html             # Story reader interface
 ├── stories/
@@ -110,10 +110,10 @@ Stories are generated using the OpenAI API. See `generator/README.md` for detail
 ```bash
 # Install dependencies
 cd generator
-npm install
+pip install -r requirements.txt
 
 # Generate a story
-node generate-story.js \
+python generate_story.py \
   --api-key YOUR_OPENAI_API_KEY \
   --system-prompt system-prompt.txt \
   --user-prompt example-story-prompt.txt

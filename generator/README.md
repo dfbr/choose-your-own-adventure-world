@@ -8,7 +8,7 @@ First, install the required dependencies:
 
 ```bash
 cd generator
-npm install
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ npm install
 ### Basic Usage
 
 ```bash
-node generate-story.js \
+python generate_story.py \
   --api-key YOUR_OPENAI_API_KEY \
   --system-prompt system-prompt.txt \
   --user-prompt your-story-outline.txt
@@ -38,7 +38,7 @@ node generate-story.js \
 
 #### Generate a complete story with images:
 ```bash
-node generate-story.js \
+python generate_story.py \
   --api-key sk-proj-... \
   --system-prompt system-prompt.txt \
   --user-prompt example-story-prompt.txt
@@ -46,7 +46,7 @@ node generate-story.js \
 
 #### Generate story structure only (no images):
 ```bash
-node generate-story.js \
+python generate_story.py \
   --api-key sk-proj-... \
   --system-prompt system-prompt.txt \
   --user-prompt example-story-prompt.txt \
@@ -55,7 +55,7 @@ node generate-story.js \
 
 #### Use a different model:
 ```bash
-node generate-story.js \
+python generate_story.py \
   --api-key sk-proj-... \
   --system-prompt system-prompt.txt \
   --user-prompt example-story-prompt.txt \
@@ -70,8 +70,11 @@ Contains instructions for the AI on how to structure the story, what format to u
 ### `example-story-prompt.txt`
 An example user prompt showing how to outline a story. Create your own prompt files following this format.
 
-### `generate-story.js`
-The main script that orchestrates the generation process.
+### `generate_story.py`
+The main Python script that orchestrates the generation process.
+
+### `requirements.txt`
+Python package dependencies (OpenAI SDK and requests).
 
 ## Creating Your Own Story Prompts
 
