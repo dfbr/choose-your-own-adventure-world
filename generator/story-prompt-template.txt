@@ -1,0 +1,21 @@
+Generate a Choose Your Own Adventure story with the following outline:
+
+Title: [Story Title]
+
+Setting: [Describe the world, time period, location, and atmosphere]
+
+Protagonist: [Describe who the reader is in this story - their role, background, starting situation]
+
+Main Story Beats:
+- [First major event or choice point]
+- [Second major event or choice point]
+- [Third major event or choice point]
+- [Fourth major event or choice point]
+- [Fifth major event or choice point]
+- Multiple endings: [Describe 3-5 possible endings - victories, compromises, defeats, surprises]
+
+Tone: [Describe the overall mood and style - adventurous, mysterious, humorous, spooky, educational, etc. Specify audience appropriateness]
+
+Branching Structure: [Describe how paths should diverge and reconnect - number of distinct paths, whether some paths loop back, complexity level]
+
+Special Requirements: [Any additional constraints, themes to emphasize, vocabulary level, educational goals, etc.]
