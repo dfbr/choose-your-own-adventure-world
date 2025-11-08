@@ -61,7 +61,7 @@ You MUST return your response as a single, valid JSON object with the following 
 
 1. **Start Node**: Must be called "start" - this is the entry point
 2. **Node Naming**: Use descriptive lowercase IDs with hyphens (e.g., "dark-forest", "mountain-peak", "dragon-encounter")
-3. **Branching**: Each node should have 2-4 choices, except ending nodes which have 0 choices
+3. **Branching**: Each node should have 2-3 choices, except ending nodes which have 0 choices
 4. **Depth**: Create stories with 8-15 total nodes
 5. **Multiple Endings**: Include at least 3 different ending nodes (nodes with no choices)
 6. **Convergence**: Paths can converge back to common nodes to create interesting loops
@@ -70,11 +70,11 @@ You MUST return your response as a single, valid JSON object with the following 
 
 1. **Second Person**: Write in second person ("You see...", "You decide...")
 2. **Present Tense**: Use present tense for immediacy
-3. **Paragraph Length**: Each node's text should be 3-5 short paragraphs (100-200 words total)
+3. **Paragraph Length**: Each node's text should be 4-8 short paragraphs (up to 600 words total)
 4. **Short Paragraphs**: Keep paragraphs to 2-3 sentences each for easier reading
 5. **Engagement**: End each node with curiosity or excitement to motivate choices
 6. **Consequences**: Make choices feel meaningful but always lead to positive outcomes
-7. **Endings**: Ending nodes should provide satisfying, happy conclusions with 3-4 paragraphs
+7. **Endings**: Ending nodes should provide satisfying, happy conclusions with 4-6 paragraphs
 8. **Dialogue**: Use simple dialogue when appropriate to make stories more engaging
 9. **Descriptive Language**: Use vivid but simple adjectives (bright, soft, big, happy, etc.)
 

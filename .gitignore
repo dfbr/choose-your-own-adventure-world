@@ -1,3 +1,6 @@
+# my secrets file
+secret
+
 # Environment variables
 .env
 .env.local
