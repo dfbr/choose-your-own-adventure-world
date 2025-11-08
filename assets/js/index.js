@@ -48,7 +48,6 @@ function createStoryCard(story) {
         <h2>${story.title}</h2>
         <p class="description">${story.description || 'An exciting adventure awaits...'}</p>
         <div class="meta">
-            ${story.author ? `<span>By ${story.author}</span> • ` : ''}
             <span>${story.created ? formatDate(story.created) : 'Recently added'}</span>
         </div>
     `;

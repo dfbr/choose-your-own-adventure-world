@@ -110,9 +110,18 @@ function showError(container, message) {
  */
 function formatDate(dateString) {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-    });
+    const day = date.getDate();
+    const month = date.toLocaleString('en-US', { month: 'long' });
+    const year = date.getFullYear();
+    const suffix = (d => {
+        if (d >= 11 && d <= 13) return 'th';
+        switch (d % 10) {
+            case 1: return 'st';
+            case 2: return 'nd';
+            case 3: return 'rd';
+            default: return 'th';
+        }
+    })(day);
+    const dayStr = String(day).padStart(2, '0');
+    return `${dayStr}${suffix} ${month} ${year}`;
 }

@@ -2,7 +2,7 @@ baseurl: "/choose-your-own-adventure-world"
 url: "https://dfbr.github.io"
 
 # GitHub Pages settings
-title: "Choose Your Own Adventure"
+title: "Choose your own adventure world"
 description: "AI-Generated Interactive Stories for Early Readers"
 
 # Exclude files from Jekyll processing (not served on GitHub Pages)
