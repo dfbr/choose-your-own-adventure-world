@@ -1,0 +1,82 @@
+{
+  "storyId": "the-great-escape",
+  "metadata": {
+    "title": "The Great Escape",
+    "description": "A young student must use their wits to escape a castle and stop a criminal gang.",
+    "storyId": "the-great-escape",
+    "author": "AI Generated",
+    "created": "2025-11-08"
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "Crack the code",
+          "nextNode": "node-crack-the-code"
+        },
+        {
+          "text": "Look for another way",
+          "nextNode": "node-look-for-another-way"
+        }
+      ],
+      "image": "images/start.jpg"
+    },
+    "node-crack-the-code": {
+      "textFile": "nodes/node-crack-the-code.txt",
+      "choices": [
+        {
+          "text": "Go up the stairs",
+          "nextNode": "node-up-the-stairs"
+        },
+        {
+          "text": "Follow the corridor",
+          "nextNode": "node-follow-corridor"
+        }
+      ],
+      "image": "images/node-crack-the-code.jpg"
+    },
+    "node-look-for-another-way": {
+      "textFile": "nodes/node-look-for-another-way.txt",
+      "choices": [
+        {
+          "text": "Keep going down",
+          "nextNode": "node-keep-going-down"
+        },
+        {
+          "text": "Hide behind the tapestry",
+          "nextNode": "node-hide-behind-tapestry"
+        }
+      ],
+      "image": "images/node-look-for-another-way.jpg"
+    },
+    "node-up-the-stairs": {
+      "textFile": "nodes/node-up-the-stairs.txt",
+      "choices": [
+        {
+          "text": "Climb out the window",
+          "nextNode": "node-climb-out-window"
+        },
+        {
+          "text": "Use the map",
+          "nextNode": "node-use-the-map"
+        }
+      ],
+      "image": "images/node-up-the-stairs.jpg"
+    },
+    "node-follow-corridor": {
+      "textFile": "nodes/node-follow-corridor.txt",
+      "choices": [
+        {
+          "text": "Grab the papers",
+          "nextNode": "node-grab-the-papers"
+        },
+        {
+          "text": "Keep moving forward",
+          "nextNode": "node-keep-moving-forward"
+        }
+      ],
+      "image": "images/node-follow-corridor.jpg"
+    }
+  }
+}

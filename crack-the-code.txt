@@ -1,0 +1,23 @@
+Generate a Choose Your Own Adventure story with the following outline:
+
+Title: The Great Escape
+
+Setting: You are stuck in an old castle which is being used by a gang of criminals. You are trying to escape before you are caught!
+
+Protagonist: You are a plucky young student, great at maths, engineering and using computers. You are quick witted and willing to stand up for yourself.
+
+Main Story Beats:
+- You find yourself trapped in a castle being used by a criminal gang planning a bank robbery
+- Instead of making choices, you need to crack codes or beat challenges to get through the story.
+    - If you get the code/challenge right, you progress through the story
+    - If you get the code wrong or fail the challenge, you are captured by the criminal gang.
+    - (This should be the case for most of the choices but some can be traditional choose-your-own-adventure type choices)
+- Challenges should be cracking a simple substitution cipher, a maths challenge, a science experiment (e.g. using the right chemical to unstick a lock)
+- You may at one point need to decide whether to escape the castle earlier or stay and try to foil the bank robbery.
+- Multiple endings: Escape the castle, get trapped in the castle, foil the robbery and escape the castle, foil the robbery but fail to escape the castle, join the gang and rob the bank
+
+Tone: The story should be reminiscent of a Sherlock Holmes novel but set in a modern day (without phones/internet devices etc)
+
+Branching Structure: The story can diverge wildly from it's starting point as needed. Aim to finish the story in around 10 choices/challenges.
+
+Special Requirements: Write in British English.

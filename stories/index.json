@@ -6,5 +6,13 @@
     "author": "AI Generated (Example)",
     "created": "2025-11-08",
     "startNode": "start"
+  },
+  {
+    "storyId": "the-great-escape",
+    "title": "The Great Escape",
+    "description": "A young student must use their wits to escape a castle and stop a criminal gang.",
+    "author": "AI Generated",
+    "created": "2025-11-08",
+    "startNode": "start"
   }
 ]

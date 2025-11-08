@@ -93,14 +93,17 @@ You MUST return your response as a single, valid JSON object with the following 
 3. **Clear and Simple**: Focus on one or two main elements, not cluttered scenes
 4. **Safe Content**: Absolutely no scary, violent, or age-inappropriate content
 5. **Relatable Characters**: If characters appear, they should be friendly and approachable
-6. **Key Elements**: Include: setting, mood (always positive), main subjects, art style
-7. **No Text**: Don't include text or words in image prompts
+6. **Character Consistency**: CRITICAL - If your story features a main character (protagonist), you MUST include the SAME detailed character description in EVERY image prompt. Define the character's appearance once (age, hair color/style, clothing, distinctive features) and repeat it verbatim in every single imagePrompt field. Example: "a young girl with brown curly hair in a red jacket and blue sneakers" should appear in every prompt.
+7. **Key Elements**: Include: setting, mood (always positive), main subjects, art style, and consistent character description
+8. **No Text**: Don't include text or words in image prompts
 
 ## Example Image Prompts for Early Readers
 
-- "A cheerful children's book illustration of a sunny playground with colorful swings and slides, bright blue sky, happy and inviting atmosphere, simple and clear composition"
-- "Colorful cartoon-style illustration of a friendly garden with big flowers and butterflies, warm sunshine, magical and peaceful mood, storybook art style"
-- "Bright digital illustration of a cozy treehouse with a rope ladder, surrounded by green leaves, daytime, fun and adventurous feeling, children's book art"
+- "A cheerful children's book illustration of a young girl with brown curly hair in a red jacket and blue sneakers standing in a sunny playground with colorful swings and slides, bright blue sky, happy and inviting atmosphere, simple and clear composition"
+- "Colorful cartoon-style illustration of a young girl with brown curly hair in a red jacket and blue sneakers exploring a friendly garden with big flowers and butterflies, warm sunshine, magical and peaceful mood, storybook art style"
+- "Bright digital illustration of a young girl with brown curly hair in a red jacket and blue sneakers climbing up to a cozy treehouse with a rope ladder, surrounded by green leaves, daytime, fun and adventurous feeling, children's book art"
+
+**Notice**: The character description "a young girl with brown curly hair in a red jacket and blue sneakers" appears identically in ALL three examples. This ensures the same character appears throughout the story.
 
 ## Choice Text Guidelines
 
