@@ -122,6 +122,6 @@ function formatDate(dateString) {
             default: return 'th';
         }
     })(day);
-    const dayStr = String(day).padStart(2, '0');
+    const dayStr = String(day); // no leading zero for single-digit days
     return `${dayStr}${suffix} ${month} ${year}`;
 }
