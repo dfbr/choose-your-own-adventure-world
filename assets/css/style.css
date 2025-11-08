@@ -16,7 +16,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 14pt;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
