@@ -91,6 +91,85 @@ def generate_story(client: OpenAI, system_prompt: str, user_prompt: str, model: 
         sys.exit(1)
 
 
+def extract_character_description(image_prompt: str) -> str:
+    """
+    Extract character description from an image prompt.
+    Looks for consistent character descriptions that should be reused.
+    Returns empty string if no clear character description found.
+    """
+    # Common character description patterns
+    patterns = [
+        'young boy', 'young girl', 'little boy', 'little girl',
+        'child with', 'kid with', 'boy with', 'girl with'
+    ]
+    
+    prompt_lower = image_prompt.lower()
+    for pattern in patterns:
+        if pattern in prompt_lower:
+            # Try to extract the full description
+            start_idx = prompt_lower.find(pattern)
+            # Look for the end (typically before "in" or "at" or "standing" or similar scene indicators)
+            scene_markers = [' in ', ' at ', ' standing', ' walking', ' running', ' exploring', ' looking', ' near']
+            end_idx = len(image_prompt)
+            
+            for marker in scene_markers:
+                marker_idx = prompt_lower.find(marker, start_idx)
+                if marker_idx != -1 and marker_idx < end_idx:
+                    end_idx = marker_idx
+            
+            character_desc = image_prompt[start_idx:end_idx].strip()
+            if character_desc:
+                return character_desc
+    
+    return ""
+
+
+def ensure_character_consistency(nodes: Dict[str, Any]) -> None:
+    """
+    Ensure all image prompts use the same character description.
+    Extracts character from start node and applies to all other nodes.
+    """
+    if 'start' not in nodes:
+        return
+    
+    # Extract character description from start node
+    start_prompt = nodes['start'].get('imagePrompt', '')
+    character_desc = extract_character_description(start_prompt)
+    
+    if not character_desc:
+        print('   ℹ No consistent character description detected - images may vary')
+        return
+    
+    print(f'   ✓ Character detected: "{character_desc}"')
+    print('   ℹ Ensuring character consistency across all image prompts...')
+    
+    # Apply to all other nodes if they don't already have the character
+    for node_id, node_data in nodes.items():
+        if node_id == 'start':
+            continue
+            
+        prompt = node_data.get('imagePrompt', '')
+        if character_desc.lower() not in prompt.lower():
+            # Insert character description at the beginning of the scene description
+            # Find where the scene starts (after art style descriptors)
+            style_markers = ['illustration of', 'cartoon of', 'drawing of', 'art of', 'picture of']
+            
+            insert_pos = 0
+            prompt_lower = prompt.lower()
+            for marker in style_markers:
+                if marker in prompt_lower:
+                    insert_pos = prompt_lower.find(marker) + len(marker)
+                    break
+            
+            if insert_pos > 0:
+                # Insert character description after the style marker
+                updated_prompt = prompt[:insert_pos] + ' ' + character_desc + ' in ' + prompt[insert_pos:].lstrip()
+                node_data['imagePrompt'] = updated_prompt
+            else:
+                # Prepend character description
+                node_data['imagePrompt'] = f"{character_desc} in {prompt}"
+
+
 def generate_image(client: OpenAI, prompt: str, model: str) -> str:
     """Generate an image using DALL-E and return the URL"""
     try:
@@ -177,6 +256,11 @@ def main():
     print(f'✓ Story generated: "{story_data["metadata"]["title"]}"')
     print(f'   Nodes: {len(story_data["nodes"])}')
     print(f'   Story ID: {story_data["metadata"]["storyId"]}\n')
+    
+    # Ensure character consistency across all image prompts
+    print('👤 Checking character consistency...')
+    ensure_character_consistency(story_data['nodes'])
+    print()
     
     # Create directory structure
     script_dir = Path(__file__).parent
