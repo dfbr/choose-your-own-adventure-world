@@ -1,0 +1,16 @@
+{
+  "name": "cyoa-generator",
+  "version": "1.0.0",
+  "description": "OpenAI-powered story generator for Choose Your Own Adventure site",
+  "main": "generate-story.js",
+  "type": "module",
+  "scripts": {
+    "generate": "node generate-story.js"
+  },
+  "keywords": ["openai", "story", "generator", "cyoa"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.20.0"
+  }
+}

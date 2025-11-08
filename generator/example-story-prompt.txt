@@ -1,0 +1,19 @@
+Generate a Choose Your Own Adventure story with the following outline:
+
+Title: The Crystal Caves of Mystara
+
+Setting: A fantasy world where an ancient underground cave system has been discovered, rumored to contain magical crystals of immense power.
+
+Protagonist: The reader is an adventurer/explorer who has just discovered the entrance to these legendary caves.
+
+Main Story Beats:
+- Start at the cave entrance, must decide how to enter (cautious or bold)
+- Encounter a choice between following a light source or trusting instinct
+- Discover crystal formations that may be dangerous or helpful
+- Meet another explorer who may be friend or foe
+- Face a challenge involving the cave's guardian creature
+- Multiple endings: finding treasure, gaining wisdom, escaping with your life, or becoming trapped
+
+Tone: Adventurous but with elements of mystery and danger. Not too dark, suitable for all ages.
+
+Branching Structure: Create at least 3 distinct paths that lead to different endings, with some paths that reconnect to create interesting narrative loops.

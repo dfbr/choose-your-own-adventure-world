@@ -1,4 +1,4 @@
-# Daphne's Choose Your Own Adventure
+# Choose Your Own Adventure World
 
 An AI-generated interactive story site built for GitHub Pages.
 
@@ -78,7 +78,7 @@ One image per node (optional but recommended).
 - ✅ Multiple endings per story
 - ✅ Static site - works with GitHub Pages
 - ✅ No user state tracking
-- 🔄 AI story generation (coming next)
+- ✅ AI story generation with OpenAI GPT-4 and DALL-E 3
 
 ## Local Development
 
@@ -101,10 +101,29 @@ Then visit `http://localhost:8000`
 
 This site is designed for GitHub Pages. Simply push to your repository and enable GitHub Pages in your repo settings.
 
-## Next Steps
+## Generating Stories
 
-The story generation script will be created next to:
-- Generate story structures using OpenAI API
-- Create branching narratives with multiple paths
-- Generate images for each node using DALL-E
+Stories are generated using the OpenAI API. See `generator/README.md` for detailed instructions.
+
+### Quick Start
+
+```bash
+# Install dependencies
+cd generator
+npm install
+
+# Generate a story
+node generate-story.js \
+  --api-key YOUR_OPENAI_API_KEY \
+  --system-prompt system-prompt.txt \
+  --user-prompt example-story-prompt.txt
+```
+
+The generator will:
+- Generate complete story structures using GPT-4
+- Create branching narratives with multiple paths and endings
+- Generate images for each node using DALL-E 3
 - Automatically create all necessary JSON and text files
+- Update the story index
+
+Cost per story: ~$4-5 with images, ~$0.10-0.30 without images
