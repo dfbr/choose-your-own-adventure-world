@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <header class="reader-header">
-            <a href="index.html" class="home-link">← Back to Stories</a>
+            <a href="#" onclick="window.location.href=buildPath('index.html'); return false;" class="home-link">← Back to Stories</a>
             <h1 id="story-title">Loading...</h1>
         </header>
         
@@ -29,7 +29,7 @@
             
             <div id="story-end" class="story-end hidden">
                 <h2>The End</h2>
-                <button onclick="window.location.href='index.html'" class="choice-button">
+                <button onclick="window.location.href=buildPath('index.html')" class="choice-button">
                     Choose Another Story
                 </button>
             </div>

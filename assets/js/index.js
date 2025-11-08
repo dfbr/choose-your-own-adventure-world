@@ -8,7 +8,7 @@ async function loadStories() {
     
     try {
         // Fetch the story index
-        const stories = await fetchJSON('stories/index.json');
+        const stories = await fetchJSON(buildPath('stories/index.json'));
         
         if (!stories || stories.length === 0) {
             storyList.innerHTML = '<p class="loading">No stories available yet. Check back soon!</p>';
@@ -41,7 +41,7 @@ async function loadStories() {
  */
 function createStoryCard(story) {
     const card = document.createElement('a');
-    card.href = `reader.html?story=${story.storyId}&node=${story.startNode}`;
+    card.href = buildPath(`reader.html?story=${story.storyId}&node=${story.startNode}`);
     card.className = 'story-card';
     
     card.innerHTML = `

@@ -1,0 +1,25 @@
+baseurl: "/choose-your-own-adventure-world"
+url: "https://dfbr.github.io"
+
+# GitHub Pages settings
+title: "Choose Your Own Adventure"
+description: "AI-Generated Interactive Stories for Early Readers"
+
+# Exclude files from Jekyll processing (not served on GitHub Pages)
+exclude:
+  - generator/
+  - venv/
+  - secret
+  - README.md
+  - .gitignore
+  - .git/
+  - LICENSE
+  - "*.md"
+  - requirements.txt
+  - package.json
+  - node_modules/
+
+# Include these files (GitHub Pages excludes assets by default)
+include:
+  - assets/
+  - stories/

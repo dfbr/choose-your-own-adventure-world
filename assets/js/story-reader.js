@@ -22,7 +22,7 @@ async function initReader() {
     
     try {
         // Load the story data
-        currentStoryData = await fetchJSON(`stories/${storyId}/story.json`);
+        currentStoryData = await fetchJSON(buildPath(`stories/${storyId}/story.json`));
         currentStory = storyId;
         
         // Set the story title
@@ -57,7 +57,7 @@ async function loadNode(nodeId) {
     
     try {
         // Load the node text
-        const text = await fetchText(`stories/${currentStory}/${node.textFile}`);
+        const text = await fetchText(buildPath(`stories/${currentStory}/${node.textFile}`));
         
         // Display the text
         const textContainer = document.getElementById('story-text');
@@ -66,8 +66,9 @@ async function loadNode(nodeId) {
         // Display the image if available
         const imageContainer = document.getElementById('story-image');
         if (node.image) {
+            const imagePath = buildPath(`stories/${currentStory}/${node.image}`);
             imageContainer.innerHTML = `
-                <img src="stories/${currentStory}/${node.image}" 
+                <img src="${imagePath}" 
                      alt="Story illustration" 
                      loading="lazy">
             `;

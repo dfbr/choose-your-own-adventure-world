@@ -1,6 +1,9 @@
 # my secrets file
 secret
 
+# venv
+/venv/
+
 # Environment variables
 .env
 .env.local

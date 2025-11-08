@@ -3,6 +3,31 @@
  */
 
 /**
+ * Get the base path for the site (handles GitHub Pages subdirectory)
+ */
+function getBasePath() {
+    // For GitHub Pages: /choose-your-own-adventure-world
+    // For local: /
+    const path = window.location.pathname;
+    const repoName = 'choose-your-own-adventure-world';
+    
+    if (path.includes(repoName)) {
+        return `/${repoName}`;
+    }
+    return '';
+}
+
+/**
+ * Build a full path with base path
+ * @param {string} relativePath - The relative path
+ * @returns {string} Full path with base
+ */
+function buildPath(relativePath) {
+    const base = getBasePath();
+    return `${base}/${relativePath}`.replace(/\/+/g, '/');
+}
+
+/**
  * Fetch JSON data from a URL
  * @param {string} url - The URL to fetch from
  * @returns {Promise<Object>} The parsed JSON data
@@ -66,11 +91,12 @@ function updateUrl(storyId, nodeId) {
  * @param {string} message - The error message
  */
 function showError(container, message) {
+    const homePath = buildPath('index.html');
     container.innerHTML = `
         <div class="error-message">
             <h2>Oops! Something went wrong</h2>
             <p>${message}</p>
-            <button onclick="window.location.href='index.html'" class="choice-button">
+            <button onclick="window.location.href='${homePath}'" class="choice-button">
                 Return to Home
             </button>
         </div>
