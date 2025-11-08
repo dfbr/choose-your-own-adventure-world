@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Reader</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="reader-header">
+            <a href="index.html" class="home-link">← Back to Stories</a>
+            <h1 id="story-title">Loading...</h1>
+        </header>
+        
+        <main class="reader-main">
+            <div id="story-content" class="story-content">
+                <div class="loading">Loading story...</div>
+            </div>
+            
+            <div id="story-image" class="story-image-container"></div>
+            
+            <div id="story-text" class="story-text">
+                <p class="loading">Please wait...</p>
+            </div>
+            
+            <div id="story-choices" class="story-choices">
+            </div>
+            
+            <div id="story-end" class="story-end hidden">
+                <h2>The End</h2>
+                <button onclick="window.location.href='index.html'" class="choice-button">
+                    Choose Another Story
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/story-reader.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "storyId": "example-adventure",
+  "metadata": {
+    "title": "Example Adventure",
+    "description": "A sample story to demonstrate the structure",
+    "author": "AI Generated",
+    "created": "2025-11-08"
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "image": "images/start.jpg",
+      "choices": [
+        {
+          "text": "Go left into the forest",
+          "nextNode": "forest"
+        },
+        {
+          "text": "Go right toward the mountains",
+          "nextNode": "mountains"
+        }
+      ]
+    },
+    "forest": {
+      "textFile": "nodes/forest.txt",
+      "image": "images/forest.jpg",
+      "choices": [
+        {
+          "text": "Follow the path deeper",
+          "nextNode": "deep-forest"
+        },
+        {
+          "text": "Return to the crossroads",
+          "nextNode": "start"
+        }
+      ]
+    },
+    "mountains": {
+      "textFile": "nodes/mountains.txt",
+      "image": "images/mountains.jpg",
+      "choices": [
+        {
+          "text": "Climb to the peak",
+          "nextNode": "peak"
+        },
+        {
+          "text": "Return to the crossroads",
+          "nextNode": "start"
+        }
+      ]
+    },
+    "deep-forest": {
+      "textFile": "nodes/deep-forest.txt",
+      "image": "images/deep-forest.jpg",
+      "choices": []
+    },
+    "peak": {
+      "textFile": "nodes/peak.txt",
+      "image": "images/peak.jpg",
+      "choices": []
+    }
+  }
+}

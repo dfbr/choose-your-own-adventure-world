@@ -1,0 +1,10 @@
+[
+  {
+    "storyId": "example-adventure",
+    "title": "Example Adventure",
+    "description": "A sample story to demonstrate the structure. Replace this with generated stories.",
+    "author": "AI Generated",
+    "created": "2025-11-08",
+    "startNode": "start"
+  }
+]
