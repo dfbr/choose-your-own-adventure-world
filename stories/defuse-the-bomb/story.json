@@ -1,0 +1,112 @@
+{
+  "storyId": "defuse-the-bomb",
+  "metadata": {
+    "title": "Defuse the Bomb!",
+    "description": "An adventurous puzzle story where you must solve puzzles to defuse a glitter bomb set by your sibling.",
+    "storyId": "defuse-the-bomb",
+    "author": "AI Generated",
+    "created": "2025-11-08"
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "Solve the first puzzle",
+          "nextNode": "colour-mix-challenge"
+        }
+      ],
+      "image": "images/start.jpg"
+    },
+    "colour-mix-challenge": {
+      "textFile": "nodes/colour-mix-challenge.txt",
+      "choices": [
+        {
+          "text": "Purple",
+          "nextNode": "riddle-challenge"
+        },
+        {
+          "text": "Orange",
+          "nextNode": "glitter-failure"
+        },
+        {
+          "text": "Green",
+          "nextNode": "glitter-failure"
+        }
+      ],
+      "image": "images/colour-mix-challenge.jpg"
+    },
+    "riddle-challenge": {
+      "textFile": "nodes/riddle-challenge.txt",
+      "choices": [
+        {
+          "text": "Echo",
+          "nextNode": "math-challenge"
+        },
+        {
+          "text": "Whisper",
+          "nextNode": "glitter-failure"
+        },
+        {
+          "text": "Leaf",
+          "nextNode": "glitter-failure"
+        },
+        {
+          "text": "Sound",
+          "nextNode": "glitter-failure"
+        }
+      ],
+      "image": "images/riddle-challenge.jpg"
+    },
+    "math-challenge": {
+      "textFile": "nodes/math-challenge.txt",
+      "choices": [
+        {
+          "text": "8",
+          "nextNode": "final-word-challenge"
+        },
+        {
+          "text": "10",
+          "nextNode": "glitter-failure"
+        },
+        {
+          "text": "12",
+          "nextNode": "glitter-failure"
+        }
+      ],
+      "image": "images/math-challenge.jpg"
+    },
+    "final-word-challenge": {
+      "textFile": "nodes/final-word-challenge.txt",
+      "choices": [
+        {
+          "text": "Piano",
+          "nextNode": "success-ending"
+        },
+        {
+          "text": "Map",
+          "nextNode": "glitter-failure"
+        },
+        {
+          "text": "Chest",
+          "nextNode": "glitter-failure"
+        },
+        {
+          "text": "Treasure",
+          "nextNode": "glitter-failure"
+        }
+      ],
+      "image": "images/final-word-challenge.jpg"
+    },
+    "glitter-failure": {
+      "textFile": "nodes/glitter-failure.txt",
+      "choices": [],
+      "image": "images/glitter-failure.jpg"
+    },
+    "success-ending": {
+      "textFile": "nodes/success-ending.txt",
+      "choices": [],
+      "image": "images/success-ending.jpg"
+    }
+  }
+}
