@@ -253,10 +253,14 @@ def main():
     print('   (This may take 30-60 seconds)\n')
     
     story_data = generate_story(client, system_prompt, user_prompt, args.model)
+    # Overwrite the created date with today's date (YYYY-MM-DD)
+    from datetime import date
+    today_str = date.today().isoformat()
+    story_data['metadata']['created'] = today_str
     print(f'✓ Story generated: "{story_data["metadata"]["title"]}"')
     print(f'   Nodes: {len(story_data["nodes"])}')
     print(f'   Story ID: {story_data["metadata"]["storyId"]}\n')
-    
+    print(f'   Date set to: {today_str}')
     # Ensure character consistency across all image prompts
     print('👤 Checking character consistency...')
     ensure_character_consistency(story_data['nodes'])
