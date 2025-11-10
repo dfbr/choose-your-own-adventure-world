@@ -1,0 +1,2 @@
+This is a test prompt file to verify .gitignore is working.
+It should not appear in git status.
