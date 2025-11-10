@@ -52,7 +52,7 @@
           "nextNode": "follow-footprints"
         },
         {
-          "text": "Explore the manor first",
+          "text": "Explore the townhouse first",
           "nextNode": "explore-manor"
         }
       ]
@@ -139,7 +139,7 @@
       "textFile": "nodes/press-green.txt",
       "choices": [
         {
-          "text": "Go to Buskerville Manor",
+          "text": "Go to Buskerville Townhouse",
           "nextNode": "buskerville-manor"
         },
         {
@@ -152,51 +152,16 @@
       "textFile": "nodes/ask-jenkins-legends.txt",
       "choices": [
         {
-          "text": "Check the sheep pen again",
+          "text": "Check the alleyway again",
           "nextNode": "check-sheep-pen"
         },
         {
-          "text": "Go straight to the manor",
+          "text": "Go straight to the townhouse",
           "nextNode": "buskerville-manor"
-        }
-      ]
-    },
-    "approach-dogs": {
-      "textFile": "nodes/approach-dogs.txt",
-      "choices": [
-        {
-          "text": "Investigate where they look",
-          "nextNode": "investigate-woods"
         },
         {
-          "text": "Continue playing with dogs",
-          "nextNode": "play-with-dogs"
-        }
-      ]
-    },
-    "observe-dogs": {
-      "textFile": "nodes/observe-dogs.txt",
-      "choices": [
-        {
-          "text": "Approach the special dog",
-          "nextNode": "approach-special-dog"
-        },
-        {
-          "text": "Call the others over",
-          "nextNode": "call-others"
-        }
-      ]
-    },
-    "head-to-manor": {
-      "textFile": "nodes/head-to-manor.txt",
-      "choices": [
-        {
-          "text": "Read more of the diary",
-          "nextNode": "read-diary"
-        },
-        {
-          "text": "Look around for clues",
-          "nextNode": "look-around-study"
+          "text": "Head back to the townhouse",
+          "nextNode": "head-to-manor"
         }
       ]
     },
@@ -373,7 +338,7 @@
       "textFile": "nodes/dig-object.txt",
       "choices": [
         {
-          "text": "Take the brooch back to the manor",
+          "text": "Take the brooch back to the townhouse",
           "nextNode": "take-brooch-manor"
         },
         {
@@ -412,7 +377,7 @@
       "textFile": "nodes/look-more-treasures.txt",
       "choices": [
         {
-          "text": "Return to the manor",
+          "text": "Return to the townhouse",
           "nextNode": "return-manor"
         },
         {
@@ -438,25 +403,16 @@
       "textFile": "nodes/continue-searching.txt",
       "choices": [
         {
-          "text": "Take the box back to the manor",
+          "text": "Take the box back to the townhouse",
           "nextNode": "take-box-manor"
         },
         {
           "text": "Read a letter here",
           "nextNode": "read-letter"
-        }
-      ]
-    },
-    "read-diary": {
-      "textFile": "nodes/read-diary.txt",
-      "choices": [
-        {
-          "text": "Search for hidden passages",
-          "nextNode": "search-hidden-passages"
         },
         {
-          "text": "Share with Mr. Jenkins",
-          "nextNode": "share-jenkins"
+          "text": "Wait to examine at the townhouse",
+          "nextNode": "wait-examine-chest"
         }
       ]
     },
@@ -555,11 +511,11 @@
       "textFile": "nodes/approach-chest.txt",
       "choices": [
         {
-          "text": "Take some treasure",
+          "text": "Take some treasure with you",
           "nextNode": "take-treasure"
         },
         {
-          "text": "Leave and escape",
+          "text": "Leave it and escape back to safety",
           "nextNode": "escape-treasure"
         }
       ]
@@ -697,7 +653,7 @@
           "nextNode": "share-jenkins-stories"
         },
         {
-          "text": "Head to the woods",
+          "text": "Head to the park",
           "nextNode": "head-woods"
         }
       ]
@@ -706,7 +662,7 @@
       "textFile": "nodes/ask-lights.txt",
       "choices": [
         {
-          "text": "Explore the woods at night",
+          "text": "Explore the park at night",
           "nextNode": "explore-woods-night"
         },
         {
@@ -732,11 +688,11 @@
       "textFile": "nodes/follow-lights.txt",
       "choices": [
         {
-          "text": "Follow the fireflies",
+          "text": "Follow the city lights",
           "nextNode": "follow-fireflies"
         },
         {
-          "text": "Turn back to the village",
+          "text": "Turn back to the neighborhood",
           "nextNode": "turn-back-village"
         }
       ]
@@ -762,7 +718,7 @@
           "nextNode": "explore-well"
         },
         {
-          "text": "Explore another part of the woods",
+          "text": "Explore another part of the park",
           "nextNode": "explore-another-part"
         }
       ]
