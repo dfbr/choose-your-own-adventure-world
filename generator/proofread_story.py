@@ -215,14 +215,34 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python proofread_story.py <story-id>")
         print("\nExample: python proofread_story.py amulets-guardian")
-        print("\nAvailable stories:")
-        
-        # List available story directories
+        print("\nStories in 'stories/' directory:")
+        # List all story directories with story.json
+        all_story_dirs = []
         if STORIES_DIR.exists():
             for item in sorted(STORIES_DIR.iterdir()):
                 if item.is_dir() and (item / 'story.json').exists():
-                    print(f"  - {item.name}")
-        
+                    all_story_dirs.append(item.name)
+        for s in all_story_dirs:
+            print(f"  - {s}")
+
+        # Load published stories from index.json
+        index_path = STORIES_DIR / 'index.json'
+        published = set()
+        if index_path.exists():
+            try:
+                with open(index_path, 'r', encoding='utf-8') as f:
+                    index = json.load(f)
+                published = {entry['storyId'] for entry in index}
+            except Exception as e:
+                print(f"⚠️  Could not read index.json: {e}")
+
+        unpublished = [s for s in all_story_dirs if s not in published]
+        if unpublished:
+            print("\nStories NOT yet proofread/published:")
+            for s in unpublished:
+                print(f"  - {s}  <-- not in index.json")
+        else:
+            print("\nAll stories with story.json are published (in index.json).")
         sys.exit(1)
     
     story_id = sys.argv[1]
