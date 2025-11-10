@@ -239,8 +239,30 @@ def main():
         unpublished = [s for s in all_story_dirs if s not in published]
         if unpublished:
             print("\nStories NOT yet proofread/published:")
-            for s in unpublished:
-                print(f"  - {s}  <-- not in index.json")
+            for idx, s in enumerate(unpublished, 1):
+                print(f"  {idx}. {s}  <-- not in index.json")
+            print()
+            while True:
+                choice = input("Enter the number of a story to proofread, or q to quit: ").strip().lower()
+                if choice in ('q', 'quit', ''):
+                    print("Exiting.")
+                    sys.exit(0)
+                try:
+                    num = int(choice)
+                    if 1 <= num <= len(unpublished):
+                        story_id = unpublished[num-1]
+                        print(f"\nStarting proofreading for: {story_id}\n")
+                        success = proofread_story(story_id)
+                        if success:
+                            print("\n✨ Done! Story is now published.")
+                            sys.exit(0)
+                        else:
+                            print("\n⚠️  Proofreading incomplete or story rejected.")
+                            sys.exit(1)
+                    else:
+                        print(f"Please enter a number between 1 and {len(unpublished)}, or q to quit.")
+                except ValueError:
+                    print(f"Please enter a number between 1 and {len(unpublished)}, or q to quit.")
         else:
             print("\nAll stories with story.json are published (in index.json).")
         sys.exit(1)
