@@ -1,0 +1,57 @@
+Generate a Choose Your Own Adventure story with the following outline:
+
+Title: Sherlock Moans and the hounds of buskerville
+
+Categories: [Select all that apply: choose-your-own-adventure, adventure, mystery, science, historical]
+
+Setting: The action takes place in modern day London where our protagonist is a Sherlock Holmes type character who solves crimes and other mysteries. While set in modern London, do not have characters using smart phones or other similar technology.
+
+Protagonist: "Sherlock Moans" is a Sherlock Holmes type character but known for their moaning and sighing.
+
+Main Story Beats:
+- The story should follow the rough structure of Sherlock Holmes and the hounds of the baskerville. When in doubt, use the story structure and points but transposed to a modern London setting.
+- Multiple endings: The story should roughly follow the structure of the reference text.
+
+Tone: the story should be more of a meander through london and the adventure. Keep the action going but give lots of atmosphere.
+
+Branching Structure: As required to keep the story on track. You can decide.
+
+Special Requirements: The story should reflect and celebrate the multi-culturalism of modern day London. The story should be at the top end of the length requirements set out in the system prompt.
+
+Character Bio (for consistent images – fill what matters, delete rest):
+	Name: Sherlock Moans
+	Age Range: tween
+	Gender: girl
+	Pronouns: she/her
+	
+	Ethnicity & Skin Tone: Afro-Caribbean
+	Skin Tone: deep brown
+	
+	Hair Type: afro
+	Hair Colour: black
+	Hair Length: shoulder-length
+	Hair Style: loose
+	
+	Eyes: hazel
+		
+	Body Type & Build: average
+	Height: average
+	
+	Clothing Style: vintage style
+	
+	Accessories: deer-stalker hat
+	
+	Signature Colours: tweed
+	
+	Personality Keywords (for tone): curious, brave, logical, determined
+	
+	Art Style Preferences: sepia line drawings
+	
+	Lighting/Mood Preferences: dark and moody (while still appropriate for a kids story)
+	
+	IMPORTANT: Repeat EXACT character appearance (including disability aids, cultural markers, and physical traits) in EVERY image prompt to maintain consistency.
+
+Image Style Constraints (global – optional):
+	Palette: warm
+	Background Simplicity: medium detail
+	Do NOT include any text in images.
