@@ -28,7 +28,7 @@ async function loadStories() {
         // Display stories
         displayStories(allStories);
         
-        // Setup category filtering
+        // Setup category filtering (this will hide unused categories)
         setupCategoryFilters();
         
     } catch (error) {
@@ -67,26 +67,123 @@ function displayStories(stories) {
  * Setup category filter buttons
  */
 function setupCategoryFilters() {
-    const categoryButtons = document.querySelectorAll('.category-btn');
+    const categoryMainContainer = document.getElementById('category-main');
+    const categoryMoreContainer = document.getElementById('category-more');
     const expandButton = document.getElementById('expand-categories');
-    const moreCategories = document.querySelector('.category-more');
     
-    // Setup expand/collapse button
-    if (expandButton && moreCategories) {
+    // Collect all categories that exist in stories
+    const usedCategories = new Set();
+    allStories.forEach(story => {
+        if (story.categories && Array.isArray(story.categories)) {
+            story.categories.forEach(cat => usedCategories.add(cat));
+        }
+    });
+    
+    // Define priority categories that should appear first (if they exist)
+    const priorityCategories = ['choose-your-own-adventure', 'puzzle'];
+    
+    // Define nice display names for categories
+    const categoryDisplayNames = {
+        'choose-your-own-adventure': 'CYOA',
+        'puzzle': 'Puzzle',
+        'adventure': 'Adventure',
+        'mystery': 'Mystery',
+        'magic': 'Magic',
+        'fantasy': 'Fantasy',
+        'science': 'Science',
+        'historical': 'Historical',
+        'educational': 'Educational',
+        'comedy': 'Comedy',
+        'friendship': 'Friendship',
+        'family': 'Family',
+        'animals': 'Animals',
+        'nature': 'Nature',
+        'space': 'Space',
+        'ocean': 'Ocean',
+        'sports': 'Sports',
+        'music': 'Music',
+        'art': 'Art',
+        'coding': 'Coding'
+    };
+    
+    // Convert Set to sorted array
+    const sortedCategories = Array.from(usedCategories).sort();
+    
+    // Separate priority categories from others
+    const mainCategories = [];
+    const moreCategories = [];
+    
+    sortedCategories.forEach(cat => {
+        if (priorityCategories.includes(cat)) {
+            mainCategories.push(cat);
+        } else {
+            moreCategories.push(cat);
+        }
+    });
+    
+    // Sort priority categories according to priority order
+    mainCategories.sort((a, b) => {
+        return priorityCategories.indexOf(a) - priorityCategories.indexOf(b);
+    });
+    
+    // Create buttons for main categories
+    mainCategories.forEach(category => {
+        const button = createCategoryButton(category, categoryDisplayNames);
+        categoryMainContainer.appendChild(button);
+    });
+    
+    // Create buttons for "more" categories
+    moreCategories.forEach(category => {
+        const button = createCategoryButton(category, categoryDisplayNames);
+        categoryMoreContainer.appendChild(button);
+    });
+    
+    // Show/hide expand button based on whether there are more categories
+    if (moreCategories.length > 0) {
+        expandButton.classList.remove('hidden');
+        
+        // Setup expand/collapse functionality
         expandButton.addEventListener('click', () => {
-            const isHidden = moreCategories.classList.contains('hidden');
+            const isHidden = categoryMoreContainer.classList.contains('hidden');
             
             if (isHidden) {
-                moreCategories.classList.remove('hidden');
+                categoryMoreContainer.classList.remove('hidden');
                 expandButton.textContent = 'Less ▲';
             } else {
-                moreCategories.classList.add('hidden');
+                categoryMoreContainer.classList.add('hidden');
                 expandButton.textContent = 'More ▼';
             }
         });
     }
     
-    // Setup category filter buttons
+    // Setup click handlers for all category buttons (including "All Stories")
+    setupCategoryClickHandlers();
+}
+
+/**
+ * Create a category button element
+ * @param {string} category - Category identifier
+ * @param {Object} displayNames - Map of category IDs to display names
+ * @returns {HTMLElement} Button element
+ */
+function createCategoryButton(category, displayNames) {
+    const button = document.createElement('button');
+    button.className = 'category-btn';
+    button.setAttribute('data-category', category);
+    
+    // Use custom display name if available, otherwise format the category name
+    const displayName = displayNames[category] || formatCategoryName(category);
+    button.textContent = displayName;
+    
+    return button;
+}
+
+/**
+ * Setup click handlers for category buttons
+ */
+function setupCategoryClickHandlers() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');

@@ -63,6 +63,13 @@ tagline {
     box-shadow: var(--shadow);
 }
 
+.category-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 .category-more {
     display: flex;
     flex-wrap: wrap;
@@ -293,6 +300,11 @@ footer {
     .category-expand-btn {
         padding: 8px 15px;
         font-size: 12pt;
+    }
+    
+    .category-main {
+        gap: 8px;
+        width: 100%;
     }
     
     .category-more {
