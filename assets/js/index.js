@@ -68,7 +68,25 @@ function displayStories(stories) {
  */
 function setupCategoryFilters() {
     const categoryButtons = document.querySelectorAll('.category-btn');
+    const expandButton = document.getElementById('expand-categories');
+    const moreCategories = document.querySelector('.category-more');
     
+    // Setup expand/collapse button
+    if (expandButton && moreCategories) {
+        expandButton.addEventListener('click', () => {
+            const isHidden = moreCategories.classList.contains('hidden');
+            
+            if (isHidden) {
+                moreCategories.classList.remove('hidden');
+                expandButton.textContent = 'Less ▲';
+            } else {
+                moreCategories.classList.add('hidden');
+                expandButton.textContent = 'More ▼';
+            }
+        });
+    }
+    
+    // Setup category filter buttons
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
             const category = button.getAttribute('data-category');
@@ -111,22 +129,12 @@ function createStoryCard(story) {
     card.href = buildPath(`reader.html?story=${story.storyId}&node=${story.startNode}`);
     card.className = 'story-card';
     
-    // Build categories HTML
-    let categoriesHtml = '';
-    if (story.categories && story.categories.length > 0) {
-        const categoryTags = story.categories
-            .map(cat => `<span class="category-tag">${formatCategoryName(cat)}</span>`)
-            .join('');
-        categoriesHtml = `<div class="categories">${categoryTags}</div>`;
-    }
-    
     card.innerHTML = `
         <h2>${story.title}</h2>
         <p class="description">${story.description || 'An exciting adventure awaits...'}</p>
         <div class="meta">
             <span>${story.created ? formatDate(story.created) : 'Recently added'}</span>
         </div>
-        ${categoriesHtml}
     `;
     
     return card;
