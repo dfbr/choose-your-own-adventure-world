@@ -22,5 +22,13 @@
     "author": "AI Generated",
     "created": "2025-11-10",
     "startNode": "start"
+  },
+  {
+    "storyId": "defuse-the-bomb-2",
+    "title": "Defuse the Bomb 2!",
+    "description": "An adventurous puzzle story where you must defuse a glitter bomb set by your sibling.",
+    "author": "AI Generated",
+    "created": "2025-11-10",
+    "startNode": "start"
   }
 ]

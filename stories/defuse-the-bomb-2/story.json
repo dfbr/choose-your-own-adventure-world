@@ -1,0 +1,304 @@
+{
+  "storyId": "defuse-the-bomb-2",
+  "metadata": {
+    "title": "Defuse the Bomb 2!",
+    "description": "An adventurous puzzle story where you must defuse a glitter bomb set by your sibling.",
+    "storyId": "defuse-the-bomb-2",
+    "author": "AI Generated",
+    "created": "2025-11-10"
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "An Echo",
+          "nextNode": "second-challenge"
+        },
+        {
+          "text": "A Shadow",
+          "nextNode": "glitter-ending-1"
+        },
+        {
+          "text": "A Tree",
+          "nextNode": "glitter-ending-2"
+        },
+        {
+          "text": "A Dream",
+          "nextNode": "glitter-ending-3"
+        }
+      ],
+      "image": "images/start.jpg"
+    },
+    "second-challenge": {
+      "textFile": "nodes/second-challenge.txt",
+      "choices": [
+        {
+          "text": "A Piano",
+          "nextNode": "third-challenge"
+        },
+        {
+          "text": "A Map",
+          "nextNode": "glitter-ending-4"
+        },
+        {
+          "text": "A Computer Keyboard",
+          "nextNode": "glitter-ending-5"
+        },
+        {
+          "text": "A Book",
+          "nextNode": "glitter-ending-6"
+        }
+      ],
+      "image": "images/second-challenge.jpg"
+    },
+    "third-challenge": {
+      "textFile": "nodes/third-challenge.txt",
+      "choices": [
+        {
+          "text": "Green",
+          "nextNode": "fourth-challenge"
+        },
+        {
+          "text": "Purple",
+          "nextNode": "glitter-ending-7"
+        },
+        {
+          "text": "Orange",
+          "nextNode": "glitter-ending-8"
+        },
+        {
+          "text": "Red",
+          "nextNode": "glitter-ending-9"
+        }
+      ],
+      "image": "images/third-challenge.jpg"
+    },
+    "fourth-challenge": {
+      "textFile": "nodes/fourth-challenge.txt",
+      "choices": [
+        {
+          "text": "A Candle",
+          "nextNode": "fifth-challenge"
+        },
+        {
+          "text": "A Tree",
+          "nextNode": "glitter-ending-10"
+        },
+        {
+          "text": "A Mountain",
+          "nextNode": "glitter-ending-11"
+        },
+        {
+          "text": "A Pencil",
+          "nextNode": "glitter-ending-12"
+        }
+      ],
+      "image": "images/fourth-challenge.jpg"
+    },
+    "fifth-challenge": {
+      "textFile": "nodes/fifth-challenge.txt",
+      "choices": [
+        {
+          "text": "3",
+          "nextNode": "sixth-challenge"
+        },
+        {
+          "text": "2",
+          "nextNode": "glitter-ending-13"
+        },
+        {
+          "text": "4",
+          "nextNode": "glitter-ending-14"
+        },
+        {
+          "text": "1",
+          "nextNode": "glitter-ending-15"
+        }
+      ],
+      "image": "images/fifth-challenge.jpg"
+    },
+    "sixth-challenge": {
+      "textFile": "nodes/sixth-challenge.txt",
+      "choices": [
+        {
+          "text": "Neither",
+          "nextNode": "seventh-challenge"
+        },
+        {
+          "text": "The yolk of the egg is white",
+          "nextNode": "glitter-ending-16"
+        },
+        {
+          "text": "The yolk of the egg are white",
+          "nextNode": "glitter-ending-17"
+        }
+      ],
+      "image": "images/sixth-challenge.jpg"
+    },
+    "seventh-challenge": {
+      "textFile": "nodes/seventh-challenge.txt",
+      "choices": [
+        {
+          "text": "Teapot",
+          "nextNode": "eighth-challenge"
+        },
+        {
+          "text": "Tent",
+          "nextNode": "glitter-ending-18"
+        },
+        {
+          "text": "Tart",
+          "nextNode": "glitter-ending-19"
+        },
+        {
+          "text": "Tint",
+          "nextNode": "glitter-ending-20"
+        }
+      ],
+      "image": "images/seventh-challenge.jpg"
+    },
+    "eighth-challenge": {
+      "textFile": "nodes/eighth-challenge.txt",
+      "choices": [
+        {
+          "text": "A Windmill",
+          "nextNode": "defuse-success"
+        },
+        {
+          "text": "A Bird",
+          "nextNode": "glitter-ending-21"
+        },
+        {
+          "text": "A Clock",
+          "nextNode": "glitter-ending-22"
+        },
+        {
+          "text": "A Helicopter",
+          "nextNode": "glitter-ending-23"
+        }
+      ],
+      "image": "images/eighth-challenge.jpg"
+    },
+    "defuse-success": {
+      "textFile": "nodes/defuse-success.txt",
+      "choices": [],
+      "image": "images/defuse-success.jpg"
+    },
+    "glitter-ending-1": {
+      "textFile": "nodes/glitter-ending-1.txt",
+      "choices": [],
+      "image": "images/glitter-ending-1.jpg"
+    },
+    "glitter-ending-2": {
+      "textFile": "nodes/glitter-ending-2.txt",
+      "choices": [],
+      "image": "images/glitter-ending-2.jpg"
+    },
+    "glitter-ending-3": {
+      "textFile": "nodes/glitter-ending-3.txt",
+      "choices": [],
+      "image": "images/glitter-ending-3.jpg"
+    },
+    "glitter-ending-4": {
+      "textFile": "nodes/glitter-ending-4.txt",
+      "choices": [],
+      "image": "images/glitter-ending-4.jpg"
+    },
+    "glitter-ending-5": {
+      "textFile": "nodes/glitter-ending-5.txt",
+      "choices": [],
+      "image": "images/glitter-ending-5.jpg"
+    },
+    "glitter-ending-6": {
+      "textFile": "nodes/glitter-ending-6.txt",
+      "choices": [],
+      "image": "images/glitter-ending-6.jpg"
+    },
+    "glitter-ending-7": {
+      "textFile": "nodes/glitter-ending-7.txt",
+      "choices": [],
+      "image": "images/glitter-ending-7.jpg"
+    },
+    "glitter-ending-8": {
+      "textFile": "nodes/glitter-ending-8.txt",
+      "choices": [],
+      "image": "images/glitter-ending-8.jpg"
+    },
+    "glitter-ending-9": {
+      "textFile": "nodes/glitter-ending-9.txt",
+      "choices": [],
+      "image": "images/glitter-ending-9.jpg"
+    },
+    "glitter-ending-10": {
+      "textFile": "nodes/glitter-ending-10.txt",
+      "choices": [],
+      "image": "images/glitter-ending-10.jpg"
+    },
+    "glitter-ending-11": {
+      "textFile": "nodes/glitter-ending-11.txt",
+      "choices": [],
+      "image": "images/glitter-ending-11.jpg"
+    },
+    "glitter-ending-12": {
+      "textFile": "nodes/glitter-ending-12.txt",
+      "choices": [],
+      "image": "images/glitter-ending-12.jpg"
+    },
+    "glitter-ending-13": {
+      "textFile": "nodes/glitter-ending-13.txt",
+      "choices": [],
+      "image": "images/glitter-ending-13.jpg"
+    },
+    "glitter-ending-14": {
+      "textFile": "nodes/glitter-ending-14.txt",
+      "choices": [],
+      "image": "images/glitter-ending-14.jpg"
+    },
+    "glitter-ending-15": {
+      "textFile": "nodes/glitter-ending-15.txt",
+      "choices": [],
+      "image": "images/glitter-ending-15.jpg"
+    },
+    "glitter-ending-16": {
+      "textFile": "nodes/glitter-ending-16.txt",
+      "choices": [],
+      "image": "images/glitter-ending-16.jpg"
+    },
+    "glitter-ending-17": {
+      "textFile": "nodes/glitter-ending-17.txt",
+      "choices": [],
+      "image": "images/glitter-ending-17.jpg"
+    },
+    "glitter-ending-18": {
+      "textFile": "nodes/glitter-ending-18.txt",
+      "choices": [],
+      "image": "images/glitter-ending-18.jpg"
+    },
+    "glitter-ending-19": {
+      "textFile": "nodes/glitter-ending-19.txt",
+      "choices": [],
+      "image": "images/glitter-ending-19.jpg"
+    },
+    "glitter-ending-20": {
+      "textFile": "nodes/glitter-ending-20.txt",
+      "choices": [],
+      "image": "images/glitter-ending-20.jpg"
+    },
+    "glitter-ending-21": {
+      "textFile": "nodes/glitter-ending-21.txt",
+      "choices": [],
+      "image": "images/glitter-ending-21.jpg"
+    },
+    "glitter-ending-22": {
+      "textFile": "nodes/glitter-ending-22.txt",
+      "choices": [],
+      "image": "images/glitter-ending-22.jpg"
+    },
+    "glitter-ending-23": {
+      "textFile": "nodes/glitter-ending-23.txt",
+      "choices": [],
+      "image": "images/glitter-ending-23.jpg"
+    }
+  }
+}

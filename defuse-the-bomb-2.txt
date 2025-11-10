@@ -1,0 +1,20 @@
+Generate a Choose Your Own Adventure puzzle story with the following outline:
+
+Title: Defuse the bomb 2!
+
+Setting: You are in front of a glitter bomb. You must defuse it or be covvered in glitter.
+
+Protagonist: You are an adventerous young person from Switzerland who enjoys cracking codes and answering puzzles and trick questions.
+
+Main Story Beats:
+- You are in front of a glitter bomb but you hate glitter. If it goes off it will be on your clothes, in your hair and on your face. Although you'll look fabulous it is not the look you're going for.
+- A darstardly older sibling has set you a number of challenges (minimum 8 challenges) and in order to defuse the glitter bomb, you must solve them all correctly. One false answer and you'll be covered in that glitter.
+- The puzzles are all fun but consist of different challenges and puzzles.
+- Multiple endings: There are only two possible endings (although one can happen multiple times). Either you defuse the bomb (and get the gligger out before throwing it over your sibling in a celebration of all things sparkly) or the bomb goes off and you get glittered!
+- If the bomb goes off, the reader must get an explanation of how they could have answered the question correctly as well as a "dad joke" about how they look glittery.
+
+Tone: The story should be fun but have a sense of urgency to make the reader keey to complete the challenge.
+
+Branching Structure: The story should mainly stay on track with each chapter giving the reader a new challenge/puzzle/riddle to solve (with up to five answers only one of which is correct - all incorrect answers can lead an ending chapter). After successfully defusing the bomb, the fear of glitter is overcome and there's a celebration of all things glittery with the sibling.
+
+Special Requirements: Write in British English.
