@@ -26,7 +26,7 @@
           "nextNode": "eavesdrop-conversation"
         },
         {
-          "text": "Go straight to Buskerville Manor",
+          "text": "Go straight to Buskerville Townhouse",
           "nextNode": "buskerville-manor"
         }
       ]
@@ -35,7 +35,7 @@
       "textFile": "nodes/eavesdrop-conversation.txt",
       "choices": [
         {
-          "text": "Ask Mr. Jenkins about the sheep",
+          "text": "Ask Mr. Jenkins about his missing cat",
           "nextNode": "ask-jenkins"
         },
         {
@@ -48,7 +48,7 @@
       "textFile": "nodes/buskerville-manor.txt",
       "choices": [
         {
-          "text": "Follow the footprints in the woods",
+          "text": "Follow the footprints into the park",
           "nextNode": "follow-footprints"
         },
         {
