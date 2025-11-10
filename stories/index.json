@@ -5,7 +5,8 @@
     "description": "Join Luna the cat on a magical adventure to protect a special amulet and make new friends!",
     "author": "AI Generated (Example)",
     "created": "2025-11-08",
-    "startNode": "start"
+    "startNode": "start",
+    "categories": ["choose-your-own-adventure", "magic", "adventure", "fantasy"]
   },
   {
     "storyId": "the-great-escape",
@@ -13,7 +14,8 @@
     "description": "A young student must use their wits to escape a castle and stop a criminal gang.",
     "author": "AI Generated",
     "created": "2025-11-08",
-    "startNode": "start"
+    "startNode": "start",
+    "categories": ["choose-your-own-adventure", "mystery", "adventure"]
   },
   {
     "storyId": "defuse-the-bomb",
@@ -21,7 +23,8 @@
     "description": "An adventurous puzzle story where you must solve puzzles to defuse a glitter bomb set by your sibling.",
     "author": "AI Generated",
     "created": "2025-11-10",
-    "startNode": "start"
+    "startNode": "start",
+    "categories": ["puzzle", "adventure", "science"]
   },
   {
     "storyId": "defuse-the-bomb-2",
@@ -29,6 +32,7 @@
     "description": "An adventurous puzzle story where you must defuse a glitter bomb set by your sibling.",
     "author": "AI Generated",
     "created": "2025-11-10",
-    "startNode": "start"
+    "startNode": "start",
+    "categories": ["puzzle", "adventure", "science"]
   }
 ]

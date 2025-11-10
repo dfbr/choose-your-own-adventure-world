@@ -48,7 +48,8 @@ You MUST return your response as a single, valid JSON object with the following 
     "description": "Brief 1-2 sentence description for the story list",
     "storyId": "lowercase-hyphenated-id",
     "author": "AI Generated",
-    "created": "2025-11-08"
+    "created": "2025-11-08",
+    "categories": ["puzzle", "adventure", "educational"]
   },
   "nodes": {
     "start": {
@@ -84,6 +85,7 @@ You MUST return your response as a single, valid JSON object with the following 
 5. **Depth**: Create stories with 6-10 total puzzle nodes (plus endings). Each puzzle node should have at least one unique ending for a wrong answer.
 6. **Multiple Endings**: There should be at least 3 different ending nodes (nodes with no choices), including both "failure" endings (from wrong answers) and a "success" ending (for solving all puzzles).
 7. **Learning Focus**: All puzzles must be relevant to the story and present a learning opportunity (math, logic, language, science, etc.).
+8. **Categories**: The user may suggest categories for their story. Review their suggestions and select the categories that best match the puzzle story you've created. Puzzle stories should always include "puzzle" as a category. You may add or remove other categories as appropriate. Choose 2-5 categories total from: puzzle, adventure, mystery, magic, fantasy, science, historical, educational, comedy, friendship, family, animals, nature, space, ocean, sports, music, art, coding.
 
 
 ## Puzzle Narrative Guidelines

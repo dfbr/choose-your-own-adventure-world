@@ -31,7 +31,8 @@ You MUST return your response as a single, valid JSON object with the following 
     "description": "Brief 1-2 sentence description for the story list",
     "storyId": "lowercase-hyphenated-id",
     "author": "AI Generated",
-    "created": "2025-11-08"
+    "created": "2025-11-08",
+    "categories": ["choose-your-own-adventure", "magic", "adventure"]
   },
   "nodes": {
     "start": {
@@ -65,6 +66,10 @@ You MUST return your response as a single, valid JSON object with the following 
 4. **Depth**: Create stories with 8-15 total nodes
 5. **Multiple Endings**: Include at least 3 different ending nodes (nodes with no choices)
 6. **Convergence**: Paths can converge back to common nodes to create interesting loops
+
+## Metadata Requirements
+
+1. **Categories**: The user may suggest categories for their story. Review their suggestions and select the categories that best match the story you've created. You may add or remove categories as appropriate. Choose 2-5 categories total from: choose-your-own-adventure, puzzle, adventure, mystery, magic, fantasy, science, historical, educational, comedy, friendship, family, animals, nature, space, ocean, sports, music, art, coding.
 
 ## Narrative Guidelines
 

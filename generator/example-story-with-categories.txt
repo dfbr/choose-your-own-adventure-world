@@ -1,0 +1,63 @@
+Generate a Choose Your Own Adventure story with the following outline:
+
+Title: The Secret Garden Portal
+
+Categories: magic, adventure, nature, friendship
+
+Setting: A modern-day neighborhood with an overgrown community garden that hides a magical portal to a nature realm where plants and animals can talk. The garden is threatened by developers.
+
+Protagonist: You are an 8-year-old child who loves plants and has just moved to a new neighborhood. You're shy but curious, and you discover the garden while exploring.
+
+Main Story Beats:
+- Discover the hidden garden and meet a talking squirrel
+- Learn about the portal and the magical nature realm
+- Find out developers want to tear down the garden
+- Gather magical seeds to save the garden
+- Rally neighborhood friends to help
+- Multiple endings: Successfully save the garden and keep the portal secret, save the garden but the magic fades, or the garden is saved but becomes too popular and the magic is discovered
+
+Tone: Warm, gentle, and hopeful with themes of environmental stewardship and community action. Age-appropriate for early readers (ages 5-8, K-2 reading level). Empowering message about kids making a difference.
+
+Branching Structure: 3-4 main paths with some convergence points. Include moments where choosing to be brave vs. cautious leads to different helpers. Some paths focus on magical solutions, others on practical community organizing.
+
+Special Requirements: Use simple plant and animal vocabulary. Include gentle lessons about ecosystems and working together. Keep all magical elements light and fun, not scary.
+
+Character Bio (for consistent images):
+	Name: Alex
+	Age Range: child (8 years old)
+	Gender: non-binary
+	Pronouns: they/them
+	
+	Ethnicity & Skin Tone: Southeast Asian / tan
+	Skin Tone: light brown with freckles
+	
+	Hair Type: wavy
+	Hair Colour: dark brown
+	Hair Length: shoulder-length
+	Hair Style: loose with a headband
+	
+	Eyes: dark brown / almond-shaped
+	
+	Face Features: freckles / round face / wide nose / full lips
+	
+	Body Type & Build: average / short
+	Height: short
+	
+	Clothing Style: casual jeans and t-shirt with nature motifs (leaf patterns, animal prints)
+	
+	Accessories: backpack / glasses / nature journal / magnifying glass
+	
+	Signature Colours: green t-shirt, blue jeans, orange backpack
+	
+	Personality Keywords: curious / kind / thoughtful / patient / brave when it matters
+	
+	Art Style Preferences: children's book illustration / soft watercolour / warm tones
+	
+	Lighting/Mood Preferences: warm daylight / soft outdoor glow / golden hour in the garden
+	
+	IMPORTANT: Repeat EXACT character appearance in EVERY image prompt to maintain consistency.
+
+Image Style Constraints:
+	Palette: warm / natural greens and earth tones
+	Background Simplicity: medium detail (enough to show garden environment)
+	Do NOT include any text in images.

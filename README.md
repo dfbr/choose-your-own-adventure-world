@@ -38,10 +38,13 @@ Lists all available stories with metadata:
     "description": "Brief description",
     "author": "AI Generated",
     "created": "2025-11-08",
-    "startNode": "start"
+    "startNode": "start",
+    "categories": ["adventure", "magic", "fantasy"]
   }
 ]
 ```
+
+Stories are sorted by creation date (newest first) on the index page. Use the category navigation bar to filter stories by genre.
 
 ### Story Structure (`stories/[story-id]/story.json`)
 Defines the story graph:
@@ -73,12 +76,38 @@ One image per node (optional but recommended).
 ## Features
 
 - ✅ Clean, responsive UI
+- ✅ Category-based filtering with navigation bar
+- ✅ Stories sorted by date (newest first)
 - ✅ Browser back/forward navigation support
 - ✅ Image support for each story node
 - ✅ Multiple endings per story
 - ✅ Static site - works with GitHub Pages
 - ✅ No user state tracking
-- ✅ AI story generation with OpenAI GPT-4 and DALL-E 3
+- ✅ AI story generation with OpenAI GPT-4o-mini and DALL-E 3
+
+## Available Categories
+
+Stories can be tagged with multiple categories:
+- `choose-your-own-adventure` - Classic CYOA format
+- `puzzle` - Puzzle-based progression
+- `adventure` - Adventure themes
+- `mystery` - Mystery and detective stories
+- `magic` - Magical elements
+- `fantasy` - Fantasy worlds
+- `science` - Science and STEM topics
+- `historical` - Historical settings
+- `educational` - Learning-focused
+- `comedy` - Humorous stories
+- `friendship` - Stories about friends
+- `family` - Family-centered stories
+- `animals` - Animal characters
+- `nature` - Nature and outdoor themes
+- `space` - Space exploration
+- `ocean` - Ocean and underwater themes
+- `sports` - Sports-related stories
+- `music` - Musical themes
+- `art` - Art and creativity
+- `coding` - Programming concepts
 
 ## Local Development
 
@@ -105,6 +134,17 @@ This site is designed for GitHub Pages. Simply push to your repository and enabl
 
 Stories are generated using the OpenAI API. See `generator/README.md` for detailed instructions.
 
+### How Categories Work
+
+1. **Author specifies categories** in the user prompt (story-prompt-template.txt):
+   ```
+   Categories: magic, adventure, nature, friendship
+   ```
+
+2. **AI validates and refines** the categories based on the actual story it creates. It may add categories that fit better or remove ones that don't match.
+
+3. **Categories are automatically added** to the story metadata and will appear in the filtering system on the index page.
+
 ### Quick Start
 
 ```bash
@@ -112,11 +152,15 @@ Stories are generated using the OpenAI API. See `generator/README.md` for detail
 cd generator
 pip install -r requirements.txt
 
+# Create your story prompt from the template
+cp story-prompt-template.txt my-story.txt
+# Edit my-story.txt with your story details including categories
+
 # Generate a story
 python generate_story.py \
   --api-key YOUR_OPENAI_API_KEY \
   --system-prompt system-prompt.txt \
-  --user-prompt example-story-prompt.txt
+  --user-prompt my-story.txt
 ```
 
 The generator will:

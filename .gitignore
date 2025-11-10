@@ -37,3 +37,7 @@ temp/
 *apikey*
 secrets.json
 config.local.json
+
+# Story prompt archives (private user prompts)
+generator/prompts-archive/*.txt
+generator/prompts-archive/**/*.txt

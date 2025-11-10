@@ -2,6 +2,8 @@ Generate a Choose Your Own Adventure story with the following outline:
 
 Title: [Story Title]
 
+Categories: [Select all that apply: choose-your-own-adventure, puzzle, adventure, mystery, magic, fantasy, science, historical, educational, comedy, friendship, family, animals, nature, space, ocean, sports, music, art, coding]
+
 Setting: [Describe the world, time period, location, and atmosphere]
 
 Protagonist: [Describe who the reader is in this story - their role, background, starting situation]
@@ -19,3 +21,49 @@ Tone: [Describe the overall mood and style - adventurous, mysterious, humorous, 
 Branching Structure: [Describe how paths should diverge and reconnect - number of distinct paths, whether some paths loop back, complexity level]
 
 Special Requirements: [Any additional constraints, themes to emphasize, vocabulary level, educational goals, etc.]
+
+Character Bio (for consistent images – fill what matters, delete rest):
+	Name: [Optional character name]
+	Age Range: [child / tween / teen / young adult / adult / older adult]
+	Gender: [girl / boy / non-binary / gender-fluid / agender / two-spirit / unspecified]
+	Pronouns: [she/her / he/him / they/them / custom pronouns / unspecified]
+	
+	Ethnicity & Skin Tone: [East Asian / South Asian / Southeast Asian / Middle Eastern / African / Afro-Caribbean / Indigenous / Pacific Islander / Latine/Hispanic / European / multiracial / other]
+	Skin Tone: [very fair / fair / light / olive / tan / light brown / medium brown / deep brown / dark brown / very dark / freckled / vitiligo patches]
+	
+	Hair Type: [straight / wavy / curly / coily / kinky / afro / locs / braided / cornrows / twists / bantu knots / natural texture]
+	Hair Colour: [black / dark brown / medium brown / light brown / blonde / platinum / red / auburn / grey / white / silver / dyed (specify color) / two-tone / rainbow]
+	Hair Length: [very short / short / ear-length / chin-length / shoulder-length / mid-back / long / very long / shaved / bald]
+	Hair Style: [loose / ponytail / bun / braids / pigtails / headwrap / hijab / turban / hat / natural / buzzed / mohawk / other]
+	
+	Eyes: [blue / green / brown / dark brown / hazel / grey / amber / black / heterochromia (two colors) / monolid / hooded / almond-shaped / round]
+	
+	Face Features: [freckles / moles / beauty marks / dimples / cleft chin / round face / oval face / square face / heart-shaped face / long face / wide nose / button nose / hooked nose / flat bridge / high cheekbones / full lips / thin lips / gap teeth / braces / facial hair (beard/mustache) / scar / birthmark]
+	
+	Body Type & Build: [petite / slim / lean / average / curvy / athletic / muscular / stocky / heavyset / plus-size / tall and thin / short and broad]
+	Height: [very short / short / below average / average / above average / tall / very tall]
+	
+	Mobility & Physical Traits: [walks independently / uses wheelchair (manual/power) / uses crutches / uses cane / uses walker / prosthetic limb (arm/leg) / wears leg brace / ambulatory wheelchair user / none]
+	
+	Visible Disabilities & Differences: [wears glasses / wears hearing aid / uses cochlear implant / wears eye patch / has guide dog / uses white cane / wears AFO/leg braces / limb difference / port-wine stain / facial difference / Down syndrome features / cerebral palsy posture / autism stim tools (fidget/headphones) / none / other]
+	
+	Clothing Style: [casual jeans and t-shirt / hoodie and joggers / dress / skirt / explorer outfit / school uniform / traditional cultural wear / hijab/modest dress / futuristic suit / fantasy tunic / lab coat / sporty athletic wear / formal suit / vintage style / punk/alternative / colorful patterned / adaptive clothing / other]
+	
+	Accessories: [backpack / wheelchair / crutches / cane / walker / prosthetic / glasses / sunglasses / hearing aids / headphones / watch / bracelet / necklace / pendant / ring / hat / beanie / baseball cap / hijab / turban / head wrap / goggles / badge / pin / patch / service dog vest / medical alert bracelet / sensory toy / none / other]
+	
+	Cultural & Religious Markers: [hijab / turban / kippah / cross necklace / bindi / tilaka / mala beads / prayer beads / headscarf / traditional jewelry / henna / cultural patterns on clothing / none / other]
+	
+	Signature Colours: [e.g., red jacket, blue trainers, purple wheelchair, rainbow backpack]
+	
+	Personality Keywords (for tone): [curious / brave / kind / logical / playful / thoughtful / determined / creative / anxious / confident / shy / outgoing / patient / energetic / calm / funny / serious / compassionate / independent / collaborative]
+	
+	Art Style Preferences: [children's book illustration / cartoon style / soft watercolour / clean digital art / comic book style / anime-inspired / realistic / simplified shapes / textured / flat design]
+	
+	Lighting/Mood Preferences: [bright daylight / warm indoor glow / soft sunset / magical sparkle / overcast soft light / golden hour / cool morning light / twilight / starlight]
+	
+	IMPORTANT: Repeat EXACT character appearance (including disability aids, cultural markers, and physical traits) in EVERY image prompt to maintain consistency.
+
+Image Style Constraints (global – optional):
+	Palette: [warm / cool / high contrast / pastel / vibrant]
+	Background Simplicity: [simple / medium detail / detailed]
+	Do NOT include any text in images.

@@ -40,8 +40,10 @@ Examples:
     parser.add_argument('--api-key', required=True, help='Your OpenAI API key')
     parser.add_argument('--system-prompt', required=True, help='Path to system prompt file (instructions for AI)')
     parser.add_argument('--user-prompt', required=True, help='Path to user prompt file (your story outline)')
-    parser.add_argument('--model', default='gpt-4o', help='OpenAI model to use (default: gpt-4o)')
-    parser.add_argument('--image-model', default='dall-e-3', help='DALL-E model to use (default: dall-e-3)')
+    parser.add_argument('--model', default='gpt-4o-mini', help='OpenAI model to use (default: gpt-4o-mini)')
+    parser.add_argument('--image-model', default='dall-e-3', help='Image model to use (default: dall-e-3). Alternatives: dall-e-2')
+    parser.add_argument('--image-quality', default='standard', choices=['standard','hd'], help='Image quality for dall-e-3 (standard or hd)')
+    parser.add_argument('--image-frequency', default='start-end-endings', choices=['all','start-end','start-end-endings'], help='Which nodes get images')
     parser.add_argument('--skip-images', action='store_true', help='Skip image generation (faster, cheaper)')
     
     return parser.parse_args()
@@ -124,6 +126,109 @@ def extract_character_description(image_prompt: str) -> str:
     return ""
 
 
+def parse_character_bio(user_prompt: str) -> str:
+    """
+    Parse a 'Character Bio' section from the user prompt template.
+    Returns a compact one-line description suitable for image prompts.
+    """
+    lines = user_prompt.splitlines()
+    desc = {}
+    in_bio = False
+    for line in lines:
+        s = line.strip()
+        if not in_bio and s.lower().startswith('character bio'):
+            in_bio = True
+            continue
+        if in_bio:
+            if s == '' or (s.endswith(':') and not any(k in s.lower() for k in ['name','age','gender','skin','hair','eyes','face','clothing','accessories','height','build','signature','personality','art style','lighting'])):
+                # blank or new unrelated header
+                break
+            # Key: Value parsing (e.g., "Hair: curly | Colour: brown | Length: short")
+            if ':' in s:
+                key, val = s.split(':', 1)
+                desc[key.strip().lower()] = val.strip()
+    if not desc:
+        return ""
+    # Build sentence parts
+    gender = desc.get('gender')
+    age = desc.get('age range')
+    skin = desc.get('skin tone')
+    hair = desc.get('hair')
+    eyes = desc.get('eyes')
+    clothing = desc.get('clothing style')
+    accessories = desc.get('accessories')
+    height = desc.get('height')
+    build = desc.get('build')
+    colours = desc.get('signature colours')
+    parts = []
+    subject = 'a'
+    if age:
+        subject += f' {age.strip()}'
+    if gender and gender.strip().lower() not in ['unspecified','none']:
+        subject += f' {gender.strip()}'
+    else:
+        subject += ' child'
+    parts.append(subject)
+    if hair:
+        parts.append(f'with {hair.strip()} hair')
+    if eyes:
+        parts.append(f'and {eyes.strip()} eyes')
+    if skin:
+        parts.append(f'{skin.strip()} skin')
+    wear = []
+    if clothing:
+        wear.append(clothing.strip())
+    if colours:
+        wear.append(colours.strip())
+    if wear:
+        parts.append('wearing ' + ', '.join(wear))
+    if height:
+        parts.append(height.strip())
+    if build:
+        parts.append(build.strip())
+    if accessories and accessories.strip().lower() != 'none':
+        parts.append('with ' + accessories.strip())
+    # Join cleanly
+    text = ' '.join(parts)
+    # Normalize spaces and punctuation
+    return ' '.join(text.split())
+
+
+def build_style_kit(user_prompt: str, nodes: Dict[str, Any]) -> Dict[str, str]:
+    """
+    Create a style kit dict with character, artStyle, and palette.
+    Prefer Character Bio from the user prompt; fallback to extraction from start node image prompt.
+    """
+    character = parse_character_bio(user_prompt)
+    if not character and 'start' in nodes:
+        character = extract_character_description(nodes['start'].get('imagePrompt',''))
+    if not character:
+        character = 'a child adventurer'
+    art_style = "children's book illustration, bright colors, simple shapes"
+    palette = "#E1497E primary with warm accents"
+    return { 'character': character, 'artStyle': art_style, 'palette': palette }
+
+
+def first_sentence(text: str, max_words: int = 28) -> str:
+    """Extract a short scene description from the node text."""
+    if not text:
+        return ''
+    # Take up to the first sentence terminator or word cap
+    import re
+    m = re.split(r'(?:[.!?]\s)', text.strip(), maxsplit=1)
+    s = m[0] if m else text.strip()
+    words = s.split()
+    if len(words) > max_words:
+        s = ' '.join(words[:max_words])
+    return s
+
+
+def build_image_prompt(node_text: str, style_kit: Dict[str, str]) -> str:
+    scene = first_sentence(node_text)
+    character = style_kit.get('character','a child')
+    art = style_kit.get('artStyle', "children's book illustration")
+    return f"{character} in {art}. Scene: {scene}. Mood: cheerful. Children's book illustration. No text."
+
 def ensure_character_consistency(nodes: Dict[str, Any]) -> None:
     """
     Ensure all image prompts use the same character description.
@@ -170,17 +275,20 @@ def ensure_character_consistency(nodes: Dict[str, Any]) -> None:
                 node_data['imagePrompt'] = f"{character_desc} in {prompt}"
 
 
-def generate_image(client: OpenAI, prompt: str, model: str) -> str:
+def generate_image(client: OpenAI, prompt: str, model: str, quality: str = 'standard') -> str:
     """Generate an image using DALL-E and return the URL"""
     try:
-        response = client.images.generate(
-            model=model,
-            prompt=prompt,
-            n=1,
-            size='1024x1024',
-            quality='standard',
-            style='vivid'
-        )
+        params = {
+            'model': model,
+            'prompt': prompt,
+            'n': 1,
+            'size': '1024x1024',
+            'style': 'vivid',
+        }
+        # Only dall-e-3 supports quality 'hd'; keep 'standard' otherwise
+        if model == 'dall-e-3':
+            params['quality'] = quality
+        response = client.images.generate(**params)
         return response.data[0].url
     except Exception as e:
         raise Exception(f"Failed to generate image: {e}")
@@ -219,14 +327,20 @@ def update_stories_index(stories_dir: Path, metadata: Dict[str, Any]):
     stories = [s for s in stories if s.get('storyId') != metadata['storyId']]
     
     # Add new entry
-    stories.append({
+    new_entry = {
         'storyId': metadata['storyId'],
         'title': metadata['title'],
         'description': metadata['description'],
         'author': metadata['author'],
         'created': metadata['created'],
         'startNode': 'start'
-    })
+    }
+    
+    # Add categories if present in metadata
+    if 'categories' in metadata and metadata['categories']:
+        new_entry['categories'] = metadata['categories']
+    
+    stories.append(new_entry)
     
     # Write back to file
     with open(index_path, 'w', encoding='utf-8') as f:
@@ -257,6 +371,9 @@ def main():
     from datetime import date
     today_str = date.today().isoformat()
     story_data['metadata']['created'] = today_str
+    # Build and attach style kit
+    style_kit = build_style_kit(user_prompt, story_data['nodes'])
+    story_data['metadata']['styleKit'] = style_kit
     print(f'✓ Story generated: "{story_data["metadata"]["title"]}"')
     print(f'   Nodes: {len(story_data["nodes"])}')
     print(f'   Story ID: {story_data["metadata"]["storyId"]}\n')
@@ -294,12 +411,27 @@ def main():
         print(f'🎨 Generating images using {args.image_model}...')
         print('   (This may take several minutes)\n')
         
-        nodes_list = list(story_data['nodes'].items())
+        # Determine which nodes get images according to frequency
+        nodes_dict = story_data['nodes']
+        ending_nodes = {nid for nid, nd in nodes_dict.items() if not nd.get('choices')}
+        target_nodes = set()
+        if args.image_frequency == 'all':
+            target_nodes = set(nodes_dict.keys())
+        elif args.image_frequency in ['start-end','start-end-endings']:
+            target_nodes.add('start')
+            target_nodes |= ending_nodes
+        else:
+            target_nodes = set(nodes_dict.keys())
+
+        nodes_list = [(nid, nodes_dict[nid]) for nid in nodes_dict if nid in target_nodes]
         for idx, (node_id, node_data) in enumerate(nodes_list, 1):
             print(f'   [{idx}/{len(nodes_list)}] Generating image for "{node_id}"...')
             
             try:
-                image_url = generate_image(client, node_data['imagePrompt'], args.image_model)
+                # Build compact, consistent prompt from style kit + node text
+                node_text = node_data.get('text', '')
+                prompt_text = build_image_prompt(node_text, style_kit)
+                image_url = generate_image(client, prompt_text, args.image_model, quality=args.image_quality)
                 download_image(image_url, images_dir, f'{node_id}.jpg')
                 node_data['image'] = f'images/{node_id}.jpg'
                 print(f'   ✓ Saved: images/{node_id}.jpg')
