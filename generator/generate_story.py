@@ -463,10 +463,27 @@ def main():
         json.dump(story_json, f, indent=2, ensure_ascii=False)
     print(f'✓ Saved: {story_data["metadata"]["storyId"]}/story.json\n')
     
-    # Update stories/index.json
-    print('📋 Updating stories index...')
-    update_stories_index(stories_dir, story_data['metadata'])
-    print('✓ Updated: stories/index.json\n')
+    # NOTE: Story is NOT automatically added to index.json
+    # Must be proofread and approved first using proofread_story.py
+    
+    # Offer to run proofreading immediately
+    try:
+        run_now = input('🔎 Run proofreading now? [Y/n]: ').strip().lower()
+    except EOFError:
+        run_now = 'n'
+    
+    if run_now in ('', 'y', 'yes'):
+        print('\n🚦 Launching proofreader...\n')
+        try:
+            import subprocess
+            proofreader = Path(__file__).parent / 'proofread_story.py'
+            code = subprocess.call([sys.executable, str(proofreader), story_data['metadata']['storyId']])
+            if code == 0:
+                print('✅ Proofreading finished and published.\n')
+            else:
+                print('⚠️ Proofreading incomplete or cancelled; story not published.\n')
+        except Exception as e:
+            print(f'❌ Could not launch proofreader: {e}\n')
     
     # Summary
     print('=' * 50)
@@ -477,8 +494,11 @@ def main():
     print(f'Nodes: {len(story_data["nodes"])}')
     print(f'Location: stories/{story_data["metadata"]["storyId"]}/')
     print()
-    print('🌐 View your story at:')
-    print(f'   reader.html?story={story_data["metadata"]["storyId"]}&node=start')
+    print('📝 Next steps:')
+    print(f'   1. Proofread: python proofread_story.py {story_data["metadata"]["storyId"]}')
+    print(f'   2. Preview: reader.html?story={story_data["metadata"]["storyId"]}&node=start')
+    print()
+    print('⚠️  Story will NOT appear on the site until proofread and published!')
     print()
 
 
