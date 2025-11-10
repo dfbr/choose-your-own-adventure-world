@@ -77,20 +77,41 @@
 }
 
 /* Skip to main content link */
+
+/* Visually hide skip-link except when focused (accessibility best practice) */
 .skip-link {
     position: absolute;
-    top: -40px;
     left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    border: 0;
+    white-space: nowrap;
     background: var(--secondary-color);
     color: white;
-    padding: 8px 16px;
     text-decoration: none;
     border-radius: 0 0 8px 0;
     z-index: 100;
+    transition: none;
 }
 
-.skip-link:focus {
+.skip-link:focus, .skip-link:active {
+    position: absolute;
     top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
 }
 
 * {
