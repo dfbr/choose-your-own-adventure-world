@@ -1,1 +1,10 @@
-Correct again! Another click, another step closer. Now comes a math puzzle: <br>🍎 + 🍎 = 6, <br>🍎 + 🍌 = 8, <br>🍌 + 🍌 = 4. <br><br>Solve for 🍎.' This combination of fruit and numbers makes you giggle.
+Correct again! Another click, another step closer. Now comes a trickier puzzle:<br><br>
+You see three clues, but each is revealed only after you solve the previous one.<br><br>
+🍌 + 🍌 = 4<br>
+🥝 + 🥝 + 🍌 = 10<br>
+🥝 - 🍎 = 2<br>
+What is 🍎?
+
+This combination of fruit and numbers makes you giggle.
+
+You enter your answer and the next clue appears.

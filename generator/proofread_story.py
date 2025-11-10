@@ -124,8 +124,7 @@ def proofread_story(story_id: str):
         display_node(story_id, node_id, node_data, i, len(node_order))
         
         while True:
-            response = input("\n✓ Accept this node? [y]es / [n]o (reject) / [q]uit: ").lower().strip()
-            
+            response = input("\n✓ Accept this node? [Y/n] (Enter for yes) / [q]uit: ").lower().strip()
             if response in ['y', 'yes', '']:
                 print("✅ Node accepted")
                 break

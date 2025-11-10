@@ -12,19 +12,19 @@
       "textFile": "nodes/start.txt",
       "choices": [
         {
-          "text": "An Echo",
+          "text": "A Pencil",
           "nextNode": "second-challenge"
         },
         {
-          "text": "A Shadow",
+          "text": "Gold",
           "nextNode": "glitter-ending-1"
         },
         {
-          "text": "A Tree",
+          "text": "Book",
           "nextNode": "glitter-ending-2"
         },
         {
-          "text": "A Dream",
+          "text": "Coal",
           "nextNode": "glitter-ending-3"
         }
       ],
