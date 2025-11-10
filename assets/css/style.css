@@ -1,3 +1,6 @@
+/* Import OpenDyslexic font for accessibility */
+@import url('https://cdn.jsdelivr.net/npm/opendyslexic@1.0.3/opendyslexic-regular.css');
+
 :root {
     /* Color palette centered on #E1497E */
     --primary-color: #B03A64;   /* darker complementary shade for headings/hover */
@@ -8,7 +11,88 @@
     --card-bg: #ffffff;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
 }
+
+/* Accessibility: Dyslexia-friendly font */
+.dyslexia-font body {
+    font-family: 'OpenDyslexic', 'Arial', sans-serif;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
+}
+
+/* Accessibility: High contrast mode */
+.high-contrast {
+    --text-color: #000;
+    --bg-color: #fff;
+    --card-bg: #fff;
+    --primary-color: #000;
+    --secondary-color: #000;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.high-contrast .story-card,
+.high-contrast .category-btn,
+.high-contrast header {
+    border: 2px solid #000;
+}
+
+/* Accessibility: Reduced motion */
+.reduced-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+}
+
+/* Accessibility: Font sizes */
+.font-small body {
+    font-size: 12pt;
+}
+
+.font-large body {
+    font-size: 18pt;
+}
+
+.font-large h1 {
+    font-size: 2.5em;
+}
+
+.font-large h2 {
+    font-size: 2em;
+}
+
+/* Accessibility: Focus indicators */
+*:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--secondary-color);
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +116,7 @@ body {
 
 header {
     text-align: center;
+    position: relative;
     padding: 20px 15px;
     background: var(--secondary-color);
     color: white;
@@ -44,6 +129,87 @@ header {
 header h1 {
     font-size: 2em;
     margin-bottom: 5px;
+}
+
+/* Icon button (accessibility toggle) */
+.icon-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.icon-btn:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Accessibility settings panel */
+.accessibility-panel {
+    background: var(--card-bg);
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.accessibility-panel h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.accessibility-panel.hidden {
+    display: none;
+}
+
+.setting-group {
+    margin-bottom: 15px;
+}
+
+.setting-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.setting-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.setting-group select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.setting-group select:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
 tagline {
@@ -143,6 +309,7 @@ tagline {
     text-decoration: none;
     color: var(--text-color);
     display: block;
+    position: relative;
 }
 
 .story-card:hover {
@@ -154,6 +321,7 @@ tagline {
     color: var(--secondary-color);
     margin-bottom: 15px;
     font-size: 1.5em;
+    padding-right: 40px;
 }
 
 .story-card .description {
@@ -164,6 +332,37 @@ tagline {
 .story-card .meta {
     font-size: 0.9em;
     color: #999;
+}
+
+/* Favorite Button */
+.favorite-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 5px;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+
+.favorite-btn.favorited {
+    color: #E1497E;
+}
+
+.favorite-btn:not(.favorited) {
+    color: #ccc;
+}
+
+.favorite-btn:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
 /* Reader Styles */

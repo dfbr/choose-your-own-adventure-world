@@ -7,31 +7,71 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!-- Skip to main content for keyboard users -->
+    <a href="#story-list" class="skip-link">Skip to main content</a>
+    
     <div class="container">
         <header>
             <h1>Choose Your Own Adventure World</h1>
+            <button id="accessibility-toggle" class="icon-btn" aria-label="Accessibility settings" title="Accessibility settings">
+                ⚙️
+            </button>
         </header>
         
-        <nav class="category-nav">
+        <!-- Accessibility settings panel -->
+        <aside id="accessibility-panel" class="accessibility-panel hidden" aria-label="Accessibility settings">
+            <h2>Accessibility Settings</h2>
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="dyslexia-font-toggle" aria-label="Enable dyslexia-friendly font">
+                    <span>Dyslexia-friendly font</span>
+                </label>
+            </div>
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="high-contrast-toggle" aria-label="Enable high contrast mode">
+                    <span>High contrast mode</span>
+                </label>
+            </div>
+            <div class="setting-group">
+                <label>
+                    <input type="checkbox" id="reduced-motion-toggle" aria-label="Reduce animations and motion">
+                    <span>Reduce motion</span>
+                </label>
+            </div>
+            <div class="setting-group">
+                <label for="font-size-select">Font size:</label>
+                <select id="font-size-select" aria-label="Select font size">
+                    <option value="small">Small</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+        </aside>
+        
+            <nav class="category-nav" role="navigation" aria-label="Story categories">
             <button class="category-btn active" data-category="all">All Stories</button>
+            <button class="category-btn" data-category="favorites">❤️ Favorites</button>
             <!-- Categories will be dynamically generated here -->
             <div class="category-main" id="category-main"></div>
             <div class="category-more hidden" id="category-more"></div>
             <button class="category-expand-btn hidden" id="expand-categories">More ▼</button>
         </nav>
         
-        <main>
-            <div id="story-list" class="story-grid">
+            <main id="story-list-container" role="main">
+                <div id="story-list" class="story-grid" aria-live="polite" aria-label="Story list">
                 <p class="loading">Loading stories...</p>
             </div>
         </main>
         
-        <footer>
+            <footer role="contentinfo">
             <p>Browse and choose your own adventure</p>
         </footer>
     </div>
     
     <script src="assets/js/utils.js"></script>
+    <script src="assets/js/accessibility.js"></script>
+    <script src="assets/js/favorites.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 </html>

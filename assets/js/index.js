@@ -201,11 +201,18 @@ function setupCategoryClickHandlers() {
 
 /**
  * Filter stories by category
- * @param {string} category - Category to filter by ('all' for no filter)
+ * @param {string} category - Category to filter by ('all' for no filter, 'favorites' for favorites)
  */
 function filterStories(category) {
     if (category === 'all') {
         displayStories(allStories);
+        return;
+    }
+    
+    if (category === 'favorites') {
+        const favoriteIds = getFavorites();
+        const favoriteStories = allStories.filter(story => favoriteIds.includes(story.storyId));
+        displayStories(favoriteStories);
         return;
     }
     
@@ -222,17 +229,51 @@ function filterStories(category) {
  * @returns {HTMLElement} The story card element
  */
 function createStoryCard(story) {
-    const card = document.createElement('a');
-    card.href = buildPath(`reader.html?story=${story.storyId}&node=${story.startNode}`);
+    const card = document.createElement('div');
     card.className = 'story-card';
     
-    card.innerHTML = `
+    // Create favorite button
+    const favoriteBtn = document.createElement('button');
+    favoriteBtn.className = 'favorite-btn';
+    favoriteBtn.innerHTML = isFavorite(story.storyId) ? '❤️' : '🤍';
+    favoriteBtn.setAttribute('aria-label', isFavorite(story.storyId) ? 'Remove from favorites' : 'Add to favorites');
+    favoriteBtn.setAttribute('title', isFavorite(story.storyId) ? 'Remove from favorites' : 'Add to favorites');
+    if (isFavorite(story.storyId)) {
+        favoriteBtn.classList.add('favorited');
+    }
+    
+    favoriteBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const nowFavorited = toggleFavorite(story.storyId);
+        favoriteBtn.innerHTML = nowFavorited ? '❤️' : '🤍';
+        favoriteBtn.classList.toggle('favorited', nowFavorited);
+        favoriteBtn.setAttribute('aria-label', nowFavorited ? 'Remove from favorites' : 'Add to favorites');
+        favoriteBtn.setAttribute('title', nowFavorited ? 'Remove from favorites' : 'Add to favorites');
+        
+        // If we're on the favorites view, refresh the display
+        if (currentCategory === 'favorites') {
+            filterStories('favorites');
+        }
+    });
+    
+    // Create clickable link area
+    const link = document.createElement('a');
+    link.href = buildPath(`reader.html?story=${story.storyId}&node=${story.startNode}`);
+    link.style.textDecoration = 'none';
+    link.style.color = 'inherit';
+    link.style.display = 'block';
+    
+    link.innerHTML = `
         <h2>${story.title}</h2>
         <p class="description">${story.description || 'An exciting adventure awaits...'}</p>
         <div class="meta">
             <span>${story.created ? formatDate(story.created) : 'Recently added'}</span>
         </div>
     `;
+    
+    card.appendChild(favoriteBtn);
+    card.appendChild(link);
     
     return card;
 }

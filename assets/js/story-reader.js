@@ -27,8 +27,11 @@ async function initReader() {
         
         // Set the story title
         document.getElementById('story-title').textContent = currentStoryData.metadata.title;
-    // Also set the HTML document title to the story title
-    document.title = currentStoryData.metadata.title;
+        // Also set the HTML document title to the story title
+        document.title = currentStoryData.metadata.title;
+        
+        // Setup favorite button
+        setupFavoriteButton(storyId);
         
         // Load the current node
         await loadNode(nodeId);
@@ -138,6 +141,32 @@ window.addEventListener('popstate', (event) => {
         }
     }
 });
+
+/**
+ * Setup the favorite button for the current story
+ * @param {string} storyId - The current story ID
+ */
+function setupFavoriteButton(storyId) {
+    const favoriteBtn = document.getElementById('favorite-story-btn');
+    if (!favoriteBtn) return;
+    
+    // Set initial state
+    const updateButton = () => {
+        const favorited = isFavorite(storyId);
+        favoriteBtn.innerHTML = favorited ? '❤️' : '🤍';
+        favoriteBtn.classList.toggle('favorited', favorited);
+        favoriteBtn.setAttribute('aria-label', favorited ? 'Remove from favorites' : 'Add to favorites');
+        favoriteBtn.setAttribute('title', favorited ? 'Remove from favorites' : 'Add to favorites');
+    };
+    
+    updateButton();
+    
+    // Add click handler
+    favoriteBtn.addEventListener('click', () => {
+        toggleFavorite(storyId);
+        updateButton();
+    });
+}
 
 // Initialize when the page loads
 document.addEventListener('DOMContentLoaded', () => {
