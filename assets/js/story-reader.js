@@ -27,6 +27,8 @@ async function initReader() {
         
         // Set the story title
         document.getElementById('story-title').textContent = currentStoryData.metadata.title;
+    // Also set the HTML document title to the story title
+    document.title = currentStoryData.metadata.title;
         
         // Load the current node
         await loadNode(nodeId);
