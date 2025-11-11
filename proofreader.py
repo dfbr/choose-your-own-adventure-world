@@ -30,9 +30,55 @@ class ProofReaderApp(QMainWindow):
         btn_row = QHBoxLayout()
         btn_expand = QPushButton("Expand All")
         btn_collapse = QPushButton("Collapse All")
+        btn_accept_all = QPushButton("Accept All")
+        btn_reject_all = QPushButton("Reject All")
         btn_row.addWidget(btn_expand)
         btn_row.addWidget(btn_collapse)
         left_layout.addLayout(btn_row)
+        btn_row2 = QHBoxLayout()
+        btn_row2.addWidget(btn_accept_all)
+        btn_row2.addWidget(btn_reject_all)
+        left_layout.addLayout(btn_row2)
+        btn_accept_all.clicked.connect(self.accept_all_nodes_in_story)
+        btn_reject_all.clicked.connect(self.reject_all_nodes_in_story)
+
+    def accept_all_nodes_in_story(self):
+        item = self.tree.currentItem()
+        if item is None:
+            return
+        # Find the top-level story item
+        while item.parent() is not None:
+            item = item.parent()
+        story = item.text(0)
+        # Accept all nodes in this story
+        self._set_all_nodes_in_story(story, True)
+        self.load_stories()
+
+    def reject_all_nodes_in_story(self):
+        item = self.tree.currentItem()
+        if item is None:
+            return
+        # Find the top-level story item
+        while item.parent() is not None:
+            item = item.parent()
+        story = item.text(0)
+        # Reject all nodes in this story
+        self._set_all_nodes_in_story(story, False)
+        self.load_stories()
+
+    def _set_all_nodes_in_story(self, story, value):
+        # Load story.json
+        story_json_path = os.path.join("stories", story, "story.json")
+        if not os.path.exists(story_json_path):
+            story_json_path = os.path.join("stories", story, "..", "story.json")
+        if not os.path.exists(story_json_path):
+            return
+        with open(story_json_path, "r", encoding="utf-8") as f:
+            story_data = json.load(f)
+        nodes = story_data.get("nodes", {})
+        for node_name in nodes:
+            self.state.setdefault(story, {})[node_name] = value
+        self.save_state()
         self.tree = QTreeWidget()
         self.tree.setHeaderLabel("Stories")
         self.tree.itemClicked.connect(self.on_tree_item_clicked)
@@ -129,37 +175,49 @@ class ProofReaderApp(QMainWindow):
         self.text_edit.setFont(font)
         bottom_layout.addWidget(self.text_edit)
         btn_layout = QHBoxLayout()
-        self.accept_btn = QPushButton("Accept")
-        self.reject_btn = QPushButton("Reject")
-        self.save_btn = QPushButton("Save")
+        self.accept_btn = QPushButton("A&ccept")  # Underline C for Ctrl+Return
+        self.reject_btn = QPushButton("Re&ject")  # Underline J for Ctrl+Backspace
+        self.save_btn = QPushButton("Sa&ve")      # Underline V for Ctrl+S
         btn_layout.addWidget(self.accept_btn)
         btn_layout.addWidget(self.reject_btn)
         btn_layout.addWidget(self.save_btn)
         bottom_layout.addLayout(btn_layout)
         right_splitter.addWidget(bottom_widget)
 
-        # Publish button
-        self.publish_btn = QPushButton("Publish Story")
-        main_layout.addWidget(self.publish_btn, 0, Qt.AlignBottom)
 
-        # Connect buttons
-        self.accept_btn.clicked.connect(self.accept_node)
-        self.reject_btn.clicked.connect(self.reject_node)
-        self.save_btn.clicked.connect(self.save_node)
-        self.publish_btn.clicked.connect(self.publish_story)
-        self.text_edit.textChanged.connect(self.update_rendered_view)
+    # Refresh Stories button
+    self.refresh_btn = QPushButton("Refresh Stories")
+    main_layout.addWidget(self.refresh_btn, 0, Qt.AlignBottom)
 
-        # Menu for text size (after widgets are created)
-        menubar = self.menuBar()
-        view_menu = menubar.addMenu("View")
-        increase_font_action = QAction("Increase Text Size", self)
-        decrease_font_action = QAction("Decrease Text Size", self)
-        increase_font_action.setShortcut("Ctrl++")
-        decrease_font_action.setShortcut("Ctrl+-")
-        view_menu.addAction(increase_font_action)
-        view_menu.addAction(decrease_font_action)
-        increase_font_action.triggered.connect(self.increase_text_size)
-        decrease_font_action.triggered.connect(self.decrease_text_size)
+    # Publish button
+    self.publish_btn = QPushButton("Publish Story")
+    main_layout.addWidget(self.publish_btn, 0, Qt.AlignBottom)
+
+
+    # Connect buttons
+    self.accept_btn.clicked.connect(self.accept_node)
+    self.reject_btn.clicked.connect(self.reject_node)
+    self.save_btn.clicked.connect(self.save_node)
+    self.publish_btn.clicked.connect(self.publish_story)
+    self.refresh_btn.clicked.connect(self.load_stories)
+    self.text_edit.textChanged.connect(self.update_rendered_view)
+
+
+    # Menu for text size and refresh (after widgets are created)
+    menubar = self.menuBar()
+    view_menu = menubar.addMenu("View")
+    increase_font_action = QAction("Increase Text Size", self)
+    decrease_font_action = QAction("Decrease Text Size", self)
+    refresh_stories_action = QAction("Refresh Stories", self)
+    view_menu.addAction(increase_font_action)
+    view_menu.addAction(decrease_font_action)
+    view_menu.addSeparator()
+    view_menu.addAction(refresh_stories_action)
+    increase_font_action.setShortcut("Ctrl++")
+    decrease_font_action.setShortcut("Ctrl+-")
+    increase_font_action.triggered.connect(self.increase_text_size)
+    decrease_font_action.triggered.connect(self.decrease_text_size)
+    refresh_stories_action.triggered.connect(self.load_stories)
 
         # Keyboard shortcuts for buttons (after buttons are created)
         self.accept_btn.setShortcut("Ctrl+Return")
@@ -323,65 +381,38 @@ class ProofReaderApp(QMainWindow):
             node_path = os.path.join("stories", self.current_story, "nodes", f"{self.current_node}.txt")
             with open(node_path, "w", encoding="utf-8") as f:
                 f.write(self.text_edit.toPlainText())
-            self.rendered_view.setText(self.text_edit.toPlainText().replace('\n', '<br>'))
+            # Ensure rendered view uses correct font size and choices rendering
+            self.render_node_with_choices(self.text_edit.toPlainText())
 
     def accept_node(self):
         if self.current_story and self.current_node:
             self.state.setdefault(self.current_story, {})[self.current_node] = True
             self.save_state()
-            # Save current selection path
-            selected = []
+            # Update label for current node in tree
             item = self.tree.currentItem()
-            while item:
-                selected.insert(0, item.data(0, Qt.UserRole))
-                item = item.parent()
-            self.load_stories()
-            # Restore selection
-            if selected:
-                def find_item(item, path, idx):
-                    if idx >= len(path):
-                        return item
-                    for i in range(item.childCount()):
-                        child = item.child(i)
-                        if child.data(0, Qt.UserRole) == path[idx]:
-                            return find_item(child, path, idx+1)
-                    return None
-                for i in range(self.tree.topLevelItemCount()):
-                    story_item = self.tree.topLevelItem(i)
-                    if story_item.text(0) == selected[0]:
-                        item = find_item(story_item, selected, 1)
-                        if item:
-                            self.tree.setCurrentItem(item)
-                            break
+            if item:
+                label = item.text(0)
+                if label.endswith('✗'):
+                    item.setText(0, label[:-1] + '✓')
+                elif label.endswith('✓'):
+                    pass  # already accepted
+                else:
+                    item.setText(0, label + ' ✓')
 
     def reject_node(self):
         if self.current_story and self.current_node:
             self.state.setdefault(self.current_story, {})[self.current_node] = False
             self.save_state()
-            # Save current selection path
-            selected = []
+            # Update label for current node in tree
             item = self.tree.currentItem()
-            while item:
-                selected.insert(0, item.data(0, Qt.UserRole))
-                item = item.parent()
-            self.load_stories()
-            # Restore selection
-            if selected:
-                def find_item(item, path, idx):
-                    if idx >= len(path):
-                        return item
-                    for i in range(item.childCount()):
-                        child = item.child(i)
-                        if child.data(0, Qt.UserRole) == path[idx]:
-                            return find_item(child, path, idx+1)
-                    return None
-                for i in range(self.tree.topLevelItemCount()):
-                    story_item = self.tree.topLevelItem(i)
-                    if story_item.text(0) == selected[0]:
-                        item = find_item(story_item, selected, 1)
-                        if item:
-                            self.tree.setCurrentItem(item)
-                            break
+            if item:
+                label = item.text(0)
+                if label.endswith('✓'):
+                    item.setText(0, label[:-1] + '✗')
+                elif label.endswith('✗'):
+                    pass  # already rejected
+                else:
+                    item.setText(0, label + ' ✗')
 
     def update_rendered_view(self):
         self.render_node_with_choices(self.text_edit.toPlainText())

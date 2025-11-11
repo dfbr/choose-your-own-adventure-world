@@ -5,7 +5,11 @@
     "start": true
   },
   "sherlock-moans-hounds-buskerville": {
-    "start": true
+    "start": true,
+    "eavesdrop-conversation": true,
+    "ask-jenkins": true,
+    "shiny-object": true,
+    "head-to-manor": false
   },
   "the-great-escape": {
     "start": true
