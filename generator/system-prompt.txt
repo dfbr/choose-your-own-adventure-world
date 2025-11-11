@@ -126,3 +126,4 @@ You MUST return your response as a single, valid JSON object with the following 
 - Every node referenced in "nextNode" must exist in the nodes object
 - All ending nodes (no choices) should provide closure to the story
 - Don't use special characters that need escaping in JSON strings
+- **All nodes in the story must be reachable by making choices from the start node. There must be no unreachable or orphaned nodes. Every part of the story must be accessible by following the choices.**
