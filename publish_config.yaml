@@ -1,0 +1,6 @@
+# Publishing configuration for CYOA project
+# This file lists files that should NOT be published to the public story index or website, but are still tracked in git.
+
+# The proofreader state file should not be published
+exclude:
+  - state.json
