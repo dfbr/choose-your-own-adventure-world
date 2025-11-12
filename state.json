@@ -2,7 +2,11 @@
   "stories": {},
   "last_opened": null,
   "defuse-the-bomb": {
-    "start": true
+    "start": true,
+    "math-challenge": false,
+    "final-word-challenge": false,
+    "success-ending": false,
+    "glitter-failure": false
   },
   "sherlock-moans-hounds-buskerville": {
     "start": true,
@@ -12,13 +16,49 @@
     "head-to-manor": false
   },
   "the-great-escape": {
-    "start": true
+    "start": true,
+    "node-crack-the-code": true,
+    "node-look-for-another-way": true,
+    "node-up-the-stairs": true,
+    "node-follow-corridor": {
+      "approved": true,
+      "hash": "fd4e825cbb12ba02ebe6f3f26363187c9f4b619985d5e9936a80e86e4bdc47b9"
+    },
+    "node-climb-out-window": true,
+    "node-use-the-map": true,
+    "node-grab-the-papers": {
+      "approved": true,
+      "hash": "3996150e1a67d05ff9fdb9f043ae66f2d24feac10343a4cacf08e69707d75be9"
+    },
+    "node-hide-papers-and-escape": {
+      "approved": true,
+      "hash": "e1a9738e05137d0855dcd62011c90eedcd891cb3492855a539c64606f0885e32"
+    },
+    "node-find-police": {
+      "approved": true,
+      "hash": "f41cedf011c32152458b4cdc60ea53433222196777d5ebc039e37a517166dbca"
+    },
+    "node-find-phone": {
+      "approved": true,
+      "hash": "0995ad17c8192ed46f5038b258e0789629d5fb467615e1a0e4a9fe24c797c49c"
+    },
+    "node-hide-in-office": {
+      "approved": true,
+      "hash": "7ab935aa94e823fc7a42f0e43f143a63f323328a5507e34cbc464cd2dfa62a6a"
+    },
+    "node-hide-in-woods": {
+      "approved": true,
+      "hash": "681f031d63ca767fcb612a02456be2e21300fd523e016599baa817ba679ea698"
+    }
   },
   "sherlock-moans": {
     "start": true,
-    "foyer": false,
-    "portrait": false,
-    "safe": false,
+    "foyer": true,
+    "portrait": true,
+    "safe": true,
     "study": false
+  },
+  "window": {
+    "maximized": true
   }
 }

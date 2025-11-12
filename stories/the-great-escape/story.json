@@ -11,72 +11,212 @@
     "start": {
       "textFile": "nodes/start.txt",
       "choices": [
-        {
-          "text": "Crack the code",
-          "nextNode": "node-crack-the-code"
-        },
-        {
-          "text": "Look for another way",
-          "nextNode": "node-look-for-another-way"
-        }
+        { "text": "Crack the code", "nextNode": "node-crack-the-code" },
+        { "text": "Look for another way", "nextNode": "node-look-for-another-way" }
       ],
       "image": "images/start.jpg"
     },
     "node-crack-the-code": {
       "textFile": "nodes/node-crack-the-code.txt",
       "choices": [
-        {
-          "text": "Go up the stairs",
-          "nextNode": "node-up-the-stairs"
-        },
-        {
-          "text": "Follow the corridor",
-          "nextNode": "node-follow-corridor"
-        }
+        { "text": "Go up the stairs", "nextNode": "node-up-the-stairs" },
+        { "text": "Follow the corridor", "nextNode": "node-follow-corridor" }
       ],
       "image": "images/node-crack-the-code.jpg"
     },
     "node-look-for-another-way": {
       "textFile": "nodes/node-look-for-another-way.txt",
       "choices": [
-        {
-          "text": "Keep going down",
-          "nextNode": "node-keep-going-down"
-        },
-        {
-          "text": "Hide behind the tapestry",
-          "nextNode": "node-hide-behind-tapestry"
-        }
+        { "text": "Keep going down", "nextNode": "node-keep-going-down" },
+        { "text": "Hide behind the tapestry", "nextNode": "node-hide-behind-tapestry" }
       ],
       "image": "images/node-look-for-another-way.jpg"
     },
     "node-up-the-stairs": {
       "textFile": "nodes/node-up-the-stairs.txt",
       "choices": [
-        {
-          "text": "Climb out the window",
-          "nextNode": "node-climb-out-window"
-        },
-        {
-          "text": "Use the map",
-          "nextNode": "node-use-the-map"
-        }
+        { "text": "Climb out the window", "nextNode": "node-climb-out-window" },
+        { "text": "Use the map", "nextNode": "node-use-the-map" }
       ],
       "image": "images/node-up-the-stairs.jpg"
     },
     "node-follow-corridor": {
       "textFile": "nodes/node-follow-corridor.txt",
       "choices": [
-        {
-          "text": "Grab the papers",
-          "nextNode": "node-grab-the-papers"
-        },
-        {
-          "text": "Keep moving forward",
-          "nextNode": "node-keep-moving-forward"
-        }
+        { "text": "Grab the papers", "nextNode": "node-grab-the-papers" },
+        { "text": "Keep moving forward", "nextNode": "node-keep-moving-forward" }
       ],
       "image": "images/node-follow-corridor.jpg"
+    },
+    "node-grab-the-papers": {
+      "textFile": "nodes/node-grab-the-papers.txt",
+      "choices": [
+        { "text": "Hide the papers in your bag and look for a way out", "nextNode": "node-hide-papers-and-escape" },
+        { "text": "Try to find a phone to call for help", "nextNode": "node-find-phone" }
+      ],
+      "image": "images/node-grab-the-papers.jpg"
+    },
+    "node-keep-moving-forward": {
+      "textFile": "nodes/node-keep-moving-forward.txt",
+      "choices": [
+        { "text": "Descend the staircase", "nextNode": "node-descend-staircase" },
+        { "text": "Go back and try another route", "nextNode": "node-back-to-corridor" }
+      ],
+      "image": "images/node-keep-moving-forward.jpg"
+    },
+    "node-descend-staircase": {
+      "textFile": "nodes/node-descend-staircase.txt",
+      "choices": [
+        { "text": "Search the cellar for a secret exit", "nextNode": "node-search-cellar" },
+        { "text": "Hide behind the barrels", "nextNode": "node-hide-behind-barrels" }
+      ],
+      "image": "images/node-descend-staircase.jpg"
+    },
+    "node-back-to-corridor": {
+      "textFile": "nodes/node-back-to-corridor.txt",
+      "choices": [
+        { "text": "Try a door you passed earlier", "nextNode": "node-try-earlier-door" },
+        { "text": "Return to the main hall", "nextNode": "node-return-main-hall" }
+      ],
+      "image": "images/node-back-to-corridor.jpg"
+    },
+    "node-try-earlier-door": {
+      "textFile": "nodes/node-try-earlier-door.txt",
+      "choices": [
+        { "text": "Climb out the window", "nextNode": "node-escape-through-window" },
+        { "text": "Return to the corridor", "nextNode": "node-back-to-corridor" }
+      ],
+      "image": "images/node-try-earlier-door.jpg"
+    },
+    "node-return-main-hall": {
+      "textFile": "nodes/node-return-main-hall.txt",
+      "choices": [
+        { "text": "Sneak past the gang to the front door", "nextNode": "node-sneak-past-gang" },
+        { "text": "Hide behind a statue", "nextNode": "node-hide-behind-statue" }
+      ],
+      "image": "images/node-return-main-hall.jpg"
+    },
+    "node-sneak-past-gang": {
+      "textFile": "nodes/node-sneak-past-gang.txt",
+      "choices": [
+        { "text": "Head for the village", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-sneak-past-gang.jpg"
+    },
+    "node-hide-behind-statue": {
+      "textFile": "nodes/node-hide-behind-statue.txt",
+      "choices": [
+        { "text": "Go to the village to find the police", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-hide-behind-statue.jpg"
+    },
+    "node-hide-behind-tapestry": {
+      "textFile": "nodes/node-hide-behind-tapestry.txt",
+      "choices": [
+        { "text": "Keep going down", "nextNode": "node-keep-going-down" },
+        { "text": "Return to the room", "nextNode": "start" }
+      ],
+      "image": "images/node-hide-behind-tapestry.jpg"
+    },
+    "node-keep-going-down": {
+      "textFile": "nodes/node-keep-going-down.txt",
+      "choices": [
+        { "text": "Search the cellar for a secret exit", "nextNode": "node-search-cellar" },
+        { "text": "Hide behind the barrels", "nextNode": "node-hide-behind-barrels" }
+      ],
+      "image": "images/node-keep-going-down.jpg"
+    },
+    "node-search-cellar": {
+      "textFile": "nodes/node-search-cellar.txt",
+      "choices": [
+        { "text": "Head for the village to get help", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods and rest", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-search-cellar.jpg"
+    },
+    "node-hide-behind-barrels": {
+      "textFile": "nodes/node-hide-behind-barrels.txt",
+      "choices": [
+        { "text": "Make your way to the village", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-hide-behind-barrels.jpg"
+    },
+    "node-hide-papers-and-escape": {
+      "textFile": "nodes/node-hide-papers-and-escape.txt",
+      "choices": [
+        { "text": "Make your way to the village to find the police", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods and wait for nightfall", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-hide-papers-and-escape.jpg"
+    },
+    "node-find-phone": {
+      "textFile": "nodes/node-find-phone.txt",
+      "choices": [
+        { "text": "Hide in the office and hope for rescue", "nextNode": "node-hide-in-office" },
+        { "text": "Escape through the window", "nextNode": "node-escape-through-window" }
+      ],
+      "image": "images/node-find-phone.jpg"
+    },
+    "node-hide-in-office": {
+      "textFile": "nodes/node-hide-in-office.txt",
+      "choices": [
+        { "text": "Head for the village to find the police", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods until morning", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-hide-in-office.jpg"
+    },
+    "node-escape-through-window": {
+      "textFile": "nodes/node-escape-through-window.txt",
+      "choices": [
+        { "text": "Go to the village to find the police", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-escape-through-window.jpg"
+    },
+    "node-climb-out-window": {
+      "textFile": "nodes/node-climb-out-window.txt",
+      "choices": [
+        { "text": "Make your way to the village to find the police", "nextNode": "node-find-police" },
+        { "text": "Hide in the woods and wait for nightfall", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-climb-out-window.jpg"
+    },
+    "node-use-the-map": {
+      "textFile": "nodes/node-use-the-map.txt",
+      "choices": [
+        { "text": "Head to the stables", "nextNode": "node-stables" },
+        { "text": "Go to the old chapel", "nextNode": "node-old-chapel" }
+      ],
+      "image": "images/node-use-the-map.jpg"
+    },
+    "node-stables": {
+      "textFile": "nodes/node-stables.txt",
+      "choices": [
+        { "text": "Ride to the village", "nextNode": "node-find-police" },
+        { "text": "Hide in the hayloft", "nextNode": "node-hide-in-woods" }
+      ],
+      "image": "images/node-stables.jpg"
+    },
+    "node-old-chapel": {
+      "textFile": "nodes/node-old-chapel.txt",
+      "choices": [
+        { "text": "Hide in the chapel", "nextNode": "node-hide-in-woods" },
+        { "text": "Sneak out the back", "nextNode": "node-find-police" }
+      ],
+      "image": "images/node-old-chapel.jpg"
+    },
+    "node-find-police": {
+      "textFile": "nodes/node-find-police.txt",
+      "choices": [],
+      "image": "images/node-find-police.jpg"
+    },
+    "node-hide-in-woods": {
+      "textFile": "nodes/node-hide-in-woods.txt",
+      "choices": [],
+      "image": "images/node-hide-in-woods.jpg"
     }
   }
 }
