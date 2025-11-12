@@ -12,7 +12,7 @@
       "textFile": "nodes/start.txt",
       "choices": [
         {
-          "text": "A Pencil",
+          "text": "Lead",
           "nextNode": "second-challenge"
         },
         {
