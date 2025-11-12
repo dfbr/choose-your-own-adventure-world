@@ -20,8 +20,7 @@
           "nextNode": "node-look-for-another-way"
         }
       ],
-      "image": "images/start.jpg",
-      "text": "You find yourself in a dusty, dimly lit room inside an old castle. It's cold and the air is filled with the echo of distant voices. You are not alone here - this castle is the hideout for a gang of criminals planning a big bank robbery. But you have a plan of your own: escape without being caught.\n\nYou look around the room and spot a rusty old door. It might be your way out, but it's locked. Beside the door is a note with a series of numbers, a cipher to crack. You know if you can figure it out, you can enter the correct code to unlock the door.\n\nOn a small wooden table, there's a piece of paper filled with coded numbers. Your maths skills are sharp, and you remember learning about substitution ciphers in school. This is your first challenge.\n\nYou feel the importance of the situation. If you can crack the code, you might just find your way to freedom. But if you fail, it might lead to capture. You take a deep breath and focus."
+  "image": "images/start.jpg"
     },
     "node-crack-the-code": {
       "textFile": "nodes/node-crack-the-code.txt",
@@ -35,8 +34,7 @@
           "nextNode": "node-follow-corridor"
         }
       ],
-      "image": "images/node-crack-the-code.jpg",
-      "text": "You study the paper closely. The numbers seem random at first, but then you notice a pattern. It's a simple substitution cipher, where each number represents a letter. You quickly jot down the alphabet and start matching the numbers to letters.\n\nAfter a few minutes of concentration, you translate the code: \"OPEN SESAME\". With excitement, you punch the phrase into the keypad by the door.\n\nThe lock clicks open! Your heart races with a mixture of fear and thrill as you push the door open slowly, trying not to make a sound.\n\nBeyond the door is a dimly lit corridor. It stretches out with doors on either side. You can hear faint voices echoing from somewhere deeper in the castle. You need to make a decision quickly.\n\nTo the left, you see a staircase leading up. It might take you to the roof or another exit. To the right, the corridor continues into shadows. Where should you go?"
+  "image": "images/node-crack-the-code.jpg"
     },
     "node-look-for-another-way": {
       "textFile": "nodes/node-look-for-another-way.txt",
@@ -50,8 +48,7 @@
           "nextNode": "node-hide-behind-tapestry"
         }
       ],
-      "image": "images/node-look-for-another-way.jpg",
-      "text": "You decide to explore the room a bit more. There might be another way out. You carefully scan the walls, looking for hidden doors or passages.\n\nOn the far wall, you notice a tapestry hanging slightly askew. Behind it, you find a narrow, winding staircase. It might lead somewhere safe, or it could be a trap.\n\nYour heart pounds as you consider the possibility. But staying here is not an option, so you decide to take the risk.\n\nThe stairs creak under your weight as you tiptoe downwards. The air becomes cooler, and you hear the distant sound of dripping water. Your mind races with the possibility of where this staircase might lead.\n\nSuddenly, you hear footsteps above. The gang might have noticed your absence. You have to decide quickly whether to keep going down or find a hiding spot."
+  "image": "images/node-look-for-another-way.jpg"
     },
     "node-up-the-stairs": {
       "textFile": "nodes/node-up-the-stairs.txt",
@@ -65,8 +62,7 @@
           "nextNode": "node-use-the-map"
         }
       ],
-      "image": "images/node-up-the-stairs.jpg",
-      "text": "You decide to take the stairs, hoping they lead you closer to freedom. Each step creaks slightly, but you move swiftly to reach the top.\n\nAt the top of the stairs, you find a small, dusty room filled with old books and maps. A large window offers a view of the surrounding countryside. You could climb out, but it's quite high.\n\nAs you look around, you notice a map of the castle pinned to the wall. This could be incredibly useful! You study it carefully, noting marked exits and passages.\n\nSuddenly, you hear voices approaching. It seems you are running out of time. You can either attempt to climb out of the window or use the map to find another exit.\n\nBoth options have risks, but you must decide quickly."
+  "image": "images/node-up-the-stairs.jpg"
     },
     "node-follow-corridor": {
       "textFile": "nodes/node-follow-corridor.txt",
@@ -80,8 +76,7 @@
           "nextNode": "node-keep-moving-forward"
         }
       ],
-      "image": "images/node-follow-corridor.jpg",
-      "text": "You decide to follow the corridor, moving quietly and quickly. The walls are lined with old paintings and the floor is covered with a thick carpet.\n\nAs you walk, you hear voices coming from a room ahead. You stop and listen closely. The gang is discussing their plans for the bank robbery. If you could somehow alert the authorities, you might foil their plan.\n\nYou spot a door slightly ajar. Inside, you see a stack of papers that might contain the details of their plan. But getting too close could be risky.\n\nYou weigh your options: sneak in and grab the papers to find a way to alert help, or continue down the corridor in hopes of a safer escape.\n\nEach choice carries risk, but also the chance to stop the criminals."
+  "image": "images/node-follow-corridor.jpg"
     },
     "node-grab-the-papers": {
       "textFile": "nodes/node-grab-the-papers.txt",
