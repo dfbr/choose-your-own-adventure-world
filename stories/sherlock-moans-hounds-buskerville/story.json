@@ -1,0 +1,414 @@
+{
+  "storyId": "sherlock-moans-hounds-buskerville",
+  "metadata": {
+    "title": "Sherlock Moans and the Hounds of Buskerville",
+    "description": "Join Sherlock Moans, a curious young detective, as she solves mysteries and explores the multicultural wonders of modern-day London.",
+    "storyId": "sherlock-moans-hounds-buskerville",
+    "author": "AI Generated",
+    "created": "2025-11-12",
+    "categories": [
+      "choose-your-own-adventure",
+      "adventure",
+      "mystery"
+    ],
+    "styleKit": {
+      "character": "a tween girl",
+      "artStyle": "children's book illustration, bright colors, simple shapes",
+      "palette": "#E1497E primary with warm accents"
+    }
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "Visit the local market",
+          "nextNode": "local-market"
+        },
+        {
+          "text": "Head to the park",
+          "nextNode": "park"
+        }
+      ]
+    },
+    "local-market": {
+      "textFile": "nodes/local-market.txt",
+      "choices": [
+        {
+          "text": "Gather more clues at the market",
+          "nextNode": "gather-clues"
+        },
+        {
+          "text": "Head directly to the fountain",
+          "nextNode": "fountain"
+        }
+      ]
+    },
+    "gather-clues": {
+      "textFile": "nodes/gather-clues.txt",
+      "choices": [
+        {
+          "text": "Rush to the library",
+          "nextNode": "library"
+        },
+        {
+          "text": "Explore the market a bit more",
+          "nextNode": "market-explore"
+        }
+      ]
+    },
+    "fountain": {
+      "textFile": "nodes/fountain.txt",
+      "choices": [
+        {
+          "text": "Approach quietly",
+          "nextNode": "quiet-approach"
+        },
+        {
+          "text": "Call out",
+          "nextNode": "call-out"
+        }
+      ]
+    },
+    "library": {
+      "textFile": "nodes/library.txt",
+      "choices": [
+        {
+          "text": "Solve the riddle now",
+          "nextNode": "solve-riddle"
+        },
+        {
+          "text": "Ask the librarian for more help",
+          "nextNode": "ask-librarian"
+        }
+      ]
+    },
+    "market-explore": {
+      "textFile": "nodes/market-explore.txt",
+      "choices": [
+        {
+          "text": "Chase after the boy and dog",
+          "nextNode": "chase-boy"
+        },
+        {
+          "text": "Ask the vendor about the collar",
+          "nextNode": "ask-collar"
+        }
+      ]
+    },
+    "quiet-approach": {
+      "textFile": "nodes/quiet-approach.txt",
+      "choices": [
+        {
+          "text": "Ask about the treasure",
+          "nextNode": "ask-treasure"
+        },
+        {
+          "text": "Ask how to be brave like them",
+          "nextNode": "ask-brave"
+        }
+      ]
+    },
+    "call-out": {
+      "textFile": "nodes/call-out.txt",
+      "choices": [
+        {
+          "text": "Try to touch the hound",
+          "nextNode": "touch-hound"
+        },
+        {
+          "text": "Ask it a question",
+          "nextNode": "ask-hound"
+        }
+      ]
+    },
+    "solve-riddle": {
+      "textFile": "nodes/solve-riddle.txt",
+      "choices": [
+        {
+          "text": "Explore the stage",
+          "nextNode": "explore-stage"
+        },
+        {
+          "text": "Look around the hall first",
+          "nextNode": "look-hall"
+        }
+      ]
+    },
+    "ask-librarian": {
+      "textFile": "nodes/ask-librarian.txt",
+      "choices": [
+        {
+          "text": "Head to the park",
+          "nextNode": "park-laughter"
+        },
+        {
+          "text": "Go to the nearby theater",
+          "nextNode": "theater-laughter"
+        }
+      ]
+    },
+    "chase-boy": {
+      "textFile": "nodes/chase-boy.txt",
+      "choices": [
+        {
+          "text": "Help them find the treasure",
+          "nextNode": "help-find-treasure"
+        },
+        {
+          "text": "Ask about the collar first",
+          "nextNode": "ask-collar"
+        }
+      ]
+    },
+    "ask-collar": {
+      "textFile": "nodes/ask-collar.txt",
+      "choices": [
+        {
+          "text": "Go straight to the park",
+          "nextNode": "park-laughter"
+        },
+        {
+          "text": "Stop at the fountain first",
+          "nextNode": "fountain"
+        }
+      ]
+    },
+    "ask-treasure": {
+      "textFile": "nodes/ask-treasure.txt",
+      "choices": [
+        {
+          "text": "Dig it up",
+          "nextNode": "dig-treasure"
+        },
+        {
+          "text": "Call for help",
+          "nextNode": "call-help"
+        }
+      ]
+    },
+    "ask-brave": {
+      "textFile": "nodes/ask-brave.txt",
+      "choices": [
+        {
+          "text": "Dig around the roots",
+          "nextNode": "dig-roots"
+        },
+        {
+          "text": "Look up in the tree",
+          "nextNode": "look-tree"
+        }
+      ]
+    },
+    "explore-stage": {
+      "textFile": "nodes/explore-stage.txt",
+      "choices": [
+        {
+          "text": "Ask her for more information",
+          "nextNode": "ask-girl"
+        },
+        {
+          "text": "Take the key and head to the park",
+          "nextNode": "park-laughter"
+        }
+      ]
+    },
+    "look-hall": {
+      "textFile": "nodes/look-hall.txt",
+      "choices": [
+        {
+          "text": "Try on the cloak",
+          "nextNode": "try-cloak"
+        },
+        {
+          "text": "Search for more clues",
+          "nextNode": "search-room"
+        }
+      ]
+    },
+    "park-laughter": {
+      "textFile": "nodes/park-laughter.txt",
+      "choices": [
+        {
+          "text": "Dig here",
+          "nextNode": "dig-treasure"
+        },
+        {
+          "text": "Call for help",
+          "nextNode": "call-help"
+        }
+      ]
+    },
+    "theater-laughter": {
+      "textFile": "nodes/theater-laughter.txt",
+      "choices": [
+        {
+          "text": "Follow her",
+          "nextNode": "follow-girl"
+        },
+        {
+          "text": "Explore the theater on your own",
+          "nextNode": "explore-theater"
+        }
+      ]
+    },
+    "dig-treasure": {
+      "textFile": "nodes/dig-treasure.txt",
+      "choices": [
+        {
+          "text": "Take them to the community center",
+          "nextNode": "community-center"
+        },
+        {
+          "text": "Share them at a festival",
+          "nextNode": "neighborhood-festival"
+        }
+      ]
+    },
+    "dig-roots": {
+      "textFile": "nodes/dig-roots.txt",
+      "choices": [
+        {
+          "text": "Return to the library",
+          "nextNode": "library-share"
+        },
+        {
+          "text": "Bring them to the market",
+          "nextNode": "market-share"
+        }
+      ]
+    },
+    "look-tree": {
+      "textFile": "nodes/look-tree.txt",
+      "choices": [
+        {
+          "text": "Head back to the park",
+          "nextNode": "park-laughter"
+        },
+        {
+          "text": "Explore the rest of the hall",
+          "nextNode": "explore-hall"
+        }
+      ]
+    },
+    "community-center": {
+      "textFile": "nodes/community-center.txt",
+      "choices": []
+    },
+    "neighborhood-festival": {
+      "textFile": "nodes/neighborhood-festival.txt",
+      "choices": []
+    },
+    "follow-girl": {
+      "textFile": "nodes/follow-girl.txt",
+      "choices": [
+        {
+          "text": "Take the wand and go on an adventure",
+          "nextNode": "magic-adventure"
+        },
+        {
+          "text": "Ask her more about this magical place",
+          "nextNode": "ask-magic-place"
+        }
+      ]
+    },
+    "explore-theater": {
+      "textFile": "nodes/explore-theater.txt",
+      "choices": [
+        {
+          "text": "Join them in the rehearsal",
+          "nextNode": "join-rehearsal"
+        },
+        {
+          "text": "Continue exploring",
+          "nextNode": "continue-exploring"
+        }
+      ]
+    },
+    "magic-adventure": {
+      "textFile": "nodes/magic-adventure.txt",
+      "choices": [
+        {
+          "text": "Share the treasures with everyone",
+          "nextNode": "share-treasures"
+        },
+        {
+          "text": "Keep some treasures for yourself",
+          "nextNode": "keep-treasures"
+        }
+      ]
+    },
+    "ask-magic-place": {
+      "textFile": "nodes/ask-magic-place.txt",
+      "choices": [
+        {
+          "text": "Explore more of the theater",
+          "nextNode": "explore-more-theater"
+        },
+        {
+          "text": "Head back to find the hounds",
+          "nextNode": "find-hounds"
+        }
+      ]
+    },
+    "join-rehearsal": {
+      "textFile": "nodes/join-rehearsal.txt",
+      "choices": [
+        {
+          "text": "Ask them about more stories",
+          "nextNode": "more-stories"
+        },
+        {
+          "text": "Head back to the park to find the treasure",
+          "nextNode": "park-laughter"
+        }
+      ]
+    },
+    "continue-exploring": {
+      "textFile": "nodes/continue-exploring.txt",
+      "choices": [
+        {
+          "text": "Take the map and head to the park",
+          "nextNode": "park-laughter"
+        },
+        {
+          "text": "Ask someone for more information",
+          "nextNode": "ask-info"
+        }
+      ]
+    },
+    "share-treasures": {
+      "textFile": "nodes/share-treasures.txt",
+      "choices": []
+    },
+    "keep-treasures": {
+      "textFile": "nodes/keep-treasures.txt",
+      "choices": []
+    },
+    "explore-more-theater": {
+      "textFile": "nodes/explore-more-theater.txt",
+      "choices": [
+        {
+          "text": "Take the script to share",
+          "nextNode": "share-script"
+        },
+        {
+          "text": "Keep it for yourself",
+          "nextNode": "keep-script"
+        }
+      ]
+    },
+    "find-hounds": {
+      "textFile": "nodes/find-hounds.txt",
+      "choices": []
+    },
+    "share-script": {
+      "textFile": "nodes/share-script.txt",
+      "choices": []
+    },
+    "keep-script": {
+      "textFile": "nodes/keep-script.txt",
+      "choices": []
+    }
+  }
+}
