@@ -51,5 +51,18 @@
       "adventure",
       "science"
     ]
+  },
+  {
+    "storyId": "sherlock-moans-hounds-buskerville",
+    "title": "Sherlock Moans and the Hounds of Buskerville",
+    "description": "Join Sherlock Moans, a curious young detective, as she solves mysteries and explores the multicultural wonders of modern-day London.",
+    "author": "AI Generated",
+    "created": "2025-11-12",
+    "startNode": "start",
+    "categories": [
+      "choose-your-own-adventure",
+      "adventure",
+      "mystery"
+    ]
   }
 ]

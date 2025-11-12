@@ -829,7 +829,49 @@ class ProofReaderApp(QMainWindow):
         # Save cleaned story.json
         with open(story_json_path, "w", encoding="utf-8") as f:
             json.dump(story_data, f, indent=2, ensure_ascii=False)
-        QMessageBox.information(self, "Published", f"Story '{self.current_story}' published to story.json. All node text is stored in .txt files only.")
+
+        # --- Update stories/index.json ---
+        index_path = os.path.join("stories", "index.json")
+        # Load or create index.json
+        if os.path.exists(index_path):
+            with open(index_path, "r", encoding="utf-8") as f:
+                try:
+                    index_data = json.load(f)
+                except Exception:
+                    index_data = []
+        else:
+            index_data = []
+
+        # Prepare metadata for index.json
+        meta = story_data.get("metadata", {})
+        story_entry = {
+            "storyId": story_data.get("storyId", self.current_story),
+            "title": meta.get("title", self.current_story),
+            "description": meta.get("description", ""),
+            "author": meta.get("author", ""),
+            "created": meta.get("created", ""),
+            "startNode": "start",
+            "categories": meta.get("categories", [])
+        }
+        # If categories is not present in metadata, try to get from story_data
+        if not story_entry["categories"] and "categories" in story_data:
+            story_entry["categories"] = story_data["categories"]
+
+        # Update or add the entry
+        found = False
+        for i, entry in enumerate(index_data):
+            if entry.get("storyId") == story_entry["storyId"]:
+                index_data[i] = story_entry
+                found = True
+                break
+        if not found:
+            index_data.append(story_entry)
+
+        # Save index.json
+        with open(index_path, "w", encoding="utf-8") as f:
+            json.dump(index_data, f, indent=2, ensure_ascii=False)
+
+        QMessageBox.information(self, "Published", f"Story '{self.current_story}' published to story.json and added to index.json. All node text is stored in .txt files only.")
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
