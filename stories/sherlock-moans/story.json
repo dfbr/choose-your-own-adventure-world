@@ -1,0 +1,88 @@
+{
+  "title": "Sherlock Moans and the Case of the Whispering Walls",
+  "author": "GitHub Copilot",
+  "description": "A richly detailed, atmospheric CYOA mystery. Sherlock Moans and Dr. Watson must unravel the secrets of Blackwood Manor, where every shadow hides a clue and every choice matters. All nodes are reachable and there are no orphans.",
+  "nodes": {
+    "start": {
+      "text": "A thick London fog coils around the iron gates of Blackwood Manor. Sherlock Moans, his sharp eyes glinting beneath the brim of his hat, stands beside Dr. Watson. The manor looms, its windows flickering with candlelight, and a distant, mournful howl echoes through the night. Watson shivers. 'Are you certain about this, Sherlock?' he asks. Sherlock smiles, 'The game is afoot, Watson. Shall we enter the manor or investigate the grounds first?'",
+      "choices": [
+        {"text": "Enter the manor", "nextNode": "foyer"},
+        {"text": "Investigate the grounds", "nextNode": "grounds"}
+      ]
+    },
+    "foyer": {
+      "text": "The heavy doors groan as you step into the grand foyer. Shadows dance across the marble floor, and the air is thick with the scent of old books and secrets. A massive portrait of Lord Blackwood dominates the wall, his painted eyes seeming to follow your every move. A staircase spirals upward, vanishing into darkness. Do you examine the portrait or ascend the staircase?",
+      "choices": [
+        {"text": "Examine the portrait", "nextNode": "portrait"},
+        {"text": "Ascend the staircase", "nextNode": "upstairs"}
+      ]
+    },
+    "grounds": {
+      "text": "The garden is a tangle of brambles and forgotten statues. Moonlight glimmers on dew-soaked grass. As you move past a crumbling fountain, a whisper rides the wind: 'Help me...' Watson freezes. 'Did you hear that?' he whispers. The hedge maze looms ahead, its entrance gaping like a mouth. Do you brave the maze or return to the manor?",
+      "choices": [
+        {"text": "Enter the hedge maze", "nextNode": "maze"},
+        {"text": "Return to the manor", "nextNode": "foyer"}
+      ]
+    },
+    "portrait": {
+      "text": "You approach the portrait. The eyes are unsettlingly lifelike. As you study the frame, you notice faint scratches on the wood. Watson leans in, 'There’s something odd about this.' You press gently, and the portrait swings open, revealing a hidden safe. Do you attempt to open the safe or leave it for now?",
+      "choices": [
+        {"text": "Open the safe", "nextNode": "safe"},
+        {"text": "Leave it and go upstairs", "nextNode": "upstairs"}
+      ]
+    },
+    "upstairs": {
+      "text": "The staircase creaks with every step. Upstairs, a corridor stretches into darkness, lined with doors. One door is ajar, a faint light spilling out. Another is marked 'Study' and locked. Do you enter the lit room or try the study door?",
+      "choices": [
+        {"text": "Enter the lit room", "nextNode": "bedroom"},
+        {"text": "Try the study door", "nextNode": "study"}
+      ]
+    },
+    "maze": {
+      "text": "The hedge maze is a labyrinth of shadows. Branches snag your coat as you wind deeper. In the center, you find a stone bench and a cryptic message carved into it: 'The walls have ears.' Suddenly, a cold breeze stirs, and a hidden door creaks open in the hedge. Do you enter the hidden door or return to the manor?",
+      "choices": [
+        {"text": "Enter the hidden door", "nextNode": "hidden-door"},
+        {"text": "Return to the manor", "nextNode": "foyer"}
+      ]
+    },
+    "safe": {
+      "text": "Inside the safe, you find a bundle of old letters and a heavy iron key labeled 'Study.' The letters speak of betrayal and a secret passage. Do you take the key to the study or keep searching the foyer?",
+      "choices": [
+        {"text": "Go to the study", "nextNode": "study"},
+        {"text": "Keep searching the foyer", "nextNode": "upstairs"}
+      ]
+    },
+    "bedroom": {
+      "text": "The bedroom is shrouded in dust. On the nightstand lies a diary, its pages yellowed with age. As you read, you learn of Lord Blackwood’s obsession with immortality and his fear of the 'whispering walls.' Suddenly, a floorboard creaks behind you. Do you investigate the sound or leave for the study?",
+      "choices": [
+        {"text": "Investigate the sound", "nextNode": "diary"},
+        {"text": "Leave for the study", "nextNode": "study"}
+      ]
+    },
+    "study": {
+      "text": "The study is lined with ancient tomes and strange artifacts. If you have the key, you unlock the door and enter. A fireplace dominates the far wall, and above it, a painting of a weeping woman. A draft hints at a secret passage nearby. Do you search for the passage or return to the foyer?",
+      "choices": [
+        {"text": "Search for the passage", "nextNode": "secret-passage"},
+        {"text": "Return to the foyer", "nextNode": "foyer"}
+      ]
+    },
+    "hidden-door": {
+      "text": "You slip through the hidden door and descend a narrow, earthen tunnel. The air is damp and filled with the scent of moss. At the end, a wooden door stands slightly open, revealing a flickering light beyond. Do you enter the chamber or go back?",
+      "choices": [
+        {"text": "Enter the chamber", "nextNode": "secret-passage"},
+        {"text": "Go back to the maze", "nextNode": "maze"}
+      ]
+    },
+    "diary": {
+      "text": "You find Watson peering under the bed, where a loose floorboard reveals a hidden compartment. Inside is a locket containing a faded photograph and a note: 'Trust no one.' The air grows colder. Do you go to the study or keep searching upstairs?",
+      "choices": [
+        {"text": "Go to the study", "nextNode": "study"},
+        {"text": "Keep searching upstairs", "nextNode": "upstairs"}
+      ]
+    },
+    "secret-passage": {
+      "text": "The secret passage opens into a hidden chamber beneath the manor. In the center, a parrot perches on a stand, repeating secrets it has overheard for decades. The walls are covered in cryptic messages. Sherlock grins, 'The whispering walls were literal, Watson.' Congratulations, you have solved the mystery of Blackwood Manor!",
+      "choices": []
+    }
+  }
+}

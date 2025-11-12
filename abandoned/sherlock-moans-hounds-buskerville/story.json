@@ -1,0 +1,792 @@
+{
+  "storyId": "sherlock-moans-hounds-buskerville",
+  "metadata": {
+    "title": "Sherlock Moans and the Hounds of Buskerville",
+    "description": "Join Sherlock Moans, a curious young detective, as she uncovers the mystery of the legendary hounds in modern-day London.",
+    "storyId": "sherlock-moans-hounds-buskerville",
+    "author": "AI Generated",
+    "created": "2025-11-10",
+    "categories": [
+      "choose-your-own-adventure",
+      "adventure",
+      "mystery"
+    ],
+    "styleKit": {
+      "character": "a tween girl",
+      "artStyle": "children's book illustration, bright colors, simple shapes",
+      "palette": "#E1497E primary with warm accents"
+    }
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "Listen to the voices nearby",
+          "nextNode": "eavesdrop-conversation"
+        },
+        {
+          "text": "Go straight to Buskerville Townhouse",
+          "nextNode": "buskerville-manor"
+        }
+      ]
+    },
+    "eavesdrop-conversation": {
+      "textFile": "nodes/eavesdrop-conversation.txt",
+      "choices": [
+        {
+          "text": "Ask Mr. Jenkins about his missing cat",
+          "nextNode": "ask-jenkins"
+        },
+        {
+          "text": "Ask Miss Green about her doubts",
+          "nextNode": "ask-green"
+        }
+      ]
+    },
+    "buskerville-manor": {
+      "textFile": "nodes/buskerville-manor.txt",
+      "choices": [
+        {
+          "text": "Follow the footprints into the park",
+          "nextNode": "follow-footprints"
+        },
+        {
+          "text": "Explore the townhouse first",
+          "nextNode": "explore-manor"
+        }
+      ]
+    },
+    "ask-jenkins": {
+      "textFile": "nodes/ask-jenkins.txt",
+      "choices": [
+        {
+          "text": "Examine the shiny object",
+          "nextNode": "shiny-object"
+        },
+        {
+          "text": "Look for more clues",
+          "nextNode": "look-for-clues"
+        }
+      ]
+    },
+    "ask-green": {
+      "textFile": "nodes/ask-green.txt",
+      "choices": [
+        {
+          "text": "Press her for more details",
+          "nextNode": "press-green"
+        },
+        {
+          "text": "Ask Mr. Jenkins about legends",
+          "nextNode": "ask-jenkins-legends"
+        }
+      ]
+    },
+    "follow-footprints": {
+      "textFile": "nodes/follow-footprints.txt",
+      "choices": [
+        {
+          "text": "Approach the dogs",
+          "nextNode": "approach-dogs"
+        },
+        {
+          "text": "Observe from a distance",
+          "nextNode": "observe-dogs"
+        }
+      ]
+    },
+    "explore-manor": {
+      "textFile": "nodes/explore-manor.txt",
+      "choices": [
+        {
+          "text": "Take the key",
+          "nextNode": "take-key"
+        },
+        {
+          "text": "Search for more clues",
+          "nextNode": "search-more-clues"
+        }
+      ]
+    },
+    "shiny-object": {
+      "textFile": "nodes/shiny-object.txt",
+      "choices": [
+        {
+          "text": "Head back to the manor",
+          "nextNode": "head-to-manor"
+        },
+        {
+          "text": "Ask more about the sheep",
+          "nextNode": "more-about-sheep"
+        }
+      ]
+    },
+    "look-for-clues": {
+      "textFile": "nodes/look-for-clues.txt",
+      "choices": [
+        {
+          "text": "Head back to the manor",
+          "nextNode": "head-to-manor"
+        },
+        {
+          "text": "Gather more information",
+          "nextNode": "gather-information"
+        }
+      ]
+    },
+    "press-green": {
+      "textFile": "nodes/press-green.txt",
+      "choices": [
+        {
+          "text": "Go to Buskerville Townhouse",
+          "nextNode": "buskerville-manor"
+        },
+        {
+          "text": "Ask more residents",
+          "nextNode": "ask-residents"
+        }
+      ]
+    },
+    "ask-jenkins-legends": {
+      "textFile": "nodes/ask-jenkins-legends.txt",
+      "choices": [
+        {
+          "text": "Check the alleyway again",
+          "nextNode": "check-sheep-pen"
+        },
+        {
+          "text": "Go straight to the townhouse",
+          "nextNode": "buskerville-manor"
+        },
+        {
+          "text": "Head back to the townhouse",
+          "nextNode": "head-to-manor"
+        }
+      ]
+    },
+    "more-about-sheep": {
+      "textFile": "nodes/more-about-sheep.txt",
+      "choices": [
+        {
+          "text": "Check the glimmering object",
+          "nextNode": "check-glimmer"
+        },
+        {
+          "text": "Enter the manor",
+          "nextNode": "enter-manor"
+        }
+      ]
+    },
+    "gather-information": {
+      "textFile": "nodes/gather-information.txt",
+      "choices": [
+        {
+          "text": "Head back to the manor",
+          "nextNode": "buskerville-manor"
+        },
+        {
+          "text": "Discuss with Mr. Jenkins",
+          "nextNode": "discuss-jenkins"
+        }
+      ]
+    },
+    "check-sheep-pen": {
+      "textFile": "nodes/check-sheep-pen.txt",
+      "choices": [
+        {
+          "text": "Take the whistle and follow the dog",
+          "nextNode": "follow-dog"
+        },
+        {
+          "text": "Examine the sheep",
+          "nextNode": "examine-sheep"
+        }
+      ]
+    },
+    "take-key": {
+      "textFile": "nodes/take-key.txt",
+      "choices": [
+        {
+          "text": "Explore the study",
+          "nextNode": "explore-study"
+        },
+        {
+          "text": "Investigate another room",
+          "nextNode": "investigate-room"
+        }
+      ]
+    },
+    "search-more-clues": {
+      "textFile": "nodes/search-more-clues.txt",
+      "choices": [
+        {
+          "text": "Follow the map",
+          "nextNode": "follow-map"
+        },
+        {
+          "text": "Ask Mr. Jenkins",
+          "nextNode": "ask-jenkins-map"
+        }
+      ]
+    },
+    "investigate-woods": {
+      "textFile": "nodes/investigate-woods.txt",
+      "choices": [
+        {
+          "text": "Peer into the well",
+          "nextNode": "peer-well"
+        },
+        {
+          "text": "Search around it",
+          "nextNode": "search-around-well"
+        }
+      ]
+    },
+    "play-with-dogs": {
+      "textFile": "nodes/play-with-dogs.txt",
+      "choices": [
+        {
+          "text": "Dig around the glimmering object",
+          "nextNode": "dig-object"
+        },
+        {
+          "text": "Call for Mr. Jenkins",
+          "nextNode": "call-jenkins"
+        }
+      ]
+    },
+    "call-others": {
+      "textFile": "nodes/call-others.txt",
+      "choices": [
+        {
+          "text": "Explore the hollow tree",
+          "nextNode": "explore-hollow-tree"
+        },
+        {
+          "text": "Look around the glade",
+          "nextNode": "look-around-glade"
+        }
+      ]
+    },
+    "investigate-room": {
+      "textFile": "nodes/investigate-room.txt",
+      "choices": [
+        {
+          "text": "Read the book",
+          "nextNode": "read-book"
+        },
+        {
+          "text": "Search the shelves",
+          "nextNode": "search-shelves"
+        }
+      ]
+    },
+    "follow-map": {
+      "textFile": "nodes/follow-map.txt",
+      "choices": [
+        {
+          "text": "Open the chest now",
+          "nextNode": "open-chest"
+        },
+        {
+          "text": "Wait to examine at the manor",
+          "nextNode": "wait-examine-chest"
+        }
+      ]
+    },
+    "ask-jenkins-map": {
+      "textFile": "nodes/ask-jenkins-map.txt",
+      "choices": [
+        {
+          "text": "Follow the map together",
+          "nextNode": "follow-map"
+        },
+        {
+          "text": "Gather more information",
+          "nextNode": "gather-information"
+        }
+      ]
+    },
+    "peer-well": {
+      "textFile": "nodes/peer-well.txt",
+      "choices": [
+        {
+          "text": "Retrieve the shining object",
+          "nextNode": "retrieve-object"
+        },
+        {
+          "text": "Call for Mr. Jenkins",
+          "nextNode": "call-jenkins-well"
+        }
+      ]
+    },
+    "search-around-well": {
+      "textFile": "nodes/search-around-well.txt",
+      "choices": [
+        {
+          "text": "Explore the hidden door",
+          "nextNode": "explore-hidden-door"
+        },
+        {
+          "text": "Return to find Mr. Jenkins",
+          "nextNode": "return-jenkins"
+        }
+      ]
+    },
+    "dig-object": {
+      "textFile": "nodes/dig-object.txt",
+      "choices": [
+        {
+          "text": "Take the brooch back to the townhouse",
+          "nextNode": "take-brooch-manor"
+        },
+        {
+          "text": "Look for more treasures",
+          "nextNode": "look-more-treasures"
+        }
+      ]
+    },
+    "call-jenkins": {
+      "textFile": "nodes/call-jenkins.txt",
+      "choices": [
+        {
+          "text": "Take the brooch back to the manor",
+          "nextNode": "take-brooch-manor"
+        },
+        {
+          "text": "Keep searching the clearing",
+          "nextNode": "look-more-treasures"
+        }
+      ]
+    },
+    "take-brooch-manor": {
+      "textFile": "nodes/take-brooch-manor.txt",
+      "choices": [
+        {
+          "text": "Look for more connections",
+          "nextNode": "more-connections"
+        },
+        {
+          "text": "Investigate the hidden door",
+          "nextNode": "explore-hidden-door"
+        }
+      ]
+    },
+    "look-more-treasures": {
+      "textFile": "nodes/look-more-treasures.txt",
+      "choices": [
+        {
+          "text": "Return to the townhouse",
+          "nextNode": "return-manor"
+        },
+        {
+          "text": "Continue searching",
+          "nextNode": "continue-searching"
+        }
+      ]
+    },
+    "return-manor": {
+      "textFile": "nodes/return-manor.txt",
+      "choices": [
+        {
+          "text": "Search the study for more clues",
+          "nextNode": "search-study"
+        },
+        {
+          "text": "Investigate the hidden door",
+          "nextNode": "explore-hidden-door"
+        }
+      ]
+    },
+    "continue-searching": {
+      "textFile": "nodes/continue-searching.txt",
+      "choices": [
+        {
+          "text": "Take the box back to the townhouse",
+          "nextNode": "take-box-manor"
+        },
+        {
+          "text": "Read a letter here",
+          "nextNode": "read-letter"
+        },
+        {
+          "text": "Wait to examine at the townhouse",
+          "nextNode": "wait-examine-chest"
+        }
+      ]
+    },
+    "look-around-study": {
+      "textFile": "nodes/look-around-study.txt",
+      "choices": [
+        {
+          "text": "Follow the map now",
+          "nextNode": "follow-map"
+        },
+        {
+          "text": "Share with Mr. Jenkins",
+          "nextNode": "share-jenkins-map"
+        }
+      ]
+    },
+    "explore-hidden-door": {
+      "textFile": "nodes/explore-hidden-door.txt",
+      "choices": [
+        {
+          "text": "Keep going deeper",
+          "nextNode": "deeper-tunnel"
+        },
+        {
+          "text": "Turn back to the light",
+          "nextNode": "turn-back-light"
+        }
+      ]
+    },
+    "search-study": {
+      "textFile": "nodes/search-study.txt",
+      "choices": [
+        {
+          "text": "Plan next move with Mr. Jenkins",
+          "nextNode": "plan-next-move"
+        },
+        {
+          "text": "Search for more clues",
+          "nextNode": "search-more-clues"
+        }
+      ]
+    },
+    "deeper-tunnel": {
+      "textFile": "nodes/deeper-tunnel.txt",
+      "choices": [
+        {
+          "text": "Approach the treasure chest",
+          "nextNode": "approach-chest"
+        },
+        {
+          "text": "Look around the cavern",
+          "nextNode": "look-around-cavern"
+        }
+      ]
+    },
+    "turn-back-light": {
+      "textFile": "nodes/turn-back-light.txt",
+      "choices": [
+        {
+          "text": "Join the children playing",
+          "nextNode": "join-children"
+        },
+        {
+          "text": "Ask the grown-ups for stories",
+          "nextNode": "ask-grown-ups"
+        }
+      ]
+    },
+    "share-jenkins": {
+      "textFile": "nodes/share-jenkins.txt",
+      "choices": [
+        {
+          "text": "Push the bookshelf",
+          "nextNode": "push-bookshelf"
+        },
+        {
+          "text": "Continue searching",
+          "nextNode": "search-more-clues"
+        }
+      ]
+    },
+    "share-jenkins-map": {
+      "textFile": "nodes/share-jenkins-map.txt",
+      "choices": [
+        {
+          "text": "Follow the map now",
+          "nextNode": "follow-map"
+        },
+        {
+          "text": "Gather more stories",
+          "nextNode": "gather-information"
+        }
+      ]
+    },
+    "approach-chest": {
+      "textFile": "nodes/approach-chest.txt",
+      "choices": [
+        {
+          "text": "Take some treasure with you",
+          "nextNode": "take-treasure"
+        },
+        {
+          "text": "Leave it and escape back to safety",
+          "nextNode": "escape-treasure"
+        }
+      ]
+    },
+    "look-around-cavern": {
+      "textFile": "nodes/look-around-cavern.txt",
+      "choices": [
+        {
+          "text": "Study the paintings more",
+          "nextNode": "study-paintings"
+        },
+        {
+          "text": "Head back to the chest",
+          "nextNode": "approach-chest"
+        }
+      ]
+    },
+    "take-treasure": {
+      "textFile": "nodes/take-treasure.txt",
+      "choices": []
+    },
+    "escape-treasure": {
+      "textFile": "nodes/escape-treasure.txt",
+      "choices": []
+    },
+    "take-box-manor": {
+      "textFile": "nodes/take-box-manor.txt",
+      "choices": [
+        {
+          "text": "Read more letters",
+          "nextNode": "read-letters"
+        },
+        {
+          "text": "Discuss with Mr. Jenkins",
+          "nextNode": "discuss-letters"
+        }
+      ]
+    },
+    "read-letters": {
+      "textFile": "nodes/read-letters.txt",
+      "choices": [
+        {
+          "text": "Follow the clues to the treasure",
+          "nextNode": "follow-clues"
+        },
+        {
+          "text": "Share with Mr. Jenkins",
+          "nextNode": "share-letters"
+        }
+      ]
+    },
+    "share-letters": {
+      "textFile": "nodes/share-letters.txt",
+      "choices": [
+        {
+          "text": "Head out immediately",
+          "nextNode": "head-out-adventure"
+        },
+        {
+          "text": "Gather supplies first",
+          "nextNode": "gather-supplies"
+        }
+      ]
+    },
+    "head-out-adventure": {
+      "textFile": "nodes/head-out-adventure.txt",
+      "choices": [
+        {
+          "text": "Keep following the path",
+          "nextNode": "follow-path"
+        },
+        {
+          "text": "Venture off the trail",
+          "nextNode": "off-trail"
+        }
+      ]
+    },
+    "gather-supplies": {
+      "textFile": "nodes/gather-supplies.txt",
+      "choices": [
+        {
+          "text": "Follow the path from the letters",
+          "nextNode": "follow-path"
+        },
+        {
+          "text": "Explore a side trail",
+          "nextNode": "side-trail"
+        }
+      ]
+    },
+    "side-trail": {
+      "textFile": "nodes/side-trail.txt",
+      "choices": [
+        {
+          "text": "Carefully approach the sound",
+          "nextNode": "approach-sound"
+        },
+        {
+          "text": "Keep walking down the path",
+          "nextNode": "keep-walking"
+        }
+      ]
+    },
+    "follow-path": {
+      "textFile": "nodes/follow-path.txt",
+      "choices": [
+        {
+          "text": "Approach the large tree",
+          "nextNode": "approach-tree"
+        },
+        {
+          "text": "Keep following the path",
+          "nextNode": "continue-path"
+        }
+      ]
+    },
+    "join-children": {
+      "textFile": "nodes/join-children.txt",
+      "choices": [
+        {
+          "text": "Ask about the strange lights",
+          "nextNode": "ask-lights"
+        },
+        {
+          "text": "Keep playing with friends",
+          "nextNode": "keep-playing"
+        }
+      ]
+    },
+    "ask-grown-ups": {
+      "textFile": "nodes/ask-grown-ups.txt",
+      "choices": [
+        {
+          "text": "Share with Mr. Jenkins",
+          "nextNode": "share-jenkins-stories"
+        },
+        {
+          "text": "Head to the park",
+          "nextNode": "head-woods"
+        }
+      ]
+    },
+    "ask-lights": {
+      "textFile": "nodes/ask-lights.txt",
+      "choices": [
+        {
+          "text": "Explore the park at night",
+          "nextNode": "explore-woods-night"
+        },
+        {
+          "text": "Share with Mr. Jenkins",
+          "nextNode": "share-jenkins-lights"
+        }
+      ]
+    },
+    "explore-woods-night": {
+      "textFile": "nodes/explore-woods-night.txt",
+      "choices": [
+        {
+          "text": "Follow the lights",
+          "nextNode": "follow-lights"
+        },
+        {
+          "text": "Observe from a distance",
+          "nextNode": "observe-lights"
+        }
+      ]
+    },
+    "follow-lights": {
+      "textFile": "nodes/follow-lights.txt",
+      "choices": [
+        {
+          "text": "Follow the city lights",
+          "nextNode": "follow-fireflies"
+        },
+        {
+          "text": "Turn back to the neighborhood",
+          "nextNode": "turn-back-village"
+        }
+      ]
+    },
+    "observe-lights": {
+      "textFile": "nodes/observe-lights.txt",
+      "choices": [
+        {
+          "text": "Investigate the shadows",
+          "nextNode": "investigate-shadows"
+        },
+        {
+          "text": "Stay where you are",
+          "nextNode": "stay-where-you-are"
+        }
+      ]
+    },
+    "return-jenkins": {
+      "textFile": "nodes/return-jenkins.txt",
+      "choices": [
+        {
+          "text": "Return to the well",
+          "nextNode": "explore-well"
+        },
+        {
+          "text": "Explore another part of the park",
+          "nextNode": "explore-another-part"
+        }
+      ]
+    },
+    "explore-another-part": {
+      "textFile": "nodes/explore-another-part.txt",
+      "choices": [
+        {
+          "text": "Investigate the creek",
+          "nextNode": "investigate-creek"
+        },
+        {
+          "text": "Follow the howling sound",
+          "nextNode": "follow-howling"
+        }
+      ]
+    },
+    "investigate-creek": {
+      "textFile": "nodes/investigate-creek.txt",
+      "choices": [
+        {
+          "text": "Keep the stone",
+          "nextNode": "keep-stone"
+        },
+        {
+          "text": "Search around the creek",
+          "nextNode": "search-creek"
+        }
+      ]
+    },
+    "follow-howling": {
+      "textFile": "nodes/follow-howling.txt",
+      "choices": [
+        {
+          "text": "Approach the dogs",
+          "nextNode": "approach-dogs-again"
+        },
+        {
+          "text": "Observe from a distance",
+          "nextNode": "observe-dogs-again"
+        }
+      ]
+    },
+    "approach-dogs-again": {
+      "textFile": "nodes/approach-dogs-again.txt",
+      "choices": [
+        {
+          "text": "Follow the dog",
+          "nextNode": "follow-dog-again"
+        },
+        {
+          "text": "Wait and watch",
+          "nextNode": "wait-and-watch"
+        }
+      ]
+    },
+    "observe-dogs-again": {
+      "textFile": "nodes/observe-dogs-again.txt",
+      "choices": [
+        {
+          "text": "Approach the largest dog",
+          "nextNode": "approach-largest-dog"
+        },
+        {
+          "text": "Stay where you are",
+          "nextNode": "stay-waiting"
+        }
+      ]
+    }
+  }
+}

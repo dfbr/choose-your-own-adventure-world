@@ -184,46 +184,37 @@ class ProofReaderApp(QMainWindow):
         bottom_layout.addLayout(btn_layout)
         right_splitter.addWidget(bottom_widget)
 
+        # Refresh Stories button
+        self.refresh_btn = QPushButton("Refresh Stories")
+        main_layout.addWidget(self.refresh_btn, 0, Qt.AlignBottom)
 
-    # Refresh Stories button
-    self.refresh_btn = QPushButton("Refresh Stories")
-    main_layout.addWidget(self.refresh_btn, 0, Qt.AlignBottom)
+        # Publish button
+        self.publish_btn = QPushButton("Publish Story")
+        main_layout.addWidget(self.publish_btn, 0, Qt.AlignBottom)
 
-    # Publish button
-    self.publish_btn = QPushButton("Publish Story")
-    main_layout.addWidget(self.publish_btn, 0, Qt.AlignBottom)
+        # Connect buttons
+        self.accept_btn.clicked.connect(self.accept_node)
+        self.reject_btn.clicked.connect(self.reject_node)
+        self.save_btn.clicked.connect(self.save_node)
+        self.publish_btn.clicked.connect(self.publish_story)
+        self.refresh_btn.clicked.connect(self.load_stories)
+        self.text_edit.textChanged.connect(self.update_rendered_view)
 
-
-    # Connect buttons
-    self.accept_btn.clicked.connect(self.accept_node)
-    self.reject_btn.clicked.connect(self.reject_node)
-    self.save_btn.clicked.connect(self.save_node)
-    self.publish_btn.clicked.connect(self.publish_story)
-    self.refresh_btn.clicked.connect(self.load_stories)
-    self.text_edit.textChanged.connect(self.update_rendered_view)
-
-
-    # Menu for text size and refresh (after widgets are created)
-    menubar = self.menuBar()
-    view_menu = menubar.addMenu("View")
-    increase_font_action = QAction("Increase Text Size", self)
-    decrease_font_action = QAction("Decrease Text Size", self)
-    refresh_stories_action = QAction("Refresh Stories", self)
-    view_menu.addAction(increase_font_action)
-    view_menu.addAction(decrease_font_action)
-    view_menu.addSeparator()
-    view_menu.addAction(refresh_stories_action)
-    increase_font_action.setShortcut("Ctrl++")
-    decrease_font_action.setShortcut("Ctrl+-")
-    increase_font_action.triggered.connect(self.increase_text_size)
-    decrease_font_action.triggered.connect(self.decrease_text_size)
-    refresh_stories_action.triggered.connect(self.load_stories)
-
-        # Keyboard shortcuts for buttons (after buttons are created)
-        self.accept_btn.setShortcut("Ctrl+Return")
-        self.reject_btn.setShortcut("Ctrl+Backspace")
-        self.save_btn.setShortcut("Ctrl+S")
-
+        # Menu for text size and refresh (after widgets are created)
+        menubar = self.menuBar()
+        view_menu = menubar.addMenu("View")
+        increase_font_action = QAction("Increase Text Size", self)
+        decrease_font_action = QAction("Decrease Text Size", self)
+        refresh_stories_action = QAction("Refresh Stories", self)
+        view_menu.addAction(increase_font_action)
+        view_menu.addAction(decrease_font_action)
+        view_menu.addSeparator()
+        view_menu.addAction(refresh_stories_action)
+        increase_font_action.setShortcut("Ctrl++")
+        decrease_font_action.setShortcut("Ctrl+-")
+        increase_font_action.triggered.connect(self.increase_text_size)
+        decrease_font_action.triggered.connect(self.decrease_text_size)
+        refresh_stories_action.triggered.connect(self.load_stories)
 
         # Keyboard shortcuts for buttons (after buttons are created)
         self.accept_btn.setShortcut("Ctrl+Return")
@@ -455,6 +446,10 @@ class ProofReaderApp(QMainWindow):
                     self.rendered_view.setTextFormat(Qt.RichText)
                     self.rendered_view.setText(html)
                     self.rendered_view.setOpenExternalLinks(False)
+                    try:
+                        self.rendered_view.linkActivated.disconnect()
+                    except TypeError:
+                        pass  # Wasn't connected yet
                     self.rendered_view.linkActivated.connect(self.handle_choice_link)
 
     def handle_choice_link(self, link):

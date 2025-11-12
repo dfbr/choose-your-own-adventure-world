@@ -13,5 +13,12 @@
   },
   "the-great-escape": {
     "start": true
+  },
+  "sherlock-moans": {
+    "start": true,
+    "foyer": false,
+    "portrait": false,
+    "safe": false,
+    "study": false
   }
 }
