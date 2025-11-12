@@ -29,7 +29,8 @@
           "text": "Head to the park",
           "nextNode": "park"
         }
-      ]
+      ],
+      "image": "images/start.jpg"
     },
     "local-market": {
       "textFile": "nodes/local-market.txt",
@@ -293,11 +294,13 @@
     },
     "community-center": {
       "textFile": "nodes/community-center.txt",
-      "choices": []
+      "choices": [],
+      "image": "images/community-center.jpg"
     },
     "neighborhood-festival": {
       "textFile": "nodes/neighborhood-festival.txt",
-      "choices": []
+      "choices": [],
+      "image": "images/neighborhood-festival.jpg"
     },
     "follow-girl": {
       "textFile": "nodes/follow-girl.txt",
@@ -379,11 +382,13 @@
     },
     "share-treasures": {
       "textFile": "nodes/share-treasures.txt",
-      "choices": []
+      "choices": [],
+      "image": "images/share-treasures.jpg"
     },
     "keep-treasures": {
       "textFile": "nodes/keep-treasures.txt",
-      "choices": []
+      "choices": [],
+      "image": "images/keep-treasures.jpg"
     },
     "explore-more-theater": {
       "textFile": "nodes/explore-more-theater.txt",
@@ -400,15 +405,18 @@
     },
     "find-hounds": {
       "textFile": "nodes/find-hounds.txt",
-      "choices": []
+      "choices": [],
+      "image": "images/find-hounds.jpg"
     },
     "share-script": {
       "textFile": "nodes/share-script.txt",
-      "choices": []
+      "choices": [],
+      "image": "images/share-script.jpg"
     },
     "keep-script": {
       "textFile": "nodes/keep-script.txt",
-      "choices": []
+      "choices": [],
+      "image": "images/keep-script.jpg"
     }
   }
 }
