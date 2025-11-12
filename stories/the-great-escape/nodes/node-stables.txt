@@ -1,0 +1,5 @@
+You head to the stables, moving quietly to avoid detection. The stable doors are open, and you see a horse saddled and ready. You could ride to the village for help, or hide in the hayloft until it's safe.
+
+Choices:
+- Ride to the village (nextNode: node-find-police)
+- Hide in the hayloft (nextNode: node-hide-in-woods)

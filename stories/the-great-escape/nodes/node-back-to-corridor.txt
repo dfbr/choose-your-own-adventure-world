@@ -1,0 +1,7 @@
+You decide it's too risky to go down the staircase, so you quietly retrace your steps back to the corridor. The way is clear, but you know you can't linger for long.
+
+You hear faint voices from the direction you came. You must choose a new path quickly.
+
+Choices:
+- Try a door you passed earlier (nextNode: node-try-earlier-door)
+- Return to the main hall (nextNode: node-return-main-hall)

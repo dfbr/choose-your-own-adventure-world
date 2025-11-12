@@ -1,0 +1,5 @@
+You hide behind a large marble statue, barely daring to breathe. The gang members talk for a while, then leave the hall. When the coast is clear, you slip out the front door and make your escape.
+
+Choices:
+- Go to the village to find the police (nextNode: node-find-police)
+- Hide in the woods (nextNode: node-hide-in-woods)

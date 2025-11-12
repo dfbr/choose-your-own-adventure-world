@@ -1,0 +1,5 @@
+You slip into the old chapel, its stained glass windows casting colored light on the dusty pews. It's quiet here, but you hear voices outside. You can hide and wait, or try to sneak out the back.
+
+Choices:
+- Hide in the chapel (nextNode: node-hide-in-woods)
+- Sneak out the back (nextNode: node-find-police)

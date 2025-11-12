@@ -1,0 +1,7 @@
+You keep going down the winding staircase, the air growing colder with each step. At the bottom, you find yourself in a dimly lit cellar filled with crates and barrels.
+
+You hear voices above—someone is searching for you. You need to find another way out.
+
+Choices:
+- Search the cellar for a secret exit (nextNode: node-search-cellar)
+- Hide behind the barrels (nextNode: node-hide-behind-barrels)

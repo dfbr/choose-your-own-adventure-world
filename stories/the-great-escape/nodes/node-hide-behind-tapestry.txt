@@ -1,0 +1,7 @@
+You slip behind the tapestry, pressing yourself against the cold stone wall. The footsteps grow louder, then fade as the gang members pass by without noticing you.
+
+Once the coast is clear, you peek out and see the way is open. You can either continue down the staircase or return to the room to look for another exit.
+
+Choices:
+- Keep going down (nextNode: node-keep-going-down)
+- Return to the room (nextNode: start)

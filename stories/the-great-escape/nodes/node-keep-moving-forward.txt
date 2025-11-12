@@ -1,0 +1,7 @@
+You keep moving forward, your footsteps echoing in the long corridor. The walls are lined with old portraits, their eyes seeming to follow you as you pass.
+
+At the end of the corridor, you find a heavy wooden door. You try the handle—it creaks open, revealing a spiral staircase leading down into darkness.
+
+Choices:
+- Descend the staircase (nextNode: node-descend-staircase)
+- Go back and try another route (nextNode: node-back-to-corridor)

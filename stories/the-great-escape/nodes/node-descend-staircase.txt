@@ -1,0 +1,7 @@
+You descend the spiral staircase, the air growing colder and damper as you go. At the bottom, you find yourself in a hidden cellar filled with crates and old barrels.
+
+You hear voices above—someone is searching for you. You need to find another way out.
+
+Choices:
+- Search the cellar for a secret exit (nextNode: node-search-cellar)
+- Hide behind the barrels (nextNode: node-hide-behind-barrels)

@@ -1,0 +1,7 @@
+You take a deep breath and try to sneak past the gang. You move quietly, keeping to the shadows. Just as you reach the door, someone shouts. You break into a run and burst outside, escaping into the night.
+
+You are free, but you know the gang will be after you. You must get to the police quickly.
+
+Choices:
+- Head for the village (nextNode: node-find-police)
+- Hide in the woods (nextNode: node-hide-in-woods)

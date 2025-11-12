@@ -1,0 +1,7 @@
+You hide behind the barrels, holding your breath as footsteps echo above. The voices fade, and after a tense wait, you slip out of the cellar and into the night.
+
+You are free, but the adventure is not over yet.
+
+Choices:
+- Make your way to the village (nextNode: node-find-police)
+- Hide in the woods (nextNode: node-hide-in-woods)
