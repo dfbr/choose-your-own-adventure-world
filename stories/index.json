@@ -45,6 +45,11 @@
     "description": "An adventurous puzzle story where you must defuse a glitter bomb set by your sibling.",
     "author": "AI Generated",
     "created": "2025-11-10",
-    "startNode": "start"
+    "startNode": "start",
+    "categories": [
+      "puzzle",
+      "adventure",
+      "science"
+    ]
   }
 ]
