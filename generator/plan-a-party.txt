@@ -1,0 +1,62 @@
+Generate a Choose Your Own Adventure story with the following outline:
+
+Title: Let's party!
+
+Categories: choose-your-own-adventure, adventure, mystery, science, comedy, friendship, family, nature, music, art
+
+Setting: It's modern day Norway (specifically Bergen). It's sunny and bright and a birthday party is being planned. Excitement and anticipation await.
+
+Protagonist: The protagonist is the reader. They are excited, happy and friendly.
+
+Main Story Beats:
+- The story revolves around planning a child's birthday party. Each choice leads to more fun and exciting activity in the party.
+- There should be a choice over the theme of the party (e.g. surprise, outdoor, card game party, trampolining etc)
+- There should be a choice of who to invite
+- There should be a choice of whether or not it's a surprise party or known to the person whose birthday it is.
+- Choose what food to have and how to decorate the table and house.
+- Choose what the birthday cake should look like and what flavour it should be.
+- Choose where to hold the party e.g. at home, in the park, or at a trampoline park.
+- What music and activities will there be at the party?
+- Multiple endings: The story should end with guests arriving and enjoying the party just as it has been planned, thanking the host and receiving exciting goody bags as they go home.
+
+Tone: mysterious (for the person it's a party for), humorous, spooky, educational, fun
+
+Branching Structure: Branches probably don't need to rejoin but it will expand as each choice is made.
+
+Special Requirements: The story should be accessible to early years readers who have an adult helping them enjoy the tale.
+
+Character Bio (for consistent images – fill what matters, delete rest):
+	Name: Abrigail
+	Age Range: tween
+	Gender: unspecified
+	Pronouns: they/them
+	
+	Ethnicity & Skin Tone: European
+	Skin Tone: light
+	
+	Hair Type: natural
+	Hair Colour: blonde
+	Hair Length: shoulder-length
+	Hair Style: natural
+	
+	Eyes: brown
+	
+	Face Features: beauty marks
+	
+	Body Type & Build: average
+	Height: average
+	
+	Visible Disabilities & Differences: has guide dog (they are blind)
+	
+	Clothing Style: jeans and t-shirt
+	
+	Accessories: sunglasses
+	
+	Signature Colours: pink and orange t-shirt
+	
+	Personality Keywords (for tone): confident / calm / funny / compassionate / collaborative
+	
+	Art Style Preferences: photo realistic
+
+	
+	IMPORTANT: Repeat EXACT character appearance (including disability aids, cultural markers, and physical traits) in EVERY image prompt to maintain consistency.

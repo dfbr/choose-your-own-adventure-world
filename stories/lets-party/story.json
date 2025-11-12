@@ -1,0 +1,385 @@
+{
+  "storyId": "lets-party",
+  "metadata": {
+    "title": "Let's Party!",
+    "description": "Join Abrigail in planning the best birthday party ever in sunny Bergen, Norway! Make fun choices about the theme, food, and music for a day full of excitement!",
+    "storyId": "lets-party",
+    "author": "AI Generated",
+    "created": "2025-11-13",
+    "categories": [
+      "choose-your-own-adventure",
+      "adventure",
+      "friendship",
+      "nature",
+      "music"
+    ],
+    "styleKit": {
+      "character": "a tween child",
+      "artStyle": "children's book illustration, bright colors, simple shapes",
+      "palette": "#E1497E primary with warm accents"
+    }
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "Choose a surprise party theme",
+          "nextNode": "surprise-theme"
+        },
+        {
+          "text": "Choose an outdoor adventure theme",
+          "nextNode": "outdoor-theme"
+        },
+        {
+          "text": "Choose a card game party theme",
+          "nextNode": "card-game-theme"
+        }
+      ],
+      "image": "images/start.jpg"
+    },
+    "surprise-theme": {
+      "textFile": "nodes/surprise-theme.txt",
+      "choices": [
+        {
+          "text": "Invite all your friends",
+          "nextNode": "invite-all-friends"
+        },
+        {
+          "text": "Invite just your best friends",
+          "nextNode": "invite-best-friends"
+        },
+        {
+          "text": "Invite family only",
+          "nextNode": "invite-family-only"
+        }
+      ]
+    },
+    "outdoor-theme": {
+      "textFile": "nodes/outdoor-theme.txt",
+      "choices": [
+        {
+          "text": "Invite all your friends",
+          "nextNode": "invite-all-friends"
+        },
+        {
+          "text": "Invite just your best friends",
+          "nextNode": "invite-best-friends"
+        },
+        {
+          "text": "Invite family only",
+          "nextNode": "invite-family-only"
+        }
+      ]
+    },
+    "card-game-theme": {
+      "textFile": "nodes/card-game-theme.txt",
+      "choices": [
+        {
+          "text": "Invite all your friends",
+          "nextNode": "invite-all-friends"
+        },
+        {
+          "text": "Invite just your best friends",
+          "nextNode": "invite-best-friends"
+        },
+        {
+          "text": "Invite family only",
+          "nextNode": "invite-family-only"
+        }
+      ]
+    },
+    "invite-all-friends": {
+      "textFile": "nodes/invite-all-friends.txt",
+      "choices": [
+        {
+          "text": "Make it a surprise party",
+          "nextNode": "surprise-party"
+        },
+        {
+          "text": "Let your friend help plan",
+          "nextNode": "help-plan"
+        }
+      ]
+    },
+    "invite-best-friends": {
+      "textFile": "nodes/invite-best-friends.txt",
+      "choices": [
+        {
+          "text": "Make it a surprise party",
+          "nextNode": "surprise-party"
+        },
+        {
+          "text": "Let your friend help plan",
+          "nextNode": "help-plan"
+        }
+      ]
+    },
+    "invite-family-only": {
+      "textFile": "nodes/invite-family-only.txt",
+      "choices": [
+        {
+          "text": "Make it a surprise party",
+          "nextNode": "surprise-party"
+        },
+        {
+          "text": "Let your friend help plan",
+          "nextNode": "help-plan"
+        }
+      ]
+    },
+    "surprise-party": {
+      "textFile": "nodes/surprise-party.txt",
+      "choices": [
+        {
+          "text": "Pizza and fruit",
+          "nextNode": "pizza-fruit"
+        },
+        {
+          "text": "Sandwiches and cupcakes",
+          "nextNode": "sandwiches-cupcakes"
+        },
+        {
+          "text": "Veggies and dip",
+          "nextNode": "veggies-dip"
+        }
+      ]
+    },
+    "help-plan": {
+      "textFile": "nodes/help-plan.txt",
+      "choices": [
+        {
+          "text": "Pizza and fruit",
+          "nextNode": "pizza-fruit"
+        },
+        {
+          "text": "Sandwiches and cupcakes",
+          "nextNode": "sandwiches-cupcakes"
+        },
+        {
+          "text": "Veggies and dip",
+          "nextNode": "veggies-dip"
+        }
+      ]
+    },
+    "pizza-fruit": {
+      "textFile": "nodes/pizza-fruit.txt",
+      "choices": [
+        {
+          "text": "Bright balloons and streamers",
+          "nextNode": "balloons-streamers"
+        },
+        {
+          "text": "Flowers and fairy lights",
+          "nextNode": "flowers-lights"
+        },
+        {
+          "text": "Art paper and crafts",
+          "nextNode": "art-paper"
+        }
+      ]
+    },
+    "sandwiches-cupcakes": {
+      "textFile": "nodes/sandwiches-cupcakes.txt",
+      "choices": [
+        {
+          "text": "Bright balloons and streamers",
+          "nextNode": "balloons-streamers"
+        },
+        {
+          "text": "Flowers and fairy lights",
+          "nextNode": "flowers-lights"
+        },
+        {
+          "text": "Art paper and crafts",
+          "nextNode": "art-paper"
+        }
+      ]
+    },
+    "veggies-dip": {
+      "textFile": "nodes/veggies-dip.txt",
+      "choices": [
+        {
+          "text": "Bright balloons and streamers",
+          "nextNode": "balloons-streamers"
+        },
+        {
+          "text": "Flowers and fairy lights",
+          "nextNode": "flowers-lights"
+        },
+        {
+          "text": "Art paper and crafts",
+          "nextNode": "art-paper"
+        }
+      ]
+    },
+    "balloons-streamers": {
+      "textFile": "nodes/balloons-streamers.txt",
+      "choices": [
+        {
+          "text": "Chocolate cake",
+          "nextNode": "chocolate-cake"
+        },
+        {
+          "text": "Vanilla cake",
+          "nextNode": "vanilla-cake"
+        },
+        {
+          "text": "Strawberry cake",
+          "nextNode": "strawberry-cake"
+        }
+      ]
+    },
+    "flowers-lights": {
+      "textFile": "nodes/flowers-lights.txt",
+      "choices": [
+        {
+          "text": "Chocolate cake",
+          "nextNode": "chocolate-cake"
+        },
+        {
+          "text": "Vanilla cake",
+          "nextNode": "vanilla-cake"
+        },
+        {
+          "text": "Strawberry cake",
+          "nextNode": "strawberry-cake"
+        }
+      ]
+    },
+    "art-paper": {
+      "textFile": "nodes/art-paper.txt",
+      "choices": [
+        {
+          "text": "Chocolate cake",
+          "nextNode": "chocolate-cake"
+        },
+        {
+          "text": "Vanilla cake",
+          "nextNode": "vanilla-cake"
+        },
+        {
+          "text": "Strawberry cake",
+          "nextNode": "strawberry-cake"
+        }
+      ]
+    },
+    "chocolate-cake": {
+      "textFile": "nodes/chocolate-cake.txt",
+      "choices": [
+        {
+          "text": "At home",
+          "nextNode": "party-at-home"
+        },
+        {
+          "text": "In the park",
+          "nextNode": "party-in-park"
+        },
+        {
+          "text": "At a trampoline park",
+          "nextNode": "party-at-trampoline"
+        }
+      ]
+    },
+    "vanilla-cake": {
+      "textFile": "nodes/vanilla-cake.txt",
+      "choices": [
+        {
+          "text": "At home",
+          "nextNode": "party-at-home"
+        },
+        {
+          "text": "In the park",
+          "nextNode": "party-in-park"
+        },
+        {
+          "text": "At a trampoline park",
+          "nextNode": "party-at-trampoline"
+        }
+      ]
+    },
+    "strawberry-cake": {
+      "textFile": "nodes/strawberry-cake.txt",
+      "choices": [
+        {
+          "text": "At home",
+          "nextNode": "party-at-home"
+        },
+        {
+          "text": "In the park",
+          "nextNode": "party-in-park"
+        },
+        {
+          "text": "At a trampoline park",
+          "nextNode": "party-at-trampoline"
+        }
+      ]
+    },
+    "party-at-home": {
+      "textFile": "nodes/party-at-home.txt",
+      "choices": [
+        {
+          "text": "Dance party with fun games",
+          "nextNode": "dance-party"
+        },
+        {
+          "text": "Storytime and crafts",
+          "nextNode": "storytime-crafts"
+        },
+        {
+          "text": "Outdoor games and music",
+          "nextNode": "outdoor-games"
+        }
+      ]
+    },
+    "party-in-park": {
+      "textFile": "nodes/party-in-park.txt",
+      "choices": [
+        {
+          "text": "Dance party with fun games",
+          "nextNode": "dance-party"
+        },
+        {
+          "text": "Storytime and crafts",
+          "nextNode": "storytime-crafts"
+        },
+        {
+          "text": "Outdoor games and music",
+          "nextNode": "outdoor-games"
+        }
+      ]
+    },
+    "party-at-trampoline": {
+      "textFile": "nodes/party-at-trampoline.txt",
+      "choices": [
+        {
+          "text": "Dance party with fun games",
+          "nextNode": "dance-party"
+        },
+        {
+          "text": "Storytime and crafts",
+          "nextNode": "storytime-crafts"
+        },
+        {
+          "text": "Outdoor games and music",
+          "nextNode": "outdoor-games"
+        }
+      ]
+    },
+    "dance-party": {
+      "textFile": "nodes/dance-party.txt",
+      "choices": [],
+      "image": "images/dance-party.jpg"
+    },
+    "storytime-crafts": {
+      "textFile": "nodes/storytime-crafts.txt",
+      "choices": [],
+      "image": "images/storytime-crafts.jpg"
+    },
+    "outdoor-games": {
+      "textFile": "nodes/outdoor-games.txt",
+      "choices": [],
+      "image": "images/outdoor-games.jpg"
+    }
+  }
+}

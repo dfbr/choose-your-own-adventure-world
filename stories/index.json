@@ -64,5 +64,20 @@
       "adventure",
       "mystery"
     ]
+  },
+  {
+    "storyId": "lets-party",
+    "title": "Let's Party!",
+    "description": "Join Abrigail in planning the best birthday party ever in sunny Bergen, Norway! Make fun choices about the theme, food, and music for a day full of excitement!",
+    "author": "AI Generated",
+    "created": "2025-11-13",
+    "startNode": "start",
+    "categories": [
+      "choose-your-own-adventure",
+      "adventure",
+      "friendship",
+      "nature",
+      "music"
+    ]
   }
 ]
