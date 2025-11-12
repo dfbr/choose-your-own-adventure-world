@@ -28,7 +28,8 @@
           "nextNode": "glitter-ending-3"
         }
       ],
-      "image": "images/start.jpg"
+      "image": "images/start.jpg",
+      "text": "You stand in front of a glitter bomb. Your heart beats fast. You can almost see the sparkle through the casing. You love adventure, but not the kind that leaves you covered in glitter from head to toe. Your older sibling, ever the prankster, has set this up. They’ve left a note: 'Solve my puzzles or glitter galore!' You roll your eyes, knowing you're up to the challenge.\n\nThe first puzzle is taped to the glitter bomb. It reads:\n\"I’m taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost every person. What am I?\"\nYou know this is your first step to defusing the bomb. Answer wisely!"
     },
     "second-challenge": {
       "textFile": "nodes/second-challenge.txt",
@@ -50,7 +51,8 @@
           "nextNode": "glitter-ending-6"
         }
       ],
-      "image": "images/second-challenge.jpg"
+      "image": "images/second-challenge.jpg",
+      "text": "Success! The first puzzle is solved. You feel a small click from the glitter bomb's mechanism. One step closer, but not there yet. The next challenge appears: 'I have keys but open no locks. I have space but no room. You can enter but not go inside. What am I?' This riddle teases your brain."
     },
     "third-challenge": {
       "textFile": "nodes/third-challenge.txt",
@@ -72,7 +74,8 @@
           "nextNode": "glitter-ending-9"
         }
       ],
-      "image": "images/third-challenge.jpg"
+      "image": "images/third-challenge.jpg",
+      "text": "Bravo! The bomb's mechanism whirs as another lock clicks open. You're getting good at this! The next puzzle is a bit different: 'Mix blue with yellow. What do you get?' Even a painting novice would know this, right?"
     },
     "fourth-challenge": {
       "textFile": "nodes/fourth-challenge.txt",
@@ -94,7 +97,8 @@
           "nextNode": "glitter-ending-12"
         }
       ],
-      "image": "images/fourth-challenge.jpg"
+      "image": "images/fourth-challenge.jpg",
+      "text": "Hooray! Yet another part of the bomb is disarmed. You're halfway there! The next challenge is: 'I’m tall when I’m young, and I’m short when I’m old. What am I?' You smile, knowing this classic riddle is no match for you."
     },
     "fifth-challenge": {
       "textFile": "nodes/fifth-challenge.txt",
@@ -116,7 +120,8 @@
           "nextNode": "glitter-ending-15"
         }
       ],
-      "image": "images/fifth-challenge.jpg"
+      "image": "images/fifth-challenge.jpg",
+      "text": "Correct again! Another click, another step closer. Now comes a trickier puzzle:<br><br>\nYou see three clues, but each is revealed only after you solve the previous one.<br><br>\n🍌 + 🍌 = 4<br>\n🥝 + 🥝 + 🍌 = 10<br>\n🥝 - 🍎 = 2<br>\nWhat is 🍎?\n\nThis combination of fruit and numbers makes you giggle.\n\nYou enter your answer and the next clue appears.\n"
     },
     "sixth-challenge": {
       "textFile": "nodes/sixth-challenge.txt",
@@ -134,7 +139,8 @@
           "nextNode": "glitter-ending-17"
         }
       ],
-      "image": "images/sixth-challenge.jpg"
+      "image": "images/sixth-challenge.jpg",
+      "text": "You're unstoppable! The bomb's ticking seems to slow. Next up: a logic puzzle. 'Which one of these is correct? The yolk of the egg is white or the yolk of the egg are white?' You ponder this carefully."
     },
     "seventh-challenge": {
       "textFile": "nodes/seventh-challenge.txt",
@@ -156,7 +162,8 @@
           "nextNode": "glitter-ending-20"
         }
       ],
-      "image": "images/seventh-challenge.jpg"
+      "image": "images/seventh-challenge.jpg",
+      "text": "You got it! The bomb's surface now reads only two more locks. The next challenge reads: 'What begins with T, ends with T, and has T in it?' It's a classic, but still makes you think!"
     },
     "eighth-challenge": {
       "textFile": "nodes/eighth-challenge.txt",
@@ -178,127 +185,152 @@
           "nextNode": "glitter-ending-23"
         }
       ],
-      "image": "images/eighth-challenge.jpg"
+      "image": "images/eighth-challenge.jpg",
+      "text": "Almost there! Just one more! The final puzzle: 'I have four wings, but cannot fly. I never laugh and never cry. On the same spot, I'm always found, toiling away with little sound. What am I?' Your mind races but you stay calm."
     },
     "defuse-success": {
       "textFile": "nodes/defuse-success.txt",
       "choices": [],
-      "image": "images/defuse-success.jpg"
+      "image": "images/defuse-success.jpg",
+      "text": "You've done it! The final mechanism clicks open and the glitter bomb is defused. You feel relief wash over you. Your sibling peeks from behind the door, clearly impressed. You smile mischievously, grab a handful of glitter, and toss it at them in a joyful celebration. You've conquered your fear and celebrated all things sparkly with a laugh.\n\n'Well, I guess you won this round!' your sibling admits, shaking glitter from their hair. You both laugh, knowing this adventure will be one to remember."
     },
     "glitter-ending-1": {
       "textFile": "nodes/glitter-ending-1.txt",
       "choices": [],
-      "image": "images/glitter-ending-1.jpg"
+      "image": "images/glitter-ending-1.jpg",
+      "text": "Oops! You guess 'Gold', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, an echo speaks without a mouth and hears without ears.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-2": {
       "textFile": "nodes/glitter-ending-2.txt",
       "choices": [],
-      "image": "images/glitter-ending-2.jpg"
+      "image": "images/glitter-ending-2.jpg",
+      "text": "Oops! You guess 'A Book', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, an echo speaks without a mouth and hears without ears.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-3": {
       "textFile": "nodes/glitter-ending-3.txt",
       "choices": [],
-      "image": "images/glitter-ending-3.jpg"
+      "image": "images/glitter-ending-3.jpg",
+      "text": "Oops! You guess 'Coal', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, an echo speaks without a mouth and hears without ears.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-4": {
       "textFile": "nodes/glitter-ending-4.txt",
       "choices": [],
-      "image": "images/glitter-ending-4.jpg"
+      "image": "images/glitter-ending-4.jpg",
+      "text": "Oops! You guess 'A Map', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a computer keyboard has keys but opens no locks.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-5": {
       "textFile": "nodes/glitter-ending-5.txt",
       "choices": [],
-      "image": "images/glitter-ending-5.jpg"
+      "image": "images/glitter-ending-5.jpg",
+      "text": "Oops! You guess 'A Computer Keyboard', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a computer keyboard has keys but opens no locks.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-6": {
       "textFile": "nodes/glitter-ending-6.txt",
       "choices": [],
-      "image": "images/glitter-ending-6.jpg"
+      "image": "images/glitter-ending-6.jpg",
+      "text": "Oops! You guess 'A Book', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a computer keyboard has keys but opens no locks.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-7": {
       "textFile": "nodes/glitter-ending-7.txt",
       "choices": [],
-      "image": "images/glitter-ending-7.jpg"
+      "image": "images/glitter-ending-7.jpg",
+      "text": "Oops! You guess 'Purple', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, mixing blue with yellow gives you green.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-8": {
       "textFile": "nodes/glitter-ending-8.txt",
       "choices": [],
-      "image": "images/glitter-ending-8.jpg"
+      "image": "images/glitter-ending-8.jpg",
+      "text": "Oops! You guess 'Orange', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, mixing blue with yellow gives you green.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-9": {
       "textFile": "nodes/glitter-ending-9.txt",
       "choices": [],
-      "image": "images/glitter-ending-9.jpg"
+      "image": "images/glitter-ending-9.jpg",
+      "text": "Oops! You guess 'Red', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, mixing blue with yellow gives you green.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-10": {
       "textFile": "nodes/glitter-ending-10.txt",
       "choices": [],
-      "image": "images/glitter-ending-10.jpg"
+      "image": "images/glitter-ending-10.jpg",
+      "text": "Oops! You guess 'A Tree', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a candle is tall when young and short when old.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-11": {
       "textFile": "nodes/glitter-ending-11.txt",
       "choices": [],
-      "image": "images/glitter-ending-11.jpg"
+      "image": "images/glitter-ending-11.jpg",
+      "text": "Oops! You guess 'A Mountain', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a candle is tall when young and short when old.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-12": {
       "textFile": "nodes/glitter-ending-12.txt",
       "choices": [],
-      "image": "images/glitter-ending-12.jpg"
+      "image": "images/glitter-ending-12.jpg",
+      "text": "Oops! You guess 'A Pencil', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a candle is tall when young and short when old.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-13": {
       "textFile": "nodes/glitter-ending-13.txt",
       "choices": [],
-      "image": "images/glitter-ending-13.jpg"
+      "image": "images/glitter-ending-13.jpg",
+      "text": "Oops! You guess '2', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, the apple equals 3 in the emoji math.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-14": {
       "textFile": "nodes/glitter-ending-14.txt",
       "choices": [],
-      "image": "images/glitter-ending-14.jpg"
+      "image": "images/glitter-ending-14.jpg",
+      "text": "Oops! You guess '4', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, the apple equals 3 in the emoji math.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-15": {
       "textFile": "nodes/glitter-ending-15.txt",
       "choices": [],
-      "image": "images/glitter-ending-15.jpg"
+      "image": "images/glitter-ending-15.jpg",
+      "text": "Oops! You guess '1', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, the apple equals 3 in the emoji math.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-16": {
       "textFile": "nodes/glitter-ending-16.txt",
       "choices": [],
-      "image": "images/glitter-ending-16.jpg"
+      "image": "images/glitter-ending-16.jpg",
+      "text": "Oops! You guess 'The yolk of the egg is white', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, egg yolks aren't white, they're yellow.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-17": {
       "textFile": "nodes/glitter-ending-17.txt",
       "choices": [],
-      "image": "images/glitter-ending-17.jpg"
+      "image": "images/glitter-ending-17.jpg",
+      "text": "Oops! You guess 'The yolk of the egg are white', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, egg yolks aren't white, they're yellow.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-18": {
       "textFile": "nodes/glitter-ending-18.txt",
       "choices": [],
-      "image": "images/glitter-ending-18.jpg"
+      "image": "images/glitter-ending-18.jpg",
+      "text": "Oops! You guess 'Tent', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a teapot begins with 'T', ends with 'T', and has tea in it.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-19": {
       "textFile": "nodes/glitter-ending-19.txt",
       "choices": [],
-      "image": "images/glitter-ending-19.jpg"
+      "image": "images/glitter-ending-19.jpg",
+      "text": "Oops! You guess 'Tart', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a teapot begins with 'T', ends with 'T', and has tea in it.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-20": {
       "textFile": "nodes/glitter-ending-20.txt",
       "choices": [],
-      "image": "images/glitter-ending-20.jpg"
+      "image": "images/glitter-ending-20.jpg",
+      "text": "Oops! You guess 'Tint', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a teapot begins with 'T', ends with 'T', and has tea in it.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-21": {
       "textFile": "nodes/glitter-ending-21.txt",
       "choices": [],
-      "image": "images/glitter-ending-21.jpg"
+      "image": "images/glitter-ending-21.jpg",
+      "text": "Oops! You guess 'A Bird', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a windmill has four wings but cannot fly.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-22": {
       "textFile": "nodes/glitter-ending-22.txt",
       "choices": [],
-      "image": "images/glitter-ending-22.jpg"
+      "image": "images/glitter-ending-22.jpg",
+      "text": "Oops! You guess 'A Clock', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a windmill has four wings but cannot fly.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     },
     "glitter-ending-23": {
       "textFile": "nodes/glitter-ending-23.txt",
       "choices": [],
-      "image": "images/glitter-ending-23.jpg"
+      "image": "images/glitter-ending-23.jpg",
+      "text": "Oops! You guess 'A Helicopter', but the glitter bomb erupts! Glitter showers down, covering you from head to toe. At least it's a dazzling look! Remember, a windmill has four wings but cannot fly.\n\nWhy did the glitter consider itself trendy? Because it’s always in fashion!"
     }
   }
 }

@@ -3,10 +3,12 @@
   "last_opened": null,
   "defuse-the-bomb": {
     "start": true,
-    "math-challenge": false,
-    "final-word-challenge": false,
-    "success-ending": false,
-    "glitter-failure": false
+    "math-challenge": true,
+    "final-word-challenge": true,
+    "success-ending": true,
+    "glitter-failure": true,
+    "colour-mix-challenge": true,
+    "riddle-challenge": true
   },
   "sherlock-moans-hounds-buskerville": {
     "start": true,
@@ -16,15 +18,30 @@
     "head-to-manor": false
   },
   "the-great-escape": {
-    "start": true,
-    "node-crack-the-code": true,
-    "node-look-for-another-way": true,
-    "node-up-the-stairs": true,
+    "start": {
+      "approved": true,
+      "hash": "f68bea804678ba1b59ee7a494772f02900bc085b9d1cb97206a2c41ccafd4021"
+    },
+    "node-crack-the-code": {
+      "approved": true,
+      "hash": "ec86805e72264e7406a5121c76c2e65f0df6abf1282b1ed64ea979bbaf0cf96b"
+    },
+    "node-look-for-another-way": {
+      "approved": true,
+      "hash": "033a8cd5a6fd9e376f8950005cee2d9d19b4b438d1a04c404c1a2f49bacfcdb5"
+    },
+    "node-up-the-stairs": {
+      "approved": true,
+      "hash": "82270be8747d5ffc0a4be4434deb213243c4881c0cdc041a52f222633bb57d21"
+    },
     "node-follow-corridor": {
       "approved": true,
       "hash": "fd4e825cbb12ba02ebe6f3f26363187c9f4b619985d5e9936a80e86e4bdc47b9"
     },
-    "node-climb-out-window": true,
+    "node-climb-out-window": {
+      "approved": true,
+      "hash": "7e9df8d99466168c450f984303f8dc240bc8cfc43ddb23a6a5776494fb025a16"
+    },
     "node-use-the-map": {
       "approved": true,
       "hash": "4261af0dcf0c1231c386637a290fe35b2eadc8b109f72b7c89716861e0f7fbce"
@@ -107,5 +124,135 @@
   },
   "window": {
     "maximized": true
+  },
+  "defuse-the-bomb-2": {
+    "start": {
+      "approved": true,
+      "hash": "ab818901554d019de06c8f8dab71357130144ab73ad4496f710b09cec88e5706"
+    },
+    "second-challenge": {
+      "approved": true,
+      "hash": "620b466548aa635ad83c90b120f52aff1ea81e955f24b32155285af36dda995c"
+    },
+    "third-challenge": {
+      "approved": true,
+      "hash": "7577d2c506f41cb980d102e31ccf0e42753a92d7c9655f53155601d1b0e98100"
+    },
+    "fourth-challenge": {
+      "approved": true,
+      "hash": "268b2ed349434dc38be9b6ed919f0c8d86fd0c03f9405a9f619d422a23164108"
+    },
+    "fifth-challenge": {
+      "approved": true,
+      "hash": "1a934cf4aa79121789a32dd153af9927216d2e222599583ddf802b5cd5f20750"
+    },
+    "sixth-challenge": {
+      "approved": true,
+      "hash": "e2cbdfa8414766d48e3ef97f957b62cfab016049183b1afcac69f387153aa1c0"
+    },
+    "seventh-challenge": {
+      "approved": true,
+      "hash": "b871c2f25ffd0212cc697c74c289d3ed1a4c2f6ffcdd7a35bf55dc1d19274970"
+    },
+    "eighth-challenge": {
+      "approved": true,
+      "hash": "c7a06196871758fa81a1bf2c3ac050f4873e5a537bc0eed03f3bed7411eb89bb"
+    },
+    "defuse-success": {
+      "approved": true,
+      "hash": "0624c83876f7fbcb20dabfdb9043a805aef9e1dc33048f462d44a974b58b57d2"
+    },
+    "glitter-ending-21": {
+      "approved": true,
+      "hash": "d8fd8159ce29f33b3a35406b06787dbf4961218e375cd878e4f8254d766f2b4b"
+    },
+    "glitter-ending-22": {
+      "approved": true,
+      "hash": "1c7f2899aa81a5a9284bb4435ac224df5da3290092b60917c7980e95431e87ff"
+    },
+    "glitter-ending-23": {
+      "approved": true,
+      "hash": "dfe2524bc306bb7835aa38a4769eeaa0d73807d1b55a7573758d2809bece9026"
+    },
+    "glitter-ending-18": {
+      "approved": true,
+      "hash": "f93d1e71ef0d5196bf972c3380a78ca5008793c2b903d471efbe65aa11619249"
+    },
+    "glitter-ending-19": {
+      "approved": true,
+      "hash": "b20476c83184ed9db569ec25c47fea2bf4db664a9dff7a18df159ce0e886ead6"
+    },
+    "glitter-ending-20": {
+      "approved": true,
+      "hash": "575aa08d5d0cb6f29137c0b47eb1605943a0b862da02c6586c0b34532b1084d0"
+    },
+    "glitter-ending-16": {
+      "approved": true,
+      "hash": "963157dd6ab3470642826771640f1794f95b587f3e5aa269b3d03b2e1f6a0937"
+    },
+    "glitter-ending-17": {
+      "approved": true,
+      "hash": "420e43d9a771fac9e555f2d9dd4f7874f6db7e808ed24204238e3f5892c1b1ec"
+    },
+    "glitter-ending-13": {
+      "approved": true,
+      "hash": "bf4bd670e9d62c5c8fa5983597711f794be30b2e81e5c751363e5672d6309c27"
+    },
+    "glitter-ending-14": {
+      "approved": true,
+      "hash": "93f95a340d61e53c50bb61d8972d15edb43623f42987a76f7e37d7dcce93e80d"
+    },
+    "glitter-ending-15": {
+      "approved": true,
+      "hash": "dc2a5740a8a73411c69d43dfb47ae7e6104687232cc3d338ca7b8403e67dc68a"
+    },
+    "glitter-ending-10": {
+      "approved": true,
+      "hash": "2d6d522fe2c25bf1311a66043524e1f96bad5f42e53f110a22b7f9fa67a97b02"
+    },
+    "glitter-ending-11": {
+      "approved": true,
+      "hash": "3291f68ca718f4b1860777fb3f81da15e51d583cf910f39bdac15bffed336350"
+    },
+    "glitter-ending-12": {
+      "approved": true,
+      "hash": "b0140fee1afb8d47dceb7956f69396c90b011e66d49cee8192cc0e41ecb6533a"
+    },
+    "glitter-ending-7": {
+      "approved": true,
+      "hash": "10efb9de72be4da763a43dd561d07ca2af4e6db543e8228fcb78ed748ce7ccb5"
+    },
+    "glitter-ending-8": {
+      "approved": true,
+      "hash": "852bae01a7585431cab665ea6af3963bf93e73a3fbc467de4c09e27739dc1478"
+    },
+    "glitter-ending-9": {
+      "approved": true,
+      "hash": "5ef9c2b9125f873c6e3b6c60f7bdf2de8a0c67cf38876d780a952f19604f1d73"
+    },
+    "glitter-ending-4": {
+      "approved": true,
+      "hash": "e505ffba93d29cda26176578ce5b869f560072588e6ec7085e28fa334516ba85"
+    },
+    "glitter-ending-5": {
+      "approved": true,
+      "hash": "2cba3268342b08dd39186f824cdc8f93f01809b1eed341b3a38decb32038b7e4"
+    },
+    "glitter-ending-6": {
+      "approved": true,
+      "hash": "5c282a1166a8e5d3d8e1f97d37a24f1419a93ca294a30ac298a8d49203b5b39b"
+    },
+    "glitter-ending-1": {
+      "approved": true,
+      "hash": "a5c24a3ee484cac96640fa0dd1465407c232dfd0b94beff4feaa5e3705d11759"
+    },
+    "glitter-ending-2": {
+      "approved": true,
+      "hash": "8c354819518cef96720f1eed7ea1a072774419d23c13c74f6d8d14b8f29089bf"
+    },
+    "glitter-ending-3": {
+      "approved": true,
+      "hash": "aa505cf9700fade11652c9561be989818c3ea98541fc8b0e621b8b6e0e0f16e5"
+    }
   }
 }
