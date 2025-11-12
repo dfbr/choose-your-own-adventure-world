@@ -25,7 +25,10 @@
       "hash": "fd4e825cbb12ba02ebe6f3f26363187c9f4b619985d5e9936a80e86e4bdc47b9"
     },
     "node-climb-out-window": true,
-    "node-use-the-map": true,
+    "node-use-the-map": {
+      "approved": true,
+      "hash": "4261af0dcf0c1231c386637a290fe35b2eadc8b109f72b7c89716861e0f7fbce"
+    },
     "node-grab-the-papers": {
       "approved": true,
       "hash": "3996150e1a67d05ff9fdb9f043ae66f2d24feac10343a4cacf08e69707d75be9"
@@ -40,7 +43,7 @@
     },
     "node-find-phone": {
       "approved": true,
-      "hash": "0995ad17c8192ed46f5038b258e0789629d5fb467615e1a0e4a9fe24c797c49c"
+      "hash": "7ed398ac441b0c22cb792160a5168c33f7f9ab466c389594d8e4dd3568edcbeb"
     },
     "node-hide-in-office": {
       "approved": true,
@@ -49,6 +52,50 @@
     "node-hide-in-woods": {
       "approved": true,
       "hash": "681f031d63ca767fcb612a02456be2e21300fd523e016599baa817ba679ea698"
+    },
+    "node-stables": {
+      "approved": true,
+      "hash": "6cd6991fbbf551bf1986fc8ad05913131a7f1f2a12169b2482c3ce27cef96307"
+    },
+    "node-old-chapel": {
+      "approved": true,
+      "hash": "6eb81c4e79f51bce0283a0ba9fa68c5bf7bf4c4505f2543b99ddf80579bef827"
+    },
+    "node-keep-moving-forward": {
+      "approved": true,
+      "hash": "54c0d3b919239528ca8952b3118b4a38605810586f7d880ab777265974996c39"
+    },
+    "node-descend-staircase": {
+      "approved": true,
+      "hash": "bb48d64d9e5d7af873cf56dc3ff324295a0552ca6dce86ba28fa2df3dbf1b2b9"
+    },
+    "node-search-cellar": {
+      "approved": true,
+      "hash": "1af0533a79e14498ffca685b2e8fb4bcf1b1ce2b3d761723e477536f9dfaf5a1"
+    },
+    "node-hide-behind-barrels": {
+      "approved": true,
+      "hash": "9705188009fe9984bf676adc2e42e971b60bda1400687e4fdbcf770fafcee081"
+    },
+    "node-back-to-corridor": {
+      "approved": true,
+      "hash": "f63210e26e924df746f5437318d53864c5d0c3222c585a6c160859c84be6f19a"
+    },
+    "node-try-earlier-door": {
+      "approved": true,
+      "hash": "98a754dcb5f0b24cb2ff66de024477cee2ff21695bbc03da768b389824265139"
+    },
+    "node-escape-through-window": {
+      "approved": true,
+      "hash": "2d37d5270fe33540f3340a3b87b124b374226d4181714720396c22d2b4caa66e"
+    },
+    "node-return-main-hall": {
+      "approved": true,
+      "hash": "93db4520c4b5841469afb366c8343ccccb508f79ae5b7ce15acc1edccc2825a3"
+    },
+    "node-sneak-past-gang": {
+      "approved": true,
+      "hash": "6752e4e58ebf59dd077aa0c881fc320bd73c6e3a9be221686ebe00da9e387e8f"
     }
   },
   "sherlock-moans": {

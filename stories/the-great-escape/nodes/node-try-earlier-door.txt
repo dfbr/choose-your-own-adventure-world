@@ -1,5 +1,1 @@
 You try the door you passed earlier. It opens into a small storage room filled with cleaning supplies. There's a window here, and you might be able to escape through it.
-
-Choices:
-- Climb out the window (nextNode: node-escape-through-window)
-- Return to the corridor (nextNode: node-back-to-corridor)

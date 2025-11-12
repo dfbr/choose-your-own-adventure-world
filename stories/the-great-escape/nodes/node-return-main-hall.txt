@@ -1,5 +1,1 @@
 You return to the main hall, where the sound of voices is louder. The gang is gathering for a meeting. You must stay hidden and find another way out.
-
-Choices:
-- Sneak past the gang to the front door (nextNode: node-sneak-past-gang)
-- Hide behind a statue (nextNode: node-hide-behind-statue)

@@ -1,7 +1,3 @@
 You search the cellar, running your hands along the damp stone walls. At last, you find a loose brick. Behind it is a narrow tunnel leading out of the castle.
 
 You crawl through the tunnel and emerge in the woods outside. Freedom is close, but you must stay alert.
-
-Choices:
-- Head for the village to get help (nextNode: node-find-police)
-- Hide in the woods and rest (nextNode: node-hide-in-woods)
