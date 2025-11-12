@@ -90,8 +90,7 @@
           "nextNode": "node-find-phone"
         }
       ],
-      "image": "images/node-grab-the-papers.jpg",
-      "text": "You quickly grab the scattered papers from the desk. As you scan them, you realize they contain the gang's plans for the bank robbery, including times, routes, and names. This is valuable evidence!\n\nSuddenly, you hear footsteps approaching. You have only moments to decide what to do next.\n"
+      "image": "images/node-grab-the-papers.jpg"
     },
     "node-keep-moving-forward": {
       "textFile": "nodes/node-keep-moving-forward.txt",
@@ -105,8 +104,7 @@
           "nextNode": "node-back-to-corridor"
         }
       ],
-      "image": "images/node-keep-moving-forward.jpg",
-      "text": "You keep moving forward, your footsteps echoing in the long corridor. The walls are lined with old portraits, their eyes seeming to follow you as you pass.\n\nAt the end of the corridor, you find a heavy wooden door. You try the handle—it creaks open, revealing a spiral staircase leading down into darkness."
+      "image": "images/node-keep-moving-forward.jpg"
     },
     "node-descend-staircase": {
       "textFile": "nodes/node-descend-staircase.txt",
@@ -120,8 +118,7 @@
           "nextNode": "node-hide-behind-barrels"
         }
       ],
-      "image": "images/node-descend-staircase.jpg",
-      "text": "You descend the spiral staircase, the air growing colder and damper as you go. At the bottom, you find yourself in a hidden cellar filled with crates and old barrels.\n\nYou hear voices above—someone is searching for you. You need to find another way out."
+      "image": "images/node-descend-staircase.jpg"
     },
     "node-back-to-corridor": {
       "textFile": "nodes/node-back-to-corridor.txt",
@@ -135,8 +132,7 @@
           "nextNode": "node-return-main-hall"
         }
       ],
-      "image": "images/node-back-to-corridor.jpg",
-      "text": "You decide it's too risky to go down the staircase, so you quietly retrace your steps back to the corridor. The way is clear, but you know you can't linger for long.\n\nYou hear faint voices from the direction you came. You must choose a new path quickly."
+      "image": "images/node-back-to-corridor.jpg"
     },
     "node-try-earlier-door": {
       "textFile": "nodes/node-try-earlier-door.txt",
@@ -150,8 +146,7 @@
           "nextNode": "node-back-to-corridor"
         }
       ],
-      "image": "images/node-try-earlier-door.jpg",
-      "text": "You try the door you passed earlier. It opens into a small storage room filled with cleaning supplies. There's a window here, and you might be able to escape through it."
+      "image": "images/node-try-earlier-door.jpg"
     },
     "node-return-main-hall": {
       "textFile": "nodes/node-return-main-hall.txt",
@@ -165,8 +160,7 @@
           "nextNode": "node-hide-behind-statue"
         }
       ],
-      "image": "images/node-return-main-hall.jpg",
-      "text": "You return to the main hall, where the sound of voices is louder. The gang is gathering for a meeting. You must stay hidden and find another way out."
+      "image": "images/node-return-main-hall.jpg"
     },
     "node-sneak-past-gang": {
       "textFile": "nodes/node-sneak-past-gang.txt",
@@ -180,8 +174,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-sneak-past-gang.jpg",
-      "text": "You take a deep breath and try to sneak past the gang. You move quietly, keeping to the shadows. Just as you reach the door, someone shouts. You break into a run and burst outside, escaping into the night.\n\nYou are free, but you know the gang will be after you. You must get to the police quickly."
+      "image": "images/node-sneak-past-gang.jpg"
     },
     "node-hide-behind-statue": {
       "textFile": "nodes/node-hide-behind-statue.txt",
@@ -195,8 +188,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-hide-behind-statue.jpg",
-      "text": "You hide behind a large marble statue, barely daring to breathe. The gang members talk for a while, then leave the hall. When the coast is clear, you slip out the front door and make your escape."
+      "image": "images/node-hide-behind-statue.jpg"
     },
     "node-hide-behind-tapestry": {
       "textFile": "nodes/node-hide-behind-tapestry.txt",
@@ -210,8 +202,7 @@
           "nextNode": "start"
         }
       ],
-      "image": "images/node-hide-behind-tapestry.jpg",
-      "text": "You slip behind the tapestry, pressing yourself against the cold stone wall. The footsteps grow louder, then fade as the gang members pass by without noticing you.\n\nOnce the coast is clear, you peek out and see the way is open. You can either continue down the staircase or return to the room to look for another exit.\n\nChoices:\n- Keep going down (nextNode: node-keep-going-down)\n- Return to the room (nextNode: start)\n"
+      "image": "images/node-hide-behind-tapestry.jpg"
     },
     "node-keep-going-down": {
       "textFile": "nodes/node-keep-going-down.txt",
@@ -225,8 +216,7 @@
           "nextNode": "node-hide-behind-barrels"
         }
       ],
-      "image": "images/node-keep-going-down.jpg",
-      "text": "You keep going down the winding staircase, the air growing colder with each step. At the bottom, you find yourself in a dimly lit cellar filled with crates and barrels.\n\nYou hear voices above—someone is searching for you. You need to find another way out.\n\nChoices:\n- Search the cellar for a secret exit (nextNode: node-search-cellar)\n- Hide behind the barrels (nextNode: node-hide-behind-barrels)\n"
+      "image": "images/node-keep-going-down.jpg"
     },
     "node-search-cellar": {
       "textFile": "nodes/node-search-cellar.txt",
@@ -240,8 +230,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-search-cellar.jpg",
-      "text": "You search the cellar, running your hands along the damp stone walls. At last, you find a loose brick. Behind it is a narrow tunnel leading out of the castle.\n\nYou crawl through the tunnel and emerge in the woods outside. Freedom is close, but you must stay alert."
+      "image": "images/node-search-cellar.jpg"
     },
     "node-hide-behind-barrels": {
       "textFile": "nodes/node-hide-behind-barrels.txt",
@@ -255,8 +244,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-hide-behind-barrels.jpg",
-      "text": "You hide behind the barrels, holding your breath as footsteps echo above. The voices fade, and after a tense wait, you slip out of the cellar and into the night.\n\nYou are free, but the adventure is not over yet.\n\nChoices:\n- Make your way to the village (nextNode: node-find-police)\n- Hide in the woods (nextNode: node-hide-in-woods)\n"
+      "image": "images/node-hide-behind-barrels.jpg"
     },
     "node-hide-papers-and-escape": {
       "textFile": "nodes/node-hide-papers-and-escape.txt",
@@ -270,8 +258,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-hide-papers-and-escape.jpg",
-      "text": "You stuff the incriminating papers into your bag and look for an exit. You spot a narrow window just big enough to squeeze through. With some effort, you manage to climb out and drop into the bushes below.\n\nYou are outside the castle, but you know you must get these papers to the police. You hurry away, careful to avoid the guards patrolling the grounds.\n"
+      "image": "images/node-hide-papers-and-escape.jpg"
     },
     "node-find-phone": {
       "textFile": "nodes/node-find-phone.txt",
@@ -285,8 +272,7 @@
           "nextNode": "node-escape-through-window"
         }
       ],
-      "image": "images/node-find-phone.jpg",
-      "text": "You search frantically for a phone. In a small office, you find an old rotary phone on the desk. You dial the emergency number, whispering your location and the details of the gang's plan.\n\nSuddenly, you hear footsteps—someone is coming! You must act fast.\n"
+      "image": "images/node-find-phone.jpg"
     },
     "node-hide-in-office": {
       "textFile": "nodes/node-hide-in-office.txt",
@@ -300,8 +286,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-hide-in-office.jpg",
-      "text": "You hide in the office, heart pounding as footsteps approach. The door creaks open, but the intruder is only a janitor. He glances around, shrugs, and leaves.\n\nRelieved, you wait a few more minutes before slipping out and making your way to safety."
+      "image": "images/node-hide-in-office.jpg"
     },
     "node-escape-through-window": {
       "textFile": "nodes/node-escape-through-window.txt",
@@ -315,8 +300,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-escape-through-window.jpg",
-      "text": "You open the window and slip out, landing softly on the grass below. You run for the cover of the trees, glancing back to make sure you weren't seen.\n\nYou are free, but you must decide what to do next."
+      "image": "images/node-escape-through-window.jpg"
     },
     "node-climb-out-window": {
       "textFile": "nodes/node-climb-out-window.txt",
@@ -330,8 +314,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-climb-out-window.jpg",
-      "text": "You decide to risk the climb. You open the window and carefully lower yourself down. It's a long drop, but you manage to land safely in the bushes below.\n\nYou are outside the castle, but you must decide what to do next."
+      "image": "images/node-climb-out-window.jpg"
     },
     "node-use-the-map": {
       "textFile": "nodes/node-use-the-map.txt",
@@ -345,8 +328,7 @@
           "nextNode": "node-old-chapel"
         }
       ],
-      "image": "images/node-use-the-map.jpg",
-      "text": "You quickly study the map, memorizing the secret passages and exits. Using this knowledge, you slip out of the room and make your way through a hidden corridor.\n\nYou soon find yourself at a fork: one path leads to the stables, the other to the old chapel.\n"
+      "image": "images/node-use-the-map.jpg"
     },
     "node-stables": {
       "textFile": "nodes/node-stables.txt",
@@ -360,8 +342,7 @@
           "nextNode": "node-hide-in-woods"
         }
       ],
-      "image": "images/node-stables.jpg",
-      "text": "You head to the stables, moving quietly to avoid detection. The stable doors are open, and you see a horse saddled and ready. You could ride to the village for help, or hide in the hayloft until it's safe.\n"
+      "image": "images/node-stables.jpg"
     },
     "node-old-chapel": {
       "textFile": "nodes/node-old-chapel.txt",
@@ -375,20 +356,17 @@
           "nextNode": "node-find-police"
         }
       ],
-      "image": "images/node-old-chapel.jpg",
-      "text": "You slip into the old chapel, its stained glass windows casting colored light on the dusty pews. It's quiet here, but you hear voices outside. You can hide and wait, or try to sneak out the back."
+      "image": "images/node-old-chapel.jpg"
     },
     "node-find-police": {
-      "textFile": "nodes/node-find-police.txt",
-      "choices": [],
-      "image": "images/node-find-police.jpg",
-      "text": "You hurry to the village, clutching the evidence. At the police station, you hand over the papers and explain everything. The officers thank you for your bravery and promise to act quickly.\n\nYou have stopped the gang's plan and ensured your own safety. Congratulations—you have completed your great escape!\n\nTHE END"
+  "textFile": "nodes/node-find-police.txt",
+  "choices": [],
+  "image": "images/node-find-police.jpg"
     },
     "node-hide-in-woods": {
-      "textFile": "nodes/node-hide-in-woods.txt",
-      "choices": [],
-      "image": "images/node-hide-in-woods.jpg",
-      "text": "You hide in the woods, waiting for nightfall. The sounds of the castle fade as darkness settles in. When you are sure it is safe, you make your way to the village and find the police.\n\nYou have survived the night and brought the criminals to justice. Well done!\n\nTHE END"
+  "textFile": "nodes/node-hide-in-woods.txt",
+  "choices": [],
+  "image": "images/node-hide-in-woods.jpg"
     }
   }
 }

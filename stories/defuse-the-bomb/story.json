@@ -16,8 +16,7 @@
           "nextNode": "colour-mix-challenge"
         }
       ],
-      "image": "images/start.jpg",
-      "text": "You stand in front of the glitter bomb, your adventurous spirit alight with the thrill of the challenge. The bomb is dazzling, shimmering with the promise of sparkling chaos. But you don't want your clothes, hair, or face covered in glitter today. Your dastardly older sibling has set this challenge up, ready to test your skills at cracking codes and solving puzzles. You're determined to defuse it, avoiding the glittery fate that hangs over you."
+      "image": "images/start.jpg"
     },
     "colour-mix-challenge": {
       "textFile": "nodes/colour-mix-challenge.txt",
@@ -35,8 +34,7 @@
           "nextNode": "glitter-failure"
         }
       ],
-      "image": "images/colour-mix-challenge.jpg",
-      "text": "The first puzzle appears on a small screen. 'Mix the colours to find the key!' it reads. Below, you see three primary colours: red, blue, and yellow. You remember that mixing these can create new colours. The key to the next step is hidden in the secondary colour you get when you mix red and blue. Which one should you choose to move forward?"
+      "image": "images/colour-mix-challenge.jpg"
     },
     "riddle-challenge": {
       "textFile": "nodes/riddle-challenge.txt",
@@ -58,8 +56,7 @@
           "nextNode": "glitter-failure"
         }
       ],
-      "image": "images/riddle-challenge.jpg",
-      "text": "You've chosen wisely! The next screen lights up with a riddle. \"I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?\" You pause to think. This puzzle is tricky, but you know the answer is the key to moving forward."
+      "image": "images/riddle-challenge.jpg"
     },
     "math-challenge": {
       "textFile": "nodes/math-challenge.txt",
@@ -77,8 +74,7 @@
           "nextNode": "glitter-failure"
         }
       ],
-      "image": "images/math-challenge.jpg",
-      "text": "You solved the riddle! Next, a math puzzle pops up. Emojis replace numbers in a quirky math problem. <br>🐱 + 🐱 = 4<br>🐶 + 🐱 = 6<br>🐶 + 🐶 = ? \n\nYou're supposed to find out what the double 🐶 equals to. Time to put on your thinking cap!"
+      "image": "images/math-challenge.jpg"
     },
     "final-word-challenge": {
       "textFile": "nodes/final-word-challenge.txt",
@@ -100,20 +96,17 @@
           "nextNode": "glitter-failure"
         }
       ],
-      "image": "images/final-word-challenge.jpg",
-      "text": "You're almost there! The final challenge is a word puzzle. 'What has keys but can't open locks?' it asks. You remember hearing this one before. It's the last hurdle before you can defuse the bomb!"
+      "image": "images/final-word-challenge.jpg"
     },
     "glitter-failure": {
-      "textFile": "nodes/glitter-failure.txt",
-      "choices": [],
-      "image": "images/glitter-failure.jpg",
-      "text": "Oh no! The bomb goes off, and you're showered in glitter. You look fabulous but it's not what you wanted. You realise your mistake: the correct answer was just a bit different. You laugh it off, remembering that even covered in glitter, you look like a dazzling disco ball! 'Well,' you chuckle, 'I guess I was born to stand out!'"
+  "textFile": "nodes/glitter-failure.txt",
+  "choices": [],
+  "image": "images/glitter-failure.jpg"
     },
     "success-ending": {
-      "textFile": "nodes/success-ending.txt",
-      "choices": [],
-      "image": "images/success-ending.jpg",
-      "text": "With the last answer correct, the bomb defuses with a satisfying click. You did it! You let out a triumphant cheer, tossing the glitter over your sibling in victory. They laugh, and you both celebrate the challenge you've overcome together. Glitter isn't so bad after all, especially when it's shared in joy. 'Next time, maybe I'll set the challenge!' you tease."
+  "textFile": "nodes/success-ending.txt",
+  "choices": [],
+  "image": "images/success-ending.jpg"
     }
   }
 }
