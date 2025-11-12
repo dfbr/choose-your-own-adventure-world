@@ -822,17 +822,14 @@ class ProofReaderApp(QMainWindow):
             return
         with open(story_json_path, "r", encoding="utf-8") as f:
             story_data = json.load(f)
-        # Update node texts
-        nodes_dir = os.path.join(story_dir, "nodes")
-        for node_name in story_data.get("nodes", {}):
-            node_file = os.path.join(nodes_dir, f"{node_name}.txt")
-            if os.path.exists(node_file):
-                with open(node_file, "r", encoding="utf-8") as nf:
-                    story_data["nodes"][node_name]["text"] = nf.read()
-        # Save updated story.json
+        # Remove any 'text' fields from nodes
+        for node in story_data.get("nodes", {}).values():
+            if "text" in node:
+                del node["text"]
+        # Save cleaned story.json
         with open(story_json_path, "w", encoding="utf-8") as f:
             json.dump(story_data, f, indent=2, ensure_ascii=False)
-        QMessageBox.information(self, "Published", f"Story '{self.current_story}' published to story.json.")
+        QMessageBox.information(self, "Published", f"Story '{self.current_story}' published to story.json. All node text is stored in .txt files only.")
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
