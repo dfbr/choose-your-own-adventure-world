@@ -1,3 +1,29 @@
+/* Reader navbar styles */
+.reader-navbar {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.reader-navbar .nav-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: var(--shadow);
+}
+
+.reader-navbar .nav-btn:hover, .reader-navbar .nav-btn:focus {
+    background: var(--secondary-color);
+    outline: 2px solid var(--accent-color);
+    transform: translateY(-2px);
+}
 /* Import OpenDyslexic font for accessibility */
 @import url('https://cdn.jsdelivr.net/npm/opendyslexic@1.0.3/opendyslexic-regular.css');
 

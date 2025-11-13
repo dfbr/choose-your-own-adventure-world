@@ -81,19 +81,23 @@
     ]
   },
   {
-    "storyId": "defuse-the-bomb-3",
-    "title": "Defuse the Bomb 3",
-    "description": "Join the adventure as you and your friends tackle challenges to defuse a stink bomb in the park!",
+    "storyId": "defuse-the-bomb-4",
+    "title": "Defuse the Bomb 4",
+    "description": "Join your friends in the park as you tackle fun puzzles to defuse a glitter bomb and save the day!",
     "author": "AI Generated",
     "created": "2025-11-13",
     "startNode": "start",
     "categories": [
       "puzzle",
-      "mystery",
       "science",
+      "historical",
       "educational",
       "friendship",
-      "nature"
+      "family",
+      "animals",
+      "nature",
+      "space",
+      "ocean"
     ]
   }
 ]

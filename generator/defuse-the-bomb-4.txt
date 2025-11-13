@@ -1,0 +1,53 @@
+Generate a Choose Your Own Adventure story with the following outline:
+
+Title: Defuse the bomb 4
+
+Categories: puzzle, science, historical, educational, friendship, family, animals, nature, space, ocean
+
+Setting: Set in the present day in a park where children are playing games.
+
+Protagonist: The reader is the protagonist. Paint them as an awesome child capable of anything that they put their mind to. They're fun, quick-witted, clever and friendly.
+
+Main Story Beats:
+- While playing in the park, the protagonist and a small group of their friends find a glitter bomb. Yikes! They want to save the day and allow the other children to keep playing without being covered in glitter.
+- They work together to solve 15 challenges to defuse the bomb.
+- There are maths problems, substitution cyphers, riddles, logic problems, facts on science, animals, nature, space etc.
+- At each puzzle, they must get the right answer to progress with defusing the bomb.
+- If they get an answer wrong, the glitter bomb goes off. Each ending in this way should be unique and fun with no one getting harmed and should reveal what the correct answer is.
+- Come up with the 15 different puzzles for the story reader to answer and associated narrative text to go with the puzzles.
+- Each puzzle should be challenging for a 12 year old to solve.
+- Upon defusing the bomb, the culprit should reveal themselves and say how proud they are of the team working together to solve the problems and defuse the bomb.
+
+Tone: humorous and educational without being preachy.
+
+Branching Structure: Branching is fairly simple with one correct answer per puzzle needed to progress.
+
+Special Requirements: Write in British English
+
+Character Bio:
+	Name: None, it is the reader, refer to them as "You"
+	Age Range: tween
+	Gender: girl
+	
+	Ethnicity & Skin Tone: British
+	Skin Tone: light olive
+	
+	Hair Type: straight
+	Hair Colour: blonde
+	Hair Length: mid-back
+	Hair Style: ponytail
+	
+	Eyes: hazel
+		
+	Personality Keywords (for tone): curious / brave / kind / playful / thoughtful / determined / creative / confident / patient / energetic / calm / funny / compassionate / independent / collaborative
+	
+	Art Style Preferences: realistic photo style
+	
+	Lighting/Mood Preferences: bright daylight
+		
+	IMPORTANT: Repeat EXACT character appearance (including disability aids, cultural markers, and physical traits) in EVERY image prompt to maintain consistency.
+
+	Image Style Constraints (global – optional):
+	Palette: [warm / cool / high contrast / pastel / vibrant]
+	Background Simplicity: [simple / medium detail / detailed]
+	Do NOT include any text in images.

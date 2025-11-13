@@ -1,0 +1,275 @@
+{
+  "storyId": "defuse-the-bomb-4",
+  "metadata": {
+    "title": "Defuse the Bomb 4",
+    "description": "Join your friends in the park as you tackle fun puzzles to defuse a glitter bomb and save the day!",
+    "storyId": "defuse-the-bomb-4",
+    "author": "AI Generated",
+    "created": "2025-11-13",
+    "categories": [
+      "puzzle",
+      "science",
+      "historical",
+      "educational",
+      "friendship",
+      "family",
+      "animals",
+      "nature",
+      "space",
+      "ocean"
+    ],
+    "styleKit": {
+      "character": "a tween girl",
+      "artStyle": "children's book illustration, bright colors, simple shapes",
+      "palette": "#E1497E primary with warm accents"
+    }
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "Solve the first puzzle!",
+          "nextNode": "math-challenge"
+        },
+        {
+          "text": "Take a closer look at the bomb!",
+          "nextNode": "ending-glitter-explosion-1"
+        }
+      ]
+    },
+    "math-challenge": {
+      "textFile": "nodes/math-challenge.txt",
+      "choices": [
+        {
+          "text": "4",
+          "nextNode": "riddle-challenge"
+        },
+        {
+          "text": "3",
+          "nextNode": "ending-glitter-explosion-2"
+        },
+        {
+          "text": "5",
+          "nextNode": "ending-glitter-explosion-3"
+        }
+      ]
+    },
+    "riddle-challenge": {
+      "textFile": "nodes/riddle-challenge.txt",
+      "choices": [
+        {
+          "text": "An echo",
+          "nextNode": "logic-challenge"
+        },
+        {
+          "text": "A whisper",
+          "nextNode": "ending-glitter-explosion-4"
+        },
+        {
+          "text": "A shadow",
+          "nextNode": "ending-glitter-explosion-5"
+        }
+      ]
+    },
+    "logic-challenge": {
+      "textFile": "nodes/logic-challenge.txt",
+      "choices": [
+        {
+          "text": "10",
+          "nextNode": "science-facts-challenge"
+        },
+        {
+          "text": "50",
+          "nextNode": "ending-glitter-explosion-6"
+        },
+        {
+          "text": "20",
+          "nextNode": "ending-glitter-explosion-7"
+        }
+      ]
+    },
+    "science-facts-challenge": {
+      "textFile": "nodes/science-facts-challenge.txt",
+      "choices": [
+        {
+          "text": "Oxygen",
+          "nextNode": "animal-facts-challenge"
+        },
+        {
+          "text": "Carbon Dioxide",
+          "nextNode": "ending-glitter-explosion-8"
+        },
+        {
+          "text": "Nitrogen",
+          "nextNode": "ending-glitter-explosion-9"
+        }
+      ]
+    },
+    "animal-facts-challenge": {
+      "textFile": "nodes/animal-facts-challenge.txt",
+      "choices": [
+        {
+          "text": "Lion",
+          "nextNode": "nature-challenge"
+        },
+        {
+          "text": "Tiger",
+          "nextNode": "ending-glitter-explosion-10"
+        },
+        {
+          "text": "Elephant",
+          "nextNode": "ending-glitter-explosion-11"
+        }
+      ]
+    },
+    "nature-challenge": {
+      "textFile": "nodes/nature-challenge.txt",
+      "choices": [
+        {
+          "text": "Photosynthesis",
+          "nextNode": "space-challenge"
+        },
+        {
+          "text": "Respiration",
+          "nextNode": "ending-glitter-explosion-12"
+        },
+        {
+          "text": "Transpiration",
+          "nextNode": "ending-glitter-explosion-13"
+        }
+      ]
+    },
+    "space-challenge": {
+      "textFile": "nodes/space-challenge.txt",
+      "choices": [
+        {
+          "text": "Saturn",
+          "nextNode": "ocean-challenge"
+        },
+        {
+          "text": "Mars",
+          "nextNode": "ending-glitter-explosion-14"
+        },
+        {
+          "text": "Jupiter",
+          "nextNode": "ending-glitter-explosion-15"
+        }
+      ]
+    },
+    "ocean-challenge": {
+      "textFile": "nodes/ocean-challenge.txt",
+      "choices": [
+        {
+          "text": "Pacific Ocean",
+          "nextNode": "final-challenge"
+        },
+        {
+          "text": "Atlantic Ocean",
+          "nextNode": "ending-glitter-explosion-16"
+        },
+        {
+          "text": "Indian Ocean",
+          "nextNode": "ending-glitter-explosion-17"
+        }
+      ]
+    },
+    "final-challenge": {
+      "textFile": "nodes/final-challenge.txt",
+      "choices": [
+        {
+          "text": "Water",
+          "nextNode": "success-ending"
+        },
+        {
+          "text": "Hydrogen",
+          "nextNode": "ending-glitter-explosion-18"
+        },
+        {
+          "text": "Oxygen",
+          "nextNode": "ending-glitter-explosion-19"
+        }
+      ]
+    },
+    "success-ending": {
+      "textFile": "nodes/success-ending.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-1": {
+      "textFile": "nodes/ending-glitter-explosion-1.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-2": {
+      "textFile": "nodes/ending-glitter-explosion-2.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-3": {
+      "textFile": "nodes/ending-glitter-explosion-3.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-4": {
+      "textFile": "nodes/ending-glitter-explosion-4.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-5": {
+      "textFile": "nodes/ending-glitter-explosion-5.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-6": {
+      "textFile": "nodes/ending-glitter-explosion-6.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-7": {
+      "textFile": "nodes/ending-glitter-explosion-7.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-8": {
+      "textFile": "nodes/ending-glitter-explosion-8.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-9": {
+      "textFile": "nodes/ending-glitter-explosion-9.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-10": {
+      "textFile": "nodes/ending-glitter-explosion-10.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-11": {
+      "textFile": "nodes/ending-glitter-explosion-11.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-12": {
+      "textFile": "nodes/ending-glitter-explosion-12.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-13": {
+      "textFile": "nodes/ending-glitter-explosion-13.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-14": {
+      "textFile": "nodes/ending-glitter-explosion-14.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-15": {
+      "textFile": "nodes/ending-glitter-explosion-15.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-16": {
+      "textFile": "nodes/ending-glitter-explosion-16.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-17": {
+      "textFile": "nodes/ending-glitter-explosion-17.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-18": {
+      "textFile": "nodes/ending-glitter-explosion-18.txt",
+      "choices": []
+    },
+    "ending-glitter-explosion-19": {
+      "textFile": "nodes/ending-glitter-explosion-19.txt",
+      "choices": []
+    }
+  }
+}
