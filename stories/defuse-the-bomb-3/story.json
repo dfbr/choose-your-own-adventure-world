@@ -89,7 +89,7 @@
       "textFile": "nodes/node-4.txt",
       "choices": [
         {
-          "text": "15",
+          "text": "14",
           "nextNode": "ending-stink"
         },
         {
