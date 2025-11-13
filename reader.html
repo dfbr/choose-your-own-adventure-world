@@ -13,11 +13,13 @@
     <div class="container">
         <header class="reader-header">
             <a href="#" onclick="window.location.href=buildPath('index.html'); return false;" class="home-link">← Back to Stories</a>
+            <button id="return-to-start-btn" class="icon-btn" aria-label="Return to Start" title="Return to Start" style="margin-left: 16px;">Return to start</button>
+            <button id="back-one-node-btn" class="icon-btn" aria-label="Back One Node" title="Back One Node" style="margin-left: 8px;">Back</button>
             <h1 id="story-title">Loading...</h1>
             <button id="accessibility-toggle" class="icon-btn" aria-label="Accessibility settings" title="Accessibility settings">
                 ⚙️
             </button>
-                <button id="favorite-story-btn" class="favorite-btn" style="position: absolute; top: 20px; right: 65px;" aria-label="Add to favorites" title="Add to favorites">🤍</button>
+            <button id="favorite-story-btn" class="favorite-btn" style="position: absolute; top: 20px; right: 65px;" aria-label="Add to favorites" title="Add to favorites">🤍</button>
         </header>
         
         <!-- Accessibility settings panel -->

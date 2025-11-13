@@ -4,6 +4,7 @@
 
 let currentStory = null;
 let currentStoryData = null;
+let nodeHistory = [];
 
 /**
  * Initialize the story reader
@@ -51,13 +52,16 @@ async function initReader() {
  */
 async function loadNode(nodeId) {
     const node = currentStoryData.nodes[nodeId];
-    
     if (!node) {
         showError(
             document.getElementById('story-content'),
             `Story node "${nodeId}" not found.`
         );
         return;
+    }
+    // Track node history for back button
+    if (nodeHistory.length === 0 || nodeHistory[nodeHistory.length - 1] !== nodeId) {
+        nodeHistory.push(nodeId);
     }
     
     try {
@@ -121,7 +125,6 @@ async function loadNode(nodeId) {
 function navigateToNode(nodeId) {
     // Update the URL (this will add to browser history)
     updateUrl(currentStory, nodeId);
-    
     // Load the new node
     loadNode(nodeId);
 }
@@ -173,11 +176,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial state for browser history
     const storyId = getUrlParameter('story');
     const nodeId = getUrlParameter('node');
-    
     if (storyId && nodeId) {
         // Replace the initial state so back button works properly
         window.history.replaceState({ storyId, nodeId }, '', window.location.href);
+        nodeHistory = [nodeId];
     }
-    
+    // Add event listeners for header navigation buttons
+    const returnToStartBtn = document.getElementById('return-to-start-btn');
+    if (returnToStartBtn) {
+        returnToStartBtn.addEventListener('click', () => {
+            if (currentStoryData && currentStoryData.start) {
+                nodeHistory = [currentStoryData.start];
+                updateUrl(currentStory, currentStoryData.start);
+                loadNode(currentStoryData.start);
+            }
+        });
+    }
+    const backOneNodeBtn = document.getElementById('back-one-node-btn');
+    if (backOneNodeBtn) {
+        backOneNodeBtn.addEventListener('click', () => {
+            if (nodeHistory.length > 1) {
+                nodeHistory.pop();
+                const prevNode = nodeHistory[nodeHistory.length - 1];
+                updateUrl(currentStory, prevNode);
+                loadNode(prevNode);
+            }
+        });
+    }
     initReader();
 });

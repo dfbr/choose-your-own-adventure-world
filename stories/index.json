@@ -79,5 +79,21 @@
       "nature",
       "music"
     ]
+  },
+  {
+    "storyId": "defuse-the-bomb-3",
+    "title": "Defuse the Bomb 3",
+    "description": "Join the adventure as you and your friends tackle challenges to defuse a stink bomb in the park!",
+    "author": "AI Generated",
+    "created": "2025-11-13",
+    "startNode": "start",
+    "categories": [
+      "puzzle",
+      "mystery",
+      "science",
+      "educational",
+      "friendship",
+      "nature"
+    ]
   }
 ]

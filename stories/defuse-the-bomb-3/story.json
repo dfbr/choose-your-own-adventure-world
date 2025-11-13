@@ -1,0 +1,225 @@
+{
+  "storyId": "defuse-the-bomb-3",
+  "metadata": {
+    "title": "Defuse the Bomb 3",
+    "description": "Join the adventure as you and your friends tackle challenges to defuse a stink bomb in the park!",
+    "storyId": "defuse-the-bomb-3",
+    "author": "AI Generated",
+    "created": "2025-11-13",
+    "categories": [
+      "puzzle",
+      "mystery",
+      "science",
+      "educational",
+      "friendship",
+      "nature"
+    ],
+    "styleKit": {
+      "character": "a tween girl",
+      "artStyle": "children's book illustration, bright colors, simple shapes",
+      "palette": "#E1497E primary with warm accents"
+    }
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "5",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "6",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "7",
+          "nextNode": "node-2"
+        },
+        {
+          "text": "8",
+          "nextNode": "ending-stink"
+        }
+      ],
+      "image": "images/start.jpg"
+    },
+    "node-2": {
+      "textFile": "nodes/node-2.txt",
+      "choices": [
+        {
+          "text": "1",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "2",
+          "nextNode": "node-3"
+        },
+        {
+          "text": "3",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "4",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "node-3": {
+      "textFile": "nodes/node-3.txt",
+      "choices": [
+        {
+          "text": "A bird",
+          "nextNode": "node-4"
+        },
+        {
+          "text": "A cake",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "A car",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "A fish",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "node-4": {
+      "textFile": "nodes/node-4.txt",
+      "choices": [
+        {
+          "text": "15",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "20",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "15",
+          "nextNode": "node-5"
+        },
+        {
+          "text": "21",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "node-5": {
+      "textFile": "nodes/node-5.txt",
+      "choices": [
+        {
+          "text": "Water",
+          "nextNode": "node-6"
+        },
+        {
+          "text": "Fire",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Air",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Earth",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "node-6": {
+      "textFile": "nodes/node-6.txt",
+      "choices": [
+        {
+          "text": "Mars",
+          "nextNode": "node-7"
+        },
+        {
+          "text": "Jupiter",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Venus",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Saturn",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "node-7": {
+      "textFile": "nodes/node-7.txt",
+      "choices": [
+        {
+          "text": "Eleven",
+          "nextNode": "node-8"
+        },
+        {
+          "text": "Nine",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Ten",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Five",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "node-8": {
+      "textFile": "nodes/node-8.txt",
+      "choices": [
+        {
+          "text": "A Joey",
+          "nextNode": "node-9"
+        },
+        {
+          "text": "A Calf",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "A Cub",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "A Kit",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "node-9": {
+      "textFile": "nodes/node-9.txt",
+      "choices": [
+        {
+          "text": "Blue Whale",
+          "nextNode": "success-ending"
+        },
+        {
+          "text": "Shark",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Dolphin",
+          "nextNode": "ending-stink"
+        },
+        {
+          "text": "Seal",
+          "nextNode": "ending-stink"
+        }
+      ]
+    },
+    "success-ending": {
+      "textFile": "nodes/success-ending.txt",
+      "choices": [],
+      "image": "images/success-ending.jpg"
+    },
+    "ending-stink": {
+      "textFile": "nodes/ending-stink.txt",
+      "choices": [],
+      "image": "images/ending-stink.jpg"
+    }
+  }
+}

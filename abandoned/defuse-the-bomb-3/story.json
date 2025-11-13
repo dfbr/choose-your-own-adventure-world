@@ -1,0 +1,238 @@
+{
+  "storyId": "defuse-the-bomb-3",
+  "metadata": {
+    "title": "Defuse the Bomb 3",
+    "description": "Join your friends in the park to solve puzzles and defuse a stink bomb before it goes off!",
+    "storyId": "defuse-the-bomb-3",
+    "author": "AI Generated",
+    "created": "2025-11-13",
+    "categories": [
+      "puzzle",
+      "mystery",
+      "science",
+      "friendship",
+      "nature"
+    ],
+    "styleKit": {
+      "character": "a tween girl",
+      "artStyle": "children's book illustration, bright colors, simple shapes",
+      "palette": "#E1497E primary with warm accents"
+    }
+  },
+  "nodes": {
+    "start": {
+      "textFile": "nodes/start.txt",
+      "choices": [
+        {
+          "text": "12",
+          "nextNode": "maths-correct"
+        },
+        {
+          "text": "10",
+          "nextNode": "maths-wrong"
+        }
+      ],
+      "image": "images/start.jpg"
+    },
+    "maths-correct": {
+      "textFile": "nodes/maths-correct.txt",
+      "choices": [
+        {
+          "text": "An echo",
+          "nextNode": "riddle-correct"
+        },
+        {
+          "text": "A shadow",
+          "nextNode": "riddle-wrong"
+        }
+      ]
+    },
+    "maths-wrong": {
+      "textFile": "nodes/maths-wrong.txt",
+      "choices": [
+        {
+          "text": "12",
+          "nextNode": "maths-correct"
+        },
+        {
+          "text": "10",
+          "nextNode": "maths-wrong"
+        }
+      ]
+    },
+    "riddle-correct": {
+      "textFile": "nodes/riddle-correct.txt",
+      "choices": [
+        {
+          "text": "In Washington, D.C.",
+          "nextNode": "logic-wrong"
+        },
+        {
+          "text": "To the right of the red house",
+          "nextNode": "logic-correct"
+        }
+      ]
+    },
+    "riddle-wrong": {
+      "textFile": "nodes/riddle-wrong.txt",
+      "choices": [
+        {
+          "text": "An echo",
+          "nextNode": "riddle-correct"
+        },
+        {
+          "text": "A shadow",
+          "nextNode": "riddle-wrong"
+        }
+      ]
+    },
+    "logic-correct": {
+      "textFile": "nodes/logic-correct.txt",
+      "choices": [
+        {
+          "text": "Mars",
+          "nextNode": "science-correct"
+        },
+        {
+          "text": "Jupiter",
+          "nextNode": "science-wrong"
+        }
+      ]
+    },
+    "logic-wrong": {
+      "textFile": "nodes/logic-wrong.txt",
+      "choices": [
+        {
+          "text": "In Washington, D.C.",
+          "nextNode": "logic-wrong"
+        },
+        {
+          "text": "To the right of the red house",
+          "nextNode": "logic-correct"
+        }
+      ]
+    },
+    "science-correct": {
+      "textFile": "nodes/science-correct.txt",
+      "choices": [
+        {
+          "text": "Blue whale",
+          "nextNode": "nature-correct"
+        },
+        {
+          "text": "Elephant",
+          "nextNode": "nature-wrong"
+        }
+      ]
+    },
+    "science-wrong": {
+      "textFile": "nodes/science-wrong.txt",
+      "choices": [
+        {
+          "text": "Mars",
+          "nextNode": "science-correct"
+        },
+        {
+          "text": "Jupiter",
+          "nextNode": "science-wrong"
+        }
+      ]
+    },
+    "nature-correct": {
+      "textFile": "nodes/nature-correct.txt",
+      "choices": [
+        {
+          "text": "Eight",
+          "nextNode": "animal-correct"
+        },
+        {
+          "text": "Six",
+          "nextNode": "animal-wrong"
+        }
+      ]
+    },
+    "nature-wrong": {
+      "textFile": "nodes/nature-wrong.txt",
+      "choices": [
+        {
+          "text": "Blue whale",
+          "nextNode": "nature-correct"
+        },
+        {
+          "text": "Elephant",
+          "nextNode": "nature-wrong"
+        }
+      ]
+    },
+    "animal-correct": {
+      "textFile": "nodes/animal-correct.txt",
+      "choices": [
+        {
+          "text": "Milky Way",
+          "nextNode": "galaxy-correct"
+        },
+        {
+          "text": "Andromeda",
+          "nextNode": "galaxy-wrong"
+        }
+      ]
+    },
+    "animal-wrong": {
+      "textFile": "nodes/animal-wrong.txt",
+      "choices": [
+        {
+          "text": "Eight",
+          "nextNode": "animal-correct"
+        },
+        {
+          "text": "Six",
+          "nextNode": "animal-wrong"
+        }
+      ]
+    },
+    "galaxy-correct": {
+      "textFile": "nodes/galaxy-correct.txt",
+      "choices": [
+        {
+          "text": "Neil Armstrong",
+          "nextNode": "moon-correct"
+        },
+        {
+          "text": "Buzz Aldrin",
+          "nextNode": "moon-wrong"
+        }
+      ]
+    },
+    "galaxy-wrong": {
+      "textFile": "nodes/galaxy-wrong.txt",
+      "choices": [
+        {
+          "text": "Milky Way",
+          "nextNode": "galaxy-correct"
+        },
+        {
+          "text": "Andromeda",
+          "nextNode": "galaxy-wrong"
+        }
+      ]
+    },
+    "moon-correct": {
+      "textFile": "nodes/moon-correct.txt",
+      "choices": [],
+      "image": "images/moon-correct.jpg"
+    },
+    "moon-wrong": {
+      "textFile": "nodes/moon-wrong.txt",
+      "choices": [
+        {
+          "text": "Neil Armstrong",
+          "nextNode": "moon-correct"
+        },
+        {
+          "text": "Buzz Aldrin",
+          "nextNode": "moon-wrong"
+        }
+      ]
+    }
+  }
+}
