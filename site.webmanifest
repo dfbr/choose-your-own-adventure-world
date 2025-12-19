@@ -1,0 +1,17 @@
+{
+  "name": "Choose Your Own Adventure World",
+  "short_name": "CYOA World",
+  "description": "An AI-powered, accessible, and proofread interactive story site",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#8b4513",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}

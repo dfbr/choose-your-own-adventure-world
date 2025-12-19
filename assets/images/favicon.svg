@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b4513;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pageGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fffef0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5f5dc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Book cover (left side) -->
+  <rect x="10" y="20" width="35" height="60" rx="2" fill="url(#bookGradient)" />
+  
+  <!-- Book spine details -->
+  <line x1="15" y1="30" x2="15" y2="70" stroke="#5a3a1a" stroke-width="1" />
+  <line x1="40" y1="30" x2="40" y2="70" stroke="#5a3a1a" stroke-width="1" />
+  
+  <!-- Book pages (right side) -->
+  <rect x="45" y="20" width="40" height="60" rx="2" fill="url(#pageGradient)" />
+  
+  <!-- Page lines to indicate text -->
+  <line x1="52" y1="35" x2="78" y2="35" stroke="#999" stroke-width="1" opacity="0.5" />
+  <line x1="52" y1="42" x2="78" y2="42" stroke="#999" stroke-width="1" opacity="0.5" />
+  <line x1="52" y1="49" x2="75" y2="49" stroke="#999" stroke-width="1" opacity="0.5" />
+  <line x1="52" y1="56" x2="78" y2="56" stroke="#999" stroke-width="1" opacity="0.5" />
+  <line x1="52" y1="63" x2="72" y2="63" stroke="#999" stroke-width="1" opacity="0.5" />
+  
+  <!-- Magic sparkle -->
+  <circle cx="75" cy="30" r="3" fill="#ffd700" opacity="0.8" />
+  <path d="M 75 25 L 76 28 L 79 29 L 76 30 L 75 33 L 74 30 L 71 29 L 74 28 Z" fill="#ffed4e" />
+  
+  <!-- Book border -->
+  <rect x="10" y="20" width="35" height="60" rx="2" fill="none" stroke="#3a2010" stroke-width="1.5" />
+  <rect x="45" y="20" width="40" height="60" rx="2" fill="none" stroke="#999" stroke-width="1" />
+</svg>
