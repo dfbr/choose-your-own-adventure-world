@@ -5,6 +5,10 @@ url: "https://dfbr.github.io"
 title: "Choose your own adventure world"
 description: "AI-Generated Interactive Stories for Early Readers"
 
+# Generate sitemap.xml automatically on each Jekyll build
+plugins:
+  - jekyll-sitemap
+
 # Exclude files from Jekyll processing (not served on GitHub Pages)
 exclude:
   - generator/
